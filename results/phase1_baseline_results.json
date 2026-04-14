@@ -1,0 +1,55 @@
+{
+  "note": "Partial results - script timed out after 2/5 test cases (~13 min total). Each generation took ~380-400s on CPU with SmolLM2-1.7B-Instruct FP32.",
+  "metrics": {
+    "json_valid": 2,
+    "schema_compliant": 2,
+    "total_completed": 2,
+    "total_planned": 5,
+    "avg_generation_time_seconds": 388.7,
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  },
+  "results": [
+    {
+      "id": "test_001",
+      "category": "SaaS/Fintech",
+      "expected_quality": "good_idea",
+      "parsed": true,
+      "schema_valid": true,
+      "evaluation": {
+        "pain_severity": {"score": 8, "reason": "Unpaid invoices cause financial stress for freelancers"},
+        "pain_frequency": {"score": 7, "reason": "Requires attention multiple times per month"},
+        "existing_alternatives": {"score": 5, "reason": "No existing solutions specifically cater to freelance invoicing needs"},
+        "willingness_to_pay": {"score": 9, "reason": "Freelancers willing to invest time in finding better solutions"},
+        "market_size": {"score": 9, "reason": "Large number of freelancers worldwide"},
+        "scalability": {"score": 9, "reason": "App can scale easily with user growth"},
+        "profitability_potential": {"score": 8, "reason": "Commission-based or subscription-based models possible"},
+        "defensibility": {"score": 6, "reason": "Competitors may have similar features but different branding and marketing strategies"},
+        "time_to_value": {"score": 8, "reason": "Easy to onboard new users and integrate with existing accounting tools"},
+        "founder_market_fit_requirement": {"score": 7, "reason": "Freelancers generally align with the target audience's values and interests"},
+        "overall_score": 8.1,
+        "summary": "High potential for success due to clear pain points, limited alternatives, and growing market size. Requires careful design and execution to differentiate from competitors."
+      }
+    },
+    {
+      "id": "test_002",
+      "category": "Social/Niche",
+      "expected_quality": "niche_idea",
+      "parsed": true,
+      "schema_valid": true,
+      "evaluation": {
+        "pain_severity": {"score": 7, "reason": "Vintage typewriter collectors face challenges like finding compatible machines, verifying authenticity, and storing valuable items safely"},
+        "pain_frequency": {"score": 7, "reason": "Needed for rare machine acquisitions, trades, and storage solutions"},
+        "existing_alternatives": {"score": 3, "reason": "No dedicated platforms cater specifically to vintage typewriter enthusiasts"},
+        "willingness_to_pay": {"score": 5, "reason": "Some collectors might be willing to pay for specialized advice, authentication services, or exclusive events"},
+        "market_size": {"score": 7, "reason": "Growing community of passionate collectors worldwide"},
+        "scalability": {"score": 8, "reason": "Platform model scales with user engagement and content quality"},
+        "profitability_potential": {"score": 6, "reason": "Commission-based sales and event ticket sales could generate revenue"},
+        "defensibility": {"score": 3, "reason": "Strong brand loyalty among collectors makes it difficult to disrupt existing communities"},
+        "time_to_value": {"score": 8, "reason": "Users can share knowledge, showcase collections, and connect with fellow enthusiasts within minutes"},
+        "founder_market_fit_requirement": {"score": 3, "reason": "No deep domain expertise needed; founders can leverage existing networks and passions"},
+        "overall_score": 5.9,
+        "summary": "Validated market with growing interest in vintage typewriting culture. Platform offers unique features and benefits to attract and retain users. However, competition from established forums and marketplaces remains significant."
+      }
+    }
+  ]
+}

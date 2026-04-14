@@ -1,0 +1,1234 @@
+[
+  {
+    "name": "GymStreak",
+    "description": "AI-powered fitness app using 3D animations and AR for workout guidance",
+    "categories": [
+      "Health & Wellness",
+      "Mobile Apps",
+      "3D Printing"
+    ],
+    "mrr_usd": 208000,
+    "mrr_raw": "$208K+ MRR"
+  },
+  {
+    "name": "Chatbase",
+    "description": "Platform for businesses to create AI-powered customer support agents",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Customer Service",
+      "SaaS"
+    ],
+    "mrr_usd": 417000,
+    "mrr_raw": "$417K+ MRR"
+  },
+  {
+    "name": "Interview Coder",
+    "description": "AI tool that assists candidates in passing coding interviews",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Career Development",
+      "Software Development"
+    ],
+    "mrr_usd": 110000,
+    "mrr_raw": "$110K MRR"
+  },
+  {
+    "name": "Advocat AI",
+    "description": "AI-driven tool for managing and optimizing contract workflows",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Legal",
+      "Automation"
+    ],
+    "mrr_usd": 80000,
+    "mrr_raw": "$80K+ MRR"
+  },
+  {
+    "name": "Kore.ai",
+    "description": "No-code platform for building conversational AI solutions across industries",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "No-Code",
+      "SaaS"
+    ],
+    "mrr_usd": 8000000,
+    "mrr_raw": "$8MM+ MRR"
+  },
+  {
+    "name": "Castmagic",
+    "description": "AI-driven tool that converts audio content into written formats",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Audio",
+      "Content Creation"
+    ],
+    "mrr_usd": 120000,
+    "mrr_raw": "$120K+ MRR"
+  },
+  {
+    "name": "Photoroom",
+    "description": "AI-powered photo editing app for entrepreneurs and small businesses",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Photography",
+      "Entrepreneurship"
+    ],
+    "mrr_usd": 4000000,
+    "mrr_raw": "$4MM+ MRR"
+  },
+  {
+    "name": "Uizard",
+    "description": "AI-powered design tool that simplifies UI creation for non-designers",
+    "categories": [
+      "Design",
+      "Artificial Intelligence (AI)",
+      "Graphic Design"
+    ],
+    "mrr_usd": 290000,
+    "mrr_raw": "$290K+ MRR"
+  },
+  {
+    "name": "Salesforge",
+    "description": "AI-powered tool that improves B2B cold email deliverability",
+    "categories": [
+      "Email",
+      "Artificial Intelligence (AI)",
+      "Sales"
+    ],
+    "mrr_usd": 167000,
+    "mrr_raw": "$167K+ MRR"
+  },
+  {
+    "name": "SkillSoniq",
+    "description": "AI-powered recruiting app connecting companies with domestic freelancers",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Hiring",
+      "Mobile Apps"
+    ],
+    "mrr_usd": 40000,
+    "mrr_raw": "$40K+ MRR"
+  },
+  {
+    "name": "Enterprise Bot",
+    "description": "AI chatbot platform for businesses to enhance customer interactions",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Automation",
+      "SaaS"
+    ],
+    "mrr_usd": 150000,
+    "mrr_raw": "$150K MRR"
+  },
+  {
+    "name": "EasyGen",
+    "description": "AI-powered tool for generating LinkedIn content for professionals",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Content Creation",
+      "Social Media"
+    ],
+    "mrr_usd": 45000,
+    "mrr_raw": "$45K MRR"
+  },
+  {
+    "name": "Fireflies.ai",
+    "description": "AI-powered app that transcribes and organizes meeting notes",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Productivity",
+      "Remote Work"
+    ],
+    "mrr_usd": 500000,
+    "mrr_raw": "$500K+ MRR"
+  },
+  {
+    "name": "Lovable",
+    "description": "AI-powered coding assistant that helps non-developers create software",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Software Development",
+      "Productivity"
+    ],
+    "mrr_usd": 330000,
+    "mrr_raw": "$330K+ MRR"
+  },
+  {
+    "name": "Rezi",
+    "description": "AI-powered resume builder that optimizes resumes for job applications",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Career Development",
+      "Productivity"
+    ],
+    "mrr_usd": 225000,
+    "mrr_raw": "$225K+ MRR"
+  },
+  {
+    "name": "Float",
+    "description": "Resource scheduling app for agencies to manage team projects efficiently",
+    "categories": [
+      "Project Management",
+      "Productivity",
+      "SaaS"
+    ],
+    "mrr_usd": 230000,
+    "mrr_raw": "$230K+ MRR"
+  },
+  {
+    "name": "Chili Piper",
+    "description": "Platform that helps sales teams qualify, route, and schedule meetings with leads",
+    "categories": [
+      "Sales",
+      "Productivity",
+      "SaaS"
+    ],
+    "mrr_usd": 2500000,
+    "mrr_raw": "$2.5MM+ MRR"
+  },
+  {
+    "name": "Wappalyzer",
+    "description": "Browser extension that identifies website technologies for developers",
+    "categories": [
+      "Chrome Extension",
+      "Developer Tools",
+      "Software Development"
+    ],
+    "mrr_usd": 85000,
+    "mrr_raw": "$85K+ MRR"
+  },
+  {
+    "name": "vFairs",
+    "description": "Virtual events platform enabling organizations to host engaging online events",
+    "categories": [
+      "Events & Conferencing",
+      "Remote Work",
+      "SaaS"
+    ],
+    "mrr_usd": 2500000,
+    "mrr_raw": "$2.5MM MRR"
+  },
+  {
+    "name": "SavvyCal",
+    "description": "Scheduling tool that alleviates the friction of booking meetings",
+    "categories": [
+      "Productivity",
+      "SaaS",
+      "Web Apps"
+    ],
+    "mrr_usd": 458000,
+    "mrr_raw": "$458K MRR"
+  },
+  {
+    "name": "Referral Factory",
+    "description": "No-code referral marketing tool that helps businesses gain leads",
+    "categories": [
+      "Marketing",
+      "SaaS",
+      "No-Code"
+    ],
+    "mrr_usd": 458000,
+    "mrr_raw": "$458K MRR"
+  },
+  {
+    "name": "BambooHR",
+    "description": "SaaS platform offering HR solutions for small and medium businesses",
+    "categories": [
+      "SaaS",
+      "HR",
+      "Small Business"
+    ],
+    "mrr_usd": 19800000,
+    "mrr_raw": "$19.8MM MRR"
+  },
+  {
+    "name": "Clockify",
+    "description": "Free time-tracking tool for monitoring productivity",
+    "categories": [
+      "Productivity",
+      "Project Management",
+      "SaaS"
+    ],
+    "mrr_usd": 458000,
+    "mrr_raw": "$458K MRR"
+  },
+  {
+    "name": "Designjoy",
+    "description": "Subscription-based design service for technology companies and agencies",
+    "categories": [
+      "Design",
+      "Subscription Box",
+      "SaaS"
+    ],
+    "mrr_usd": 258000,
+    "mrr_raw": "$258K MRR"
+  },
+  {
+    "name": "Ahrefs",
+    "description": "Suite of SEO tools for businesses to enhance online visibility",
+    "categories": [
+      "SaaS",
+      "Marketing",
+      "Business Intelligence"
+    ],
+    "mrr_usd": 8330000,
+    "mrr_raw": "$8.33MM MRR"
+  },
+  {
+    "name": "Canny",
+    "description": "Tool for businesses to gather, organize, and act on user feedback",
+    "categories": [
+      "Business Intelligence",
+      "SaaS",
+      "Market Research"
+    ],
+    "mrr_usd": 280000,
+    "mrr_raw": "$280K+ MRR"
+  },
+  {
+    "name": "SmallPDF",
+    "description": "Suite of tools that allows users to be more productive and work smarter with documents",
+    "categories": [
+      "Productivity",
+      "Web Apps",
+      "SaaS"
+    ],
+    "mrr_usd": 1460000,
+    "mrr_raw": "$1.46MM MRR"
+  },
+  {
+    "name": "Browserless",
+    "description": "Headless browser service that simplifies web automation tasks for developers",
+    "categories": [
+      "Automation",
+      "Developer Tools",
+      "Software Development"
+    ],
+    "mrr_usd": 131000,
+    "mrr_raw": "$131K MRR"
+  },
+  {
+    "name": "Lunch Money",
+    "description": "Simple budgeting tool with multi-currency support",
+    "categories": [
+      "Financial Services",
+      "Mobile Apps",
+      "Travel & Tourism"
+    ],
+    "mrr_usd": 34000,
+    "mrr_raw": "$34K MRR"
+  },
+  {
+    "name": "Bubble",
+    "description": "No-code platform enabling users to build products without technical skills",
+    "categories": [
+      "Software Development",
+      "No-Code",
+      "Entrepreneurship"
+    ],
+    "mrr_usd": 5000000,
+    "mrr_raw": "$5MM MRR"
+  },
+  {
+    "name": "Plausible Analytics",
+    "description": "Privacy-friendly web analytics tool for businesses seeking ethical data insights",
+    "categories": [
+      "Analytics",
+      "Data",
+      "Open Source"
+    ],
+    "mrr_usd": 175000,
+    "mrr_raw": "$175K+ MRR"
+  },
+  {
+    "name": "Streak",
+    "description": "CRM integrated with Gmail",
+    "categories": [
+      "CRM",
+      "Email",
+      "Productivity"
+    ],
+    "mrr_usd": 833000,
+    "mrr_raw": "$833K+ MRR"
+  },
+  {
+    "name": "Balsamiq",
+    "description": "Easy-to-use tool to create wireframes",
+    "categories": [
+      "Design",
+      "SaaS",
+      "Web Apps"
+    ],
+    "mrr_usd": 580000,
+    "mrr_raw": "$580K MRR"
+  },
+  {
+    "name": "ChartMogul",
+    "description": "Subscription analytics tool that helps SaaS companies understand their metrics",
+    "categories": [
+      "Analytics",
+      "SaaS",
+      "Business Intelligence"
+    ],
+    "mrr_usd": 834000,
+    "mrr_raw": "$834K MRR"
+  },
+  {
+    "name": "Ghost",
+    "description": "Easy-to-use, open-source blogging platform",
+    "categories": [
+      "Blogging Platforms",
+      "Web Hosting",
+      "SaaS"
+    ],
+    "mrr_usd": 580000,
+    "mrr_raw": "$580K+ MRR"
+  },
+  {
+    "name": "Trends.vc",
+    "description": "Newsletter offering reports on the latest trends in tech and startups",
+    "categories": [
+      "News & Journalism",
+      "Market Research",
+      "Info Products"
+    ],
+    "mrr_usd": 40000,
+    "mrr_raw": "$40K+ MRR"
+  },
+  {
+    "name": "Clearbit",
+    "description": "API tool that makes it easy to get demographic data about individuals",
+    "categories": [
+      "APIs",
+      "Data"
+    ],
+    "mrr_usd": 3000000,
+    "mrr_raw": "$3MM+ MRR"
+  },
+  {
+    "name": "BuySellAds",
+    "description": "Marketplace that connects small publishers with advertisers to automate ad sales",
+    "categories": [
+      "Marketplace",
+      "Advertising"
+    ],
+    "mrr_usd": 1000000,
+    "mrr_raw": "$1MM+ MRR"
+  },
+  {
+    "name": "MeetEdgar",
+    "description": "Social media tool that automates sharing evergreen content for small businesses",
+    "categories": [
+      "Social Media",
+      "Automation",
+      "Marketing"
+    ],
+    "mrr_usd": 300000,
+    "mrr_raw": "$300K+ MRR"
+  },
+  {
+    "name": "Zapier",
+    "description": "Tool that lets users automate workflows between different apps",
+    "categories": [
+      "Automation",
+      "SaaS",
+      "Productivity"
+    ],
+    "mrr_usd": 20000000,
+    "mrr_raw": "$20MM+ MRR"
+  },
+  {
+    "name": "Going",
+    "description": "Newsletter that shares flight deals to help travelers save money",
+    "categories": [
+      "Travel & Tourism",
+      "Email",
+      "Shopping"
+    ],
+    "mrr_usd": 300000,
+    "mrr_raw": "$300K MRR"
+  },
+  {
+    "name": "Baremetrics",
+    "description": "Financial metrics tool for SaaS companies",
+    "categories": [
+      "SaaS",
+      "Business Intelligence",
+      "Automation"
+    ],
+    "mrr_usd": 300000,
+    "mrr_raw": "$300K+ MRR"
+  },
+  {
+    "name": "Sifter",
+    "description": "Simple bug tracking tool designed for non-technical users",
+    "categories": [
+      "Software Development",
+      "SaaS",
+      "Web Apps"
+    ],
+    "mrr_usd": 20000,
+    "mrr_raw": "$20K MRR"
+  },
+  {
+    "name": "Sidekiq",
+    "description": "Background job processor for Ruby applications",
+    "categories": [
+      "Software Development",
+      "Developer Tools",
+      "SaaS"
+    ],
+    "mrr_usd": 500000,
+    "mrr_raw": "$500K MRR"
+  },
+  {
+    "name": "Growth Machine",
+    "description": "Agency that creates and manages content marketing for businesses",
+    "categories": [
+      "Content Marketing",
+      "Consulting Services",
+      "Marketing"
+    ],
+    "mrr_usd": 160000,
+    "mrr_raw": "$160K+ MRR"
+  },
+  {
+    "name": "Beardbrand",
+    "description": "E-commerce brand offering beard care products",
+    "categories": [
+      "E-commerce",
+      "Personal Care & Hygiene"
+    ],
+    "mrr_usd": 2000000,
+    "mrr_raw": "$2MM MRR"
+  },
+  {
+    "name": "Postpone",
+    "description": "Tool for scheduling social media posts",
+    "categories": [
+      "Social Media",
+      "Automation",
+      "Content Creation"
+    ],
+    "mrr_usd": 30000,
+    "mrr_raw": "$30K MRR"
+  },
+  {
+    "name": "Fearless Business",
+    "description": "Business coaching service that helps entrepreneurs grow their businesses",
+    "categories": [
+      "Consulting Services",
+      "Personal Development"
+    ],
+    "mrr_usd": 25000,
+    "mrr_raw": "$25K MRR"
+  },
+  {
+    "name": "Threadless",
+    "description": "Community-driven marketplace for custom-designed t-shirts",
+    "categories": [
+      "Marketplace",
+      "Community",
+      "Fashion & Apparel"
+    ],
+    "mrr_usd": 5000000,
+    "mrr_raw": "$5MM MRR"
+  },
+  {
+    "name": "Canva",
+    "description": "Online design tool that makes it easy to create and collaborate",
+    "categories": [
+      "Design",
+      "Graphic Design",
+      "Web Apps"
+    ],
+    "mrr_usd": 170000000,
+    "mrr_raw": "$170MM+ MRR"
+  },
+  {
+    "name": "PyImageSearch",
+    "description": "Blog and resource site for learning computer vision with Python",
+    "categories": [
+      "Info Products",
+      "Content Creation",
+      "Education"
+    ],
+    "mrr_usd": 80000,
+    "mrr_raw": "$80K+ MRR"
+  },
+  {
+    "name": "Rails Autoscale",
+    "description": "Autoscaling tool for Heroku apps",
+    "categories": [
+      "Software Development",
+      "Developer Tools",
+      "Cloud Computing"
+    ],
+    "mrr_usd": 26000,
+    "mrr_raw": "$26K MRR"
+  },
+  {
+    "name": "Alitu",
+    "description": "Tool that simplifies podcast editing for content creators",
+    "categories": [
+      "Podcasting",
+      "Audio",
+      "Content Creation"
+    ],
+    "mrr_usd": 45000,
+    "mrr_raw": "$45K+ MRR"
+  },
+  {
+    "name": "Userlist",
+    "description": "SaaS tool that helps companies personalize customer messaging",
+    "categories": [
+      "SaaS",
+      "Email"
+    ],
+    "mrr_usd": 30000,
+    "mrr_raw": "$30K+ MRR"
+  },
+  {
+    "name": "FeedbackPanda",
+    "description": "SaaS tool that automates feedback writing for online English teachers",
+    "categories": [
+      "SaaS",
+      "Automation",
+      "Education"
+    ],
+    "mrr_usd": 55000,
+    "mrr_raw": "$55K MRR"
+  },
+  {
+    "name": "Place Card Me",
+    "description": "Tool that helps people create and print custom wedding place cards",
+    "categories": [
+      "Weddings",
+      "Design",
+      "Events & Conferencing"
+    ],
+    "mrr_usd": 1600,
+    "mrr_raw": "$1.6K+ MRR"
+  },
+  {
+    "name": "SegMetrics",
+    "description": "SaaS tool that automates marketing data analysis",
+    "categories": [
+      "SaaS",
+      "Automation",
+      "Data"
+    ],
+    "mrr_usd": 100000,
+    "mrr_raw": "$100K+ MRR"
+  },
+  {
+    "name": "Webflow",
+    "description": "Visual software development platform for building websites",
+    "categories": [
+      "Software Development",
+      "Web Apps",
+      "Design"
+    ],
+    "mrr_usd": 8000000,
+    "mrr_raw": "$8MM+ MRR"
+  },
+  {
+    "name": "1 Second Everyday",
+    "description": "Mobile app that lets users capture one-second daily videos",
+    "categories": [
+      "Mobile Apps",
+      "Video",
+      "Social Media"
+    ],
+    "mrr_usd": 200000,
+    "mrr_raw": "$200K+ MRR"
+  },
+  {
+    "name": "Laravel",
+    "description": "Framework that simplifies working with PHP",
+    "categories": [
+      "Software Development",
+      "Developer Tools"
+    ],
+    "mrr_usd": 250000,
+    "mrr_raw": "$250K+ MRR"
+  },
+  {
+    "name": "DigsConnect",
+    "description": "Marketplace that connects students with landlords for housing",
+    "categories": [
+      "Marketplace",
+      "Real Estate",
+      "Education"
+    ],
+    "mrr_usd": 100000,
+    "mrr_raw": "$100K MRR"
+  },
+  {
+    "name": "Cloud Campaign",
+    "description": "Social media management tool for marketing agencies to manage campaigns",
+    "categories": [
+      "Social Media",
+      "Marketing",
+      "SaaS"
+    ],
+    "mrr_usd": 25000,
+    "mrr_raw": "$25K+ MRR"
+  },
+  {
+    "name": "Contentyze",
+    "description": "SaaS tool that uses AI to generate marketing content",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Content Creation",
+      "SaaS"
+    ],
+    "mrr_usd": 5000,
+    "mrr_raw": "$5K+ MRR"
+  },
+  {
+    "name": "Geocodio",
+    "description": "Geocoding tool that converts addresses to coordinates and vice versa",
+    "categories": [
+      "APIs",
+      "Developer Tools",
+      "SaaS"
+    ],
+    "mrr_usd": 80000,
+    "mrr_raw": "$80K+ MRR"
+  },
+  {
+    "name": "SquadCast",
+    "description": "Remote recording tool that provides high-quality audio and video for podcasters",
+    "categories": [
+      "Podcasting",
+      "Audio",
+      "Video"
+    ],
+    "mrr_usd": 250000,
+    "mrr_raw": "$250K+ MRR"
+  },
+  {
+    "name": "Acquire",
+    "description": "Marketplace that connects buyers and sellers of small startups",
+    "categories": [
+      "Marketplace",
+      "Entrepreneurship",
+      "Investing"
+    ],
+    "mrr_usd": 53000,
+    "mrr_raw": "$53K+ MRR"
+  },
+  {
+    "name": "Examine.com",
+    "description": "Subscription-based website providing scientifically researched nutrition information",
+    "categories": [
+      "Nutrition",
+      "Health & Wellness",
+      "Info Products"
+    ],
+    "mrr_usd": 83000,
+    "mrr_raw": "$83K+ MRR"
+  },
+  {
+    "name": "Hotjar",
+    "description": "Analytics tool that helps businesses understand user behavior",
+    "categories": [
+      "Analytics",
+      "Business Intelligence",
+      "SaaS"
+    ],
+    "mrr_usd": 3330000,
+    "mrr_raw": "$3.33MM+ MRR"
+  },
+  {
+    "name": "Bluetick",
+    "description": "Email tool that automates the process of following up with recipients",
+    "categories": [
+      "Email",
+      "Productivity",
+      "CRM"
+    ],
+    "mrr_usd": 100000,
+    "mrr_raw": "$100K+ MRR"
+  },
+  {
+    "name": "SEOTesting.com",
+    "description": "Tool that helps businesses run and analyze SEO tests for better results",
+    "categories": [
+      "SEO",
+      "Automation",
+      "Analytics"
+    ],
+    "mrr_usd": 18000,
+    "mrr_raw": "$18K+ MRR"
+  },
+  {
+    "name": "Astalty",
+    "description": "Platform that helps NDIS providers manage their business operations",
+    "categories": [
+      "SaaS",
+      "CRM",
+      "Health & Wellness"
+    ],
+    "mrr_usd": 60000,
+    "mrr_raw": "$60K+ MRR"
+  },
+  {
+    "name": "Builder Prime",
+    "description": "CRM designed for home improvement contractors",
+    "categories": [
+      "CRM",
+      "Home & Garden",
+      "SaaS"
+    ],
+    "mrr_usd": 80000,
+    "mrr_raw": "$80K+ MRR"
+  },
+  {
+    "name": "Tally",
+    "description": "Free, intuitive form builder for startups, creators, and small businesses",
+    "categories": [
+      "SaaS",
+      "Web Apps",
+      "Freemium"
+    ],
+    "mrr_usd": 100000,
+    "mrr_raw": "$100K MRR"
+  },
+  {
+    "name": "muk mat",
+    "description": "High-quality door mat for people who love the outdoors",
+    "categories": [
+      "E-commerce",
+      "Home & Garden",
+      "Retail"
+    ],
+    "mrr_usd": 250000,
+    "mrr_raw": "$250K+ MRR"
+  },
+  {
+    "name": "Boot.dev",
+    "description": "Gamified platform for learning backend development languages",
+    "categories": [
+      "Education",
+      "Software Development",
+      "Online Courses"
+    ],
+    "mrr_usd": 110000,
+    "mrr_raw": "$110K MRR"
+  },
+  {
+    "name": "AI Scout",
+    "description": "Directory of AI tools tailored to business needs",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Business Intelligence",
+      "Info Products"
+    ],
+    "mrr_usd": 8000,
+    "mrr_raw": "$8K+ MRR"
+  },
+  {
+    "name": "A Self Guru",
+    "description": "Legal template and service provider for entrepreneurs to protect their businesses",
+    "categories": [
+      "Legal",
+      "Entrepreneurship",
+      "Consulting Services"
+    ],
+    "mrr_usd": 83000,
+    "mrr_raw": "$83K+ MRR"
+  },
+  {
+    "name": "Stripo",
+    "description": "Email design tool that simplifies creating professional emails",
+    "categories": [
+      "Email",
+      "Design",
+      "Marketing"
+    ],
+    "mrr_usd": 300000,
+    "mrr_raw": "$300K+ MRR"
+  },
+  {
+    "name": "Zum Rails",
+    "description": "SaaS tool that combines open banking with instant payment processing for businesses",
+    "categories": [
+      "SaaS",
+      "FinTech"
+    ],
+    "mrr_usd": 833000,
+    "mrr_raw": "$833K+ MRR"
+  },
+  {
+    "name": "Unicorn Digital Marketing Assistant School",
+    "description": "E-learning business teaching women to become marketing assistants",
+    "categories": [
+      "Online Courses",
+      "Education",
+      "Marketing"
+    ],
+    "mrr_usd": 23000,
+    "mrr_raw": "$23K MRR"
+  },
+  {
+    "name": "VizyPay",
+    "description": "Payment processing service tailored for small businesses in rural areas",
+    "categories": [
+      "FinTech",
+      "Financial Services",
+      "Local"
+    ],
+    "mrr_usd": 1800000,
+    "mrr_raw": "$1.8MM+ MRR"
+  },
+  {
+    "name": "Grasshopper Labs",
+    "description": "AI-driven platform that optimizes transportation and warehousing for businesses",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Transportation",
+      "SaaS"
+    ],
+    "mrr_usd": 400000,
+    "mrr_raw": "$400K MRR"
+  },
+  {
+    "name": "Xtreme Xperience",
+    "description": "Service offering supercar driving experiences on racetracks",
+    "categories": [
+      "Entertainment",
+      "Sports & Competition"
+    ],
+    "mrr_usd": 2500000,
+    "mrr_raw": "$2.5MM MRR"
+  },
+  {
+    "name": "Baresquare",
+    "description": "AI-powered analytics tool that provides actionable insights for e-commerce businesses",
+    "categories": [
+      "Analytics",
+      "Artificial Intelligence (AI)",
+      "E-commerce"
+    ],
+    "mrr_usd": 100000,
+    "mrr_raw": "$100K MRR"
+  },
+  {
+    "name": "Starter Story",
+    "description": "Website showcasing interviews with entrepreneurs about their startup journeys",
+    "categories": [
+      "Entrepreneurship",
+      "Content Creation",
+      "News & Journalism"
+    ],
+    "mrr_usd": 41000,
+    "mrr_raw": "$41K+ MRR"
+  },
+  {
+    "name": "Grasshopper",
+    "description": "Virtual phone system designed for entrepreneurs to handle calls professionally",
+    "categories": [
+      "SaaS",
+      "Telecommunications",
+      "Customer Service"
+    ],
+    "mrr_usd": 2500000,
+    "mrr_raw": "$2.5MM+ MRR"
+  },
+  {
+    "name": "Chekkit",
+    "description": "Comprehensive customer communication tool for local businesses",
+    "categories": [
+      "Local",
+      "SaaS",
+      "Customer Relationship Management (CRM)"
+    ],
+    "mrr_usd": 166000,
+    "mrr_raw": "$166K+ MRR"
+  },
+  {
+    "name": "EaseMyTrip",
+    "description": "Online travel platform that doesn't charge convenience fees",
+    "categories": [
+      "Travel & Tourism"
+    ],
+    "mrr_usd": 6400000,
+    "mrr_raw": "$6.4MM MRR"
+  },
+  {
+    "name": "Monite",
+    "description": "B2B API fintech platform for finance software services",
+    "categories": [
+      "APIs",
+      "FinTech",
+      "B2B"
+    ],
+    "mrr_usd": 1000000,
+    "mrr_raw": "$1MM MRR"
+  },
+  {
+    "name": "Upvoty",
+    "description": "SaaS tool that streamlines gathering and managing user feedback",
+    "categories": [
+      "SaaS",
+      "Consumer Research",
+      "Community"
+    ],
+    "mrr_usd": 20000,
+    "mrr_raw": "$20K+ MRR"
+  },
+  {
+    "name": "ProfitWell",
+    "description": "Platform optimizing pricing and payment strategies for businesses",
+    "categories": [
+      "Data",
+      "Analytics",
+      "Financial Services"
+    ],
+    "mrr_usd": 1800000,
+    "mrr_raw": "$1.8MM+ MRR"
+  },
+  {
+    "name": "Tweet Hunter",
+    "description": "SaaS tool that helps users grow and monetize their Twitter audience",
+    "categories": [
+      "SaaS",
+      "Social Media",
+      "Marketing"
+    ],
+    "mrr_usd": 41000,
+    "mrr_raw": "$41K+ MRR"
+  },
+  {
+    "name": "ZenMaid",
+    "description": "SaaS for maid services to manage schedules, handle communication, and automate tasks",
+    "categories": [
+      "SaaS",
+      "Home & Garden",
+      "Automation"
+    ],
+    "mrr_usd": 130000,
+    "mrr_raw": "$130K+ MRR"
+  },
+  {
+    "name": "Headlime",
+    "description": "AI-powered tool that generates marketing content",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Copywriting",
+      "SaaS"
+    ],
+    "mrr_usd": 20000,
+    "mrr_raw": "$20K MRR"
+  },
+  {
+    "name": "Substack",
+    "description": "Platform for independent writers to publish newsletters and charge for subscriptions",
+    "categories": [
+      "Blogging Platforms",
+      "News & Journalism",
+      "Content Creation"
+    ],
+    "mrr_usd": 1000000,
+    "mrr_raw": "$1MM MRR"
+  },
+  {
+    "name": "Teachable",
+    "description": "SaaS marketplace that allows experts to create and sell online courses",
+    "categories": [
+      "SaaS",
+      "Marketplace",
+      "Online Courses"
+    ],
+    "mrr_usd": 2100000,
+    "mrr_raw": "$2.1MM+ MRR"
+  },
+  {
+    "name": "CoderPad",
+    "description": "Web-based platform for conducting technical interviews with programmers",
+    "categories": [
+      "Hiring",
+      "Software Development",
+      "Web Apps"
+    ],
+    "mrr_usd": 170000,
+    "mrr_raw": "$170K+ MRR"
+  },
+  {
+    "name": "Edusign",
+    "description": "Platform for managing educational attendance sheets and document signatures",
+    "categories": [
+      "Education",
+      "SaaS"
+    ],
+    "mrr_usd": 300000,
+    "mrr_raw": "$300K MRR"
+  },
+  {
+    "name": "IBISWorld",
+    "description": "Global provider of detailed and analytical industry research reports",
+    "categories": [
+      "Market Research",
+      "Data",
+      "Consulting Services"
+    ],
+    "mrr_usd": 1450000,
+    "mrr_raw": "$1.45MM+ MRR"
+  },
+  {
+    "name": "AppSumo",
+    "description": "Daily deals website that curates discounts on software and digital goods",
+    "categories": [
+      "Entrepreneurship",
+      "Marketplace",
+      "Web Apps"
+    ],
+    "mrr_usd": 6670000,
+    "mrr_raw": "$6.67MM+ MRR"
+  },
+  {
+    "name": "Tettra",
+    "description": "Slack-integrated wiki tool for teams to document their knowledge",
+    "categories": [
+      "Knowledge Management",
+      "Productivity",
+      "SaaS"
+    ],
+    "mrr_usd": 25000,
+    "mrr_raw": "$25K MRR"
+  },
+  {
+    "name": "Fomo",
+    "description": "Tool that boosts website conversions by showing visitors what other customers are buying",
+    "categories": [
+      "Marketing",
+      "SaaS",
+      "Web Apps"
+    ],
+    "mrr_usd": 88000,
+    "mrr_raw": "$88K MRR"
+  },
+  {
+    "name": "EditionGuard",
+    "description": "Digital rights management service for protecting eBooks from piracy",
+    "categories": [
+      "SaaS",
+      "Books & Reading",
+      "E-commerce"
+    ],
+    "mrr_usd": 25000,
+    "mrr_raw": "$25K MRR"
+  },
+  {
+    "name": "Nomad List",
+    "description": "Community that helps digital nomads find the best places to live and work remotely",
+    "categories": [
+      "Community",
+      "Remote Work",
+      "Travel & Tourism"
+    ],
+    "mrr_usd": 60000,
+    "mrr_raw": "$60K MRR"
+  },
+  {
+    "name": "Gumroad",
+    "description": "Streamlined e-commerce platform for digital content creators",
+    "categories": [
+      "E-commerce",
+      "Content Creation",
+      "Creator Economy"
+    ],
+    "mrr_usd": 1800000,
+    "mrr_raw": "$1.8MM+ MRR"
+  },
+  {
+    "name": "Moonlight",
+    "description": "Community for software engineers that connects them with employers",
+    "categories": [
+      "Community",
+      "Hiring",
+      "Subscription Box"
+    ],
+    "mrr_usd": 55000,
+    "mrr_raw": "$55K MRR"
+  },
+  {
+    "name": "egghead.io",
+    "description": "Site that teaches coding skills through bite-sized screencasts",
+    "categories": [
+      "Education",
+      "Online Courses",
+      "Web Apps"
+    ],
+    "mrr_usd": 308000,
+    "mrr_raw": "$308K MRR"
+  },
+  {
+    "name": "HeyGen",
+    "description": "Video-creation tool that lets users create talking avatars using AI",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Video",
+      "Content Creation"
+    ],
+    "mrr_usd": 1670000,
+    "mrr_raw": "$1.67MM MRR"
+  },
+  {
+    "name": "Stratechery",
+    "description": "Newsletter for tech investors that analyzes tech and media news",
+    "categories": [
+      "Newsletter",
+      "News & Journalism",
+      "Investing"
+    ],
+    "mrr_usd": 267000,
+    "mrr_raw": "$267K MRR"
+  },
+  {
+    "name": "BuiltWith",
+    "description": "Tool that can reveal the tech stack behind any website",
+    "categories": [
+      "Analytics",
+      "Market Research",
+      "Web Apps"
+    ],
+    "mrr_usd": 1170000,
+    "mrr_raw": "$1.17MM MRR"
+  },
+  {
+    "name": "Devv",
+    "description": "AI-powered search engine that helps developers find reliable answers to coding questions",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Search",
+      "Developer Tools"
+    ],
+    "mrr_usd": 30000,
+    "mrr_raw": "$30K MRR"
+  },
+  {
+    "name": "Site Builder Report",
+    "description": "Site that reviews website builders and publishes reports on which ones are the best",
+    "categories": [
+      "Reviews",
+      "Affiliate & Referral",
+      "SEO"
+    ],
+    "mrr_usd": 40000,
+    "mrr_raw": "$40K MRR"
+  },
+  {
+    "name": "ConvertKit",
+    "description": "Email marketing tool tailored to help creators to grow their audiences",
+    "categories": [
+      "Email Marketing",
+      "Creator Economy",
+      "Blogging Platforms"
+    ],
+    "mrr_usd": 3420000,
+    "mrr_raw": "$3.42MM MRR"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "source_id": "seed_001",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An app that helps freelancers track unpaid invoices and auto-send payment reminders via email and SMS."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"Unpaid invoices cause financial stress for freelancers\"},\"pain_frequency\":{\"score\":7,\"reason\":\"Requires attention multiple times per month\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"No existing solutions specifically cater to freelance invoicing needs\"},\"willingness_to_pay\":{\"score\":9,\"reason\":\"Freelancers willing to invest time in finding better solutions\"},\"market_size\":{\"score\":9,\"reason\":\"Large number of freelancers worldwide\"},\"scalability\":{\"score\":9,\"reason\":\"App can scale easily with user growth\"},\"profitability_potential\":{\"score\":8,\"reason\":\"Commission-based or subscription-based models possible\"},\"defensibility\":{\"score\":6,\"reason\":\"Competitors may have similar features but different branding and marketing strategies\"},\"time_to_value\":{\"score\":8,\"reason\":\"Easy to onboard new users and integrate with existing accounting tools\"},\"founder_market_fit_requirement\":{\"score\":4,\"reason\":\"Basic fintech knowledge needed but not deep domain expertise\"},\"overall_score\":7.3,\"summary\":\"Strong idea with clear pain point and large market. Monetization is straightforward via subscriptions. Main risk is competition from established invoicing tools like FreshBooks and Wave.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_002",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A social network exclusively for people who collect vintage typewriters. Users can post photos of their collections, trade machines, and attend virtual meetups."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":3,\"reason\":\"Collecting vintage typewriters is a hobby, not a critical need\"},\"pain_frequency\":{\"score\":4,\"reason\":\"Collectors engage with their hobby weekly but not daily\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"Facebook groups and Reddit communities partially serve this need\"},\"willingness_to_pay\":{\"score\":3,\"reason\":\"Hobbyists expect social platforms to be free\"},\"market_size\":{\"score\":2,\"reason\":\"Very small niche of vintage typewriter collectors\"},\"scalability\":{\"score\":7,\"reason\":\"Software platform scales easily but limited by niche audience\"},\"profitability_potential\":{\"score\":2,\"reason\":\"Tiny market limits revenue potential\"},\"defensibility\":{\"score\":4,\"reason\":\"Community loyalty provides some moat but easily replicated\"},\"time_to_value\":{\"score\":7,\"reason\":\"Users can browse and connect immediately\"},\"founder_market_fit_requirement\":{\"score\":5,\"reason\":\"Need to understand collector community dynamics\"},\"overall_score\":4.2,\"summary\":\"Passionate but tiny niche. The market is too small to build a sustainable business. Better as a feature within a broader collectibles platform than a standalone product.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_003",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An AI-powered platform that automatically generates and files patent applications for inventors, handling prior art search, claim drafting, and USPTO submission."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":9,\"reason\":\"Patent filing is expensive, complex, and critical for IP protection\"},\"pain_frequency\":{\"score\":4,\"reason\":\"Most inventors file patents infrequently\"},\"existing_alternatives\":{\"score\":7,\"reason\":\"Patent attorneys are expensive and few AI tools handle end-to-end filing\"},\"willingness_to_pay\":{\"score\":9,\"reason\":\"Inventors currently pay $5K-$15K per patent application\"},\"market_size\":{\"score\":7,\"reason\":\"Hundreds of thousands of patent applications filed annually in the US alone\"},\"scalability\":{\"score\":8,\"reason\":\"AI platform scales well once trained on patent corpus\"},\"profitability_potential\":{\"score\":9,\"reason\":\"High willingness to pay with software-level margins\"},\"defensibility\":{\"score\":7,\"reason\":\"Specialized AI training data and regulatory expertise create barriers\"},\"time_to_value\":{\"score\":5,\"reason\":\"Patent process inherently takes months regardless of tool\"},\"founder_market_fit_requirement\":{\"score\":9,\"reason\":\"Deep patent law and AI expertise required\"},\"overall_score\":7.4,\"summary\":\"High-value problem with strong willingness to pay. Technical and regulatory barriers create defensibility. Main risk is accuracy — patent claims must be legally precise. Requires founders with both AI and patent law expertise.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_004",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A browser extension that changes all website backgrounds to the color blue."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":1,\"reason\":\"No real problem being solved\"},\"pain_frequency\":{\"score\":1,\"reason\":\"No recurring need\"},\"existing_alternatives\":{\"score\":2,\"reason\":\"Dark mode extensions and custom CSS tools already exist\"},\"willingness_to_pay\":{\"score\":1,\"reason\":\"Users expect browser extensions to be free\"},\"market_size\":{\"score\":1,\"reason\":\"Essentially no addressable market\"},\"scalability\":{\"score\":9,\"reason\":\"Browser extension distributes trivially\"},\"profitability_potential\":{\"score\":1,\"reason\":\"No monetization path\"},\"defensibility\":{\"score\":1,\"reason\":\"Can be built in an afternoon\"},\"time_to_value\":{\"score\":9,\"reason\":\"Instant effect on install\"},\"founder_market_fit_requirement\":{\"score\":1,\"reason\":\"Basic web development skills sufficient\"},\"overall_score\":2.7,\"summary\":\"A novelty project with zero business viability. No pain point, no market, no monetization. Fine as a learning exercise but not a business.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_005",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A B2B platform that connects small restaurants with local farms for direct produce sourcing, cutting out distributors and reducing food costs by 20-30%."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"Food costs are a major expense for restaurants and directly impact margins\"},\"pain_frequency\":{\"score\":10,\"reason\":\"Restaurants source produce daily or multiple times per week\"},\"existing_alternatives\":{\"score\":6,\"reason\":\"Sysco and US Foods dominate but are expensive; few tech-enabled local alternatives\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Clear ROI if platform saves 20-30% on produce costs\"},\"market_size\":{\"score\":8,\"reason\":\"Millions of small restaurants globally\"},\"scalability\":{\"score\":5,\"reason\":\"Marketplace requires building supply and demand in each local market\"},\"profitability_potential\":{\"score\":7,\"reason\":\"Transaction fees on high-frequency orders can generate strong revenue\"},\"defensibility\":{\"score\":5,\"reason\":\"Network effects in local markets but vulnerable to well-funded competitors\"},\"time_to_value\":{\"score\":6,\"reason\":\"Need to onboard enough farms before restaurants see full value\"},\"founder_market_fit_requirement\":{\"score\":7,\"reason\":\"Understanding of restaurant operations and agricultural supply chains needed\"},\"overall_score\":7.0,\"summary\":\"Strong unit economics and high-frequency use case. The chicken-and-egg marketplace problem is the main challenge — need to build local supply before demand follows. Geographic expansion is slow but defensible once established.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_006",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A subscription box service that sends curated artisanal hot sauces from around the world every month."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":2,\"reason\":\"Not solving a pain point, more of a want than a need\"},\"pain_frequency\":{\"score\":3,\"reason\":\"Hot sauce enthusiasts buy regularly but discovery is not a major friction\"},\"existing_alternatives\":{\"score\":4,\"reason\":\"Several hot sauce subscription boxes already exist\"},\"willingness_to_pay\":{\"score\":6,\"reason\":\"Food enthusiasts pay $20-40/month for subscription boxes\"},\"market_size\":{\"score\":5,\"reason\":\"Hot sauce market is growing but subscription niche is limited\"},\"scalability\":{\"score\":4,\"reason\":\"Physical product requires inventory, shipping, and logistics\"},\"profitability_potential\":{\"score\":4,\"reason\":\"Thin margins on physical goods with shipping costs\"},\"defensibility\":{\"score\":3,\"reason\":\"Low barriers to entry, brand is the main differentiator\"},\"time_to_value\":{\"score\":7,\"reason\":\"Exciting unboxing experience on first delivery\"},\"founder_market_fit_requirement\":{\"score\":3,\"reason\":\"Food curation skills helpful but not deep expertise needed\"},\"overall_score\":4.1,\"summary\":\"Fun lifestyle business but limited scalability and thin margins. Competitive space with low barriers. Could work as a small profitable business but unlikely to become a large venture-scale company.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_007",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An AI copilot for real estate agents that auto-generates property listings, schedules showings, and follows up with leads."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":7,\"reason\":\"Agents spend hours on administrative tasks that reduce selling time\"},\"pain_frequency\":{\"score\":9,\"reason\":\"Listing creation, scheduling, and follow-ups happen daily\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"CRMs exist but few offer AI-powered automation end-to-end\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Agents earn commissions and will pay for tools that increase closings\"},\"market_size\":{\"score\":7,\"reason\":\"Over 1.5 million real estate agents in the US alone\"},\"scalability\":{\"score\":8,\"reason\":\"SaaS model with AI scales well across agents\"},\"profitability_potential\":{\"score\":8,\"reason\":\"High willingness to pay with SaaS margins\"},\"defensibility\":{\"score\":5,\"reason\":\"AI features can be replicated but integration depth creates switching costs\"},\"time_to_value\":{\"score\":7,\"reason\":\"Agents see time savings from first listing generated\"},\"founder_market_fit_requirement\":{\"score\":6,\"reason\":\"Understanding of real estate workflows important but not specialized\"},\"overall_score\":7.0,\"summary\":\"Strong product-market fit potential with clear ROI for agents. Daily use case drives retention. Competition from established CRMs adding AI features is the main risk. First-mover advantage in AI-native real estate tools could be valuable.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_008",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A peer-to-peer lending platform for small business loans in emerging markets, using mobile money for disbursement."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":9,\"reason\":\"Small businesses in emerging markets have extremely limited access to credit\"},\"pain_frequency\":{\"score\":7,\"reason\":\"Businesses need working capital regularly for inventory and operations\"},\"existing_alternatives\":{\"score\":8,\"reason\":\"Traditional banks underserve this segment and microfinance has high rates\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Borrowers accept reasonable interest rates given lack of alternatives\"},\"market_size\":{\"score\":9,\"reason\":\"Billions of underbanked people in emerging markets\"},\"scalability\":{\"score\":7,\"reason\":\"Mobile money enables digital disbursement but credit risk assessment is complex\"},\"profitability_potential\":{\"score\":7,\"reason\":\"Net interest margin potential but default risk is significant\"},\"defensibility\":{\"score\":6,\"reason\":\"Credit scoring data and mobile money partnerships create barriers\"},\"time_to_value\":{\"score\":7,\"reason\":\"Fast disbursement via mobile money within hours\"},\"founder_market_fit_requirement\":{\"score\":9,\"reason\":\"Deep understanding of local financial systems, regulations, and credit risk needed\"},\"overall_score\":7.7,\"summary\":\"Massive underserved market with genuine need. Mobile money infrastructure enables scale. Key risks are credit defaults and regulatory complexity across different countries. Requires founders with deep fintech and emerging market expertise.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_009",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A wearable device that monitors soil moisture and sends alerts to home gardeners when plants need watering."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":4,\"reason\":\"Overwatering or underwatering plants is annoying but not critical for most gardeners\"},\"pain_frequency\":{\"score\":6,\"reason\":\"Gardeners check plants daily during growing season\"},\"existing_alternatives\":{\"score\":4,\"reason\":\"Cheap soil moisture meters and smart irrigation systems already exist\"},\"willingness_to_pay\":{\"score\":5,\"reason\":\"Gardeners spend on tools but price sensitivity is high for accessories\"},\"market_size\":{\"score\":6,\"reason\":\"Large gardening market but niche within it for smart devices\"},\"scalability\":{\"score\":4,\"reason\":\"Hardware requires manufacturing, inventory, and distribution\"},\"profitability_potential\":{\"score\":4,\"reason\":\"Hardware margins are thin and competition drives prices down\"},\"defensibility\":{\"score\":3,\"reason\":\"Simple sensor technology is easily replicated\"},\"time_to_value\":{\"score\":8,\"reason\":\"Plug in sensor and get immediate readings\"},\"founder_market_fit_requirement\":{\"score\":5,\"reason\":\"Hardware engineering and IoT experience needed\"},\"overall_score\":4.9,\"summary\":\"Decent idea but faces commoditization risk. Cheap alternatives already exist. Could work as part of a broader smart garden ecosystem but standalone sensor business has thin margins and low defensibility.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_010",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An online marketplace for buying and selling used textbooks between college students at the same university."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":7,\"reason\":\"Textbook costs are a significant financial burden for students\"},\"pain_frequency\":{\"score\":3,\"reason\":\"Students buy textbooks once or twice per semester\"},\"existing_alternatives\":{\"score\":3,\"reason\":\"Amazon, Chegg, and campus bookstores already serve this market\"},\"willingness_to_pay\":{\"score\":4,\"reason\":\"Students are extremely price-sensitive and expect low or no fees\"},\"market_size\":{\"score\":5,\"reason\":\"Large student population but declining textbook market due to digital alternatives\"},\"scalability\":{\"score\":5,\"reason\":\"Need to build critical mass at each university individually\"},\"profitability_potential\":{\"score\":3,\"reason\":\"Low transaction values and price-sensitive users limit revenue\"},\"defensibility\":{\"score\":3,\"reason\":\"Low switching costs and easy to replicate\"},\"time_to_value\":{\"score\":7,\"reason\":\"Students can list and find books quickly\"},\"founder_market_fit_requirement\":{\"score\":2,\"reason\":\"Any student can understand this market\"},\"overall_score\":4.2,\"summary\":\"Classic student project idea with real pain but tough economics. Established competitors, price-sensitive users, and declining physical textbook market make this challenging. The local university angle provides some differentiation but limits scale.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_011",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A SaaS tool that automatically detects and removes duplicate customer records across CRM systems."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":7,\"reason\":\"Duplicate records cause wasted sales effort and inaccurate reporting\"},\"pain_frequency\":{\"score\":8,\"reason\":\"New duplicates are created constantly as data flows in from multiple sources\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"Built-in CRM dedup tools are basic; specialized tools like RingLead exist but are expensive\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Companies pay for data quality tools that improve sales efficiency\"},\"market_size\":{\"score\":7,\"reason\":\"Every company using a CRM has this problem\"},\"scalability\":{\"score\":9,\"reason\":\"Pure SaaS with API integrations scales easily\"},\"profitability_potential\":{\"score\":8,\"reason\":\"High-margin SaaS with enterprise pricing potential\"},\"defensibility\":{\"score\":5,\"reason\":\"Matching algorithms can be replicated but integration depth creates stickiness\"},\"time_to_value\":{\"score\":7,\"reason\":\"Can show duplicate count and savings estimate immediately\"},\"founder_market_fit_requirement\":{\"score\":6,\"reason\":\"Data engineering and CRM ecosystem knowledge needed\"},\"overall_score\":7.0,\"summary\":\"Solid B2B SaaS opportunity with clear ROI story. Data quality is a persistent problem that companies will pay to solve. Competition exists but market is large enough for multiple players.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_016",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A no-code platform for creating interactive product demos and walkthroughs for SaaS companies."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"SaaS companies struggle to show product value before purchase, losing deals\"},\"pain_frequency\":{\"score\":8,\"reason\":\"Every sales cycle and marketing campaign needs demos\"},\"existing_alternatives\":{\"score\":4,\"reason\":\"Navattic, Storylane, and Reprise already compete in this space\"},\"willingness_to_pay\":{\"score\":9,\"reason\":\"SaaS companies have marketing budgets and clear ROI from better demos\"},\"market_size\":{\"score\":7,\"reason\":\"Thousands of SaaS companies globally need demo tools\"},\"scalability\":{\"score\":9,\"reason\":\"Pure software platform with self-serve onboarding\"},\"profitability_potential\":{\"score\":8,\"reason\":\"SaaS pricing with high margins and expansion revenue\"},\"defensibility\":{\"score\":4,\"reason\":\"Feature parity is achievable but ecosystem integrations help\"},\"time_to_value\":{\"score\":8,\"reason\":\"Users can create a demo in under an hour\"},\"founder_market_fit_requirement\":{\"score\":5,\"reason\":\"SaaS sales experience helpful but not specialized\"},\"overall_score\":7.0,\"summary\":\"Hot category with proven demand. Multiple funded competitors validate the market. Differentiation through ease of use, pricing, or specific integrations is key. Late entry needs a clear wedge.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_023",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A telehealth platform specifically for mental health therapy in rural and underserved areas."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":9,\"reason\":\"Mental health access in rural areas is critically lacking with long wait times\"},\"pain_frequency\":{\"score\":8,\"reason\":\"Therapy requires weekly or biweekly sessions\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"BetterHelp and Talkspace exist but don't focus on underserved areas specifically\"},\"willingness_to_pay\":{\"score\":6,\"reason\":\"Insurance coverage varies and rural populations have lower income\"},\"market_size\":{\"score\":7,\"reason\":\"60 million Americans live in rural areas with mental health provider shortages\"},\"scalability\":{\"score\":7,\"reason\":\"Telehealth scales well but therapist supply is the bottleneck\"},\"profitability_potential\":{\"score\":6,\"reason\":\"Insurance reimbursement complexity and therapist costs limit margins\"},\"defensibility\":{\"score\":5,\"reason\":\"Therapist network and rural community trust create some moat\"},\"time_to_value\":{\"score\":7,\"reason\":\"First session can be booked within days vs months for in-person\"},\"founder_market_fit_requirement\":{\"score\":8,\"reason\":\"Healthcare regulations, insurance billing, and rural community understanding needed\"},\"overall_score\":6.8,\"summary\":\"Important social impact opportunity with real demand. Insurance and regulatory complexity are the main challenges. Therapist supply constraints limit growth. Could attract mission-driven funding and partnerships with rural health systems.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_024",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An API service that converts any PDF document into structured, queryable data."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"Extracting data from PDFs is a universal pain point across industries\"},\"pain_frequency\":{\"score\":9,\"reason\":\"Businesses process PDFs constantly for invoices, contracts, reports\"},\"existing_alternatives\":{\"score\":4,\"reason\":\"AWS Textract, Google Document AI exist but are complex to implement\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Developers and companies pay for APIs that save engineering time\"},\"market_size\":{\"score\":9,\"reason\":\"Every industry deals with PDF data extraction\"},\"scalability\":{\"score\":9,\"reason\":\"API service scales horizontally with usage-based pricing\"},\"profitability_potential\":{\"score\":8,\"reason\":\"Usage-based API pricing with high margins at scale\"},\"defensibility\":{\"score\":5,\"reason\":\"Model accuracy and document type coverage create differentiation\"},\"time_to_value\":{\"score\":9,\"reason\":\"Developers can integrate and see results in minutes\"},\"founder_market_fit_requirement\":{\"score\":6,\"reason\":\"ML and document processing expertise needed\"},\"overall_score\":7.5,\"summary\":\"Excellent developer tool opportunity with massive TAM. The key differentiator is accuracy and ease of use compared to cloud provider offerings. Usage-based pricing aligns well with customer value.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_031",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A dating app exclusively for dog owners where matches are based on dog compatibility."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":4,\"reason\":\"Finding a partner who likes dogs is nice-to-have, not a critical need\"},\"pain_frequency\":{\"score\":5,\"reason\":\"Dating is ongoing but dog compatibility is a secondary filter\"},\"existing_alternatives\":{\"score\":3,\"reason\":\"Mainstream dating apps let you filter by pet ownership\"},\"willingness_to_pay\":{\"score\":5,\"reason\":\"Dating app users pay for premium features but niche apps struggle\"},\"market_size\":{\"score\":4,\"reason\":\"Subset of dog owners who are single and want dog-specific dating\"},\"scalability\":{\"score\":7,\"reason\":\"App scales but needs critical mass of users in each city\"},\"profitability_potential\":{\"score\":4,\"reason\":\"Small user base limits subscription revenue\"},\"defensibility\":{\"score\":3,\"reason\":\"Feature can be added to any existing dating app\"},\"time_to_value\":{\"score\":5,\"reason\":\"Need enough local users before matches are meaningful\"},\"founder_market_fit_requirement\":{\"score\":2,\"reason\":\"No specialized expertise needed\"},\"overall_score\":4.2,\"summary\":\"Cute concept but too niche for a standalone app. The cold start problem is severe — need many users in each city. Better as a feature within an existing dating platform than a separate product.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_032",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: An enterprise tool that monitors employee burnout risk using anonymized communication pattern analysis."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"Employee burnout costs companies billions in turnover and lost productivity\"},\"pain_frequency\":{\"score\":8,\"reason\":\"HR teams need ongoing visibility into workforce wellbeing\"},\"existing_alternatives\":{\"score\":6,\"reason\":\"Survey tools like Culture Amp exist but lack real-time behavioral signals\"},\"willingness_to_pay\":{\"score\":8,\"reason\":\"Enterprise HR budgets are substantial for retention tools\"},\"market_size\":{\"score\":8,\"reason\":\"Every large company with knowledge workers is a potential customer\"},\"scalability\":{\"score\":8,\"reason\":\"SaaS integrates with existing communication tools\"},\"profitability_potential\":{\"score\":8,\"reason\":\"Enterprise SaaS pricing with high contract values\"},\"defensibility\":{\"score\":6,\"reason\":\"Proprietary models and data partnerships create barriers\"},\"time_to_value\":{\"score\":6,\"reason\":\"Need weeks of data collection before insights are meaningful\"},\"founder_market_fit_requirement\":{\"score\":7,\"reason\":\"Organizational psychology and data science expertise needed\"},\"overall_score\":7.3,\"summary\":\"Strong enterprise opportunity addressing a growing concern. Privacy considerations are critical — anonymization must be bulletproof. Sales cycle will be long due to sensitivity of monitoring employee communications. Trust and compliance are key differentiators.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_036",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A SaaS tool that auto-generates API documentation from source code comments and type annotations."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":7,\"reason\":\"Outdated API docs frustrate developers and slow down integrations\"},\"pain_frequency\":{\"score\":8,\"reason\":\"Documentation needs updating with every code change\"},\"existing_alternatives\":{\"score\":3,\"reason\":\"Swagger, Redoc, and JSDoc already handle this well for many frameworks\"},\"willingness_to_pay\":{\"score\":6,\"reason\":\"Developer tools have moderate willingness to pay\"},\"market_size\":{\"score\":7,\"reason\":\"Every company with APIs needs documentation\"},\"scalability\":{\"score\":9,\"reason\":\"Pure SaaS with CI/CD integration scales easily\"},\"profitability_potential\":{\"score\":6,\"reason\":\"Competitive pricing pressure from free open-source alternatives\"},\"defensibility\":{\"score\":3,\"reason\":\"Open-source tools provide similar functionality for free\"},\"time_to_value\":{\"score\":8,\"reason\":\"Point at a repo and get docs in minutes\"},\"founder_market_fit_requirement\":{\"score\":5,\"reason\":\"Developer tools experience helpful\"},\"overall_score\":6.2,\"summary\":\"Real problem but crowded space with strong free alternatives. Needs to offer significantly better output quality or unique features like AI-enhanced descriptions to justify paid pricing over open-source options.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_015",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A decentralized protocol for verifying academic credentials on the blockchain."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":6,\"reason\":\"Credential fraud exists but verification is not a daily pain for most\"},\"pain_frequency\":{\"score\":3,\"reason\":\"Credential verification happens during hiring, not frequently\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"National Student Clearinghouse and manual verification processes work adequately\"},\"willingness_to_pay\":{\"score\":4,\"reason\":\"Universities and employers have limited budgets for verification tools\"},\"market_size\":{\"score\":6,\"reason\":\"Global education market is large but verification is a small slice\"},\"scalability\":{\"score\":7,\"reason\":\"Protocol scales once adopted but adoption is the challenge\"},\"profitability_potential\":{\"score\":4,\"reason\":\"Blockchain protocols struggle with monetization\"},\"defensibility\":{\"score\":4,\"reason\":\"Open protocol can be forked; network effects provide some moat\"},\"time_to_value\":{\"score\":3,\"reason\":\"Requires university adoption before verifiers see value\"},\"founder_market_fit_requirement\":{\"score\":8,\"reason\":\"Deep understanding of higher education systems and blockchain needed\"},\"overall_score\":5.0,\"summary\":\"Solution looking for a problem. Current verification methods work well enough for most use cases. Blockchain adds complexity without clear benefit over centralized databases. University adoption would be extremely slow.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_019",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A platform that aggregates and compares insurance quotes for gig economy workers."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":8,\"reason\":\"Gig workers lack employer-provided insurance and finding affordable coverage is stressful\"},\"pain_frequency\":{\"score\":4,\"reason\":\"Insurance shopping happens annually or when coverage changes\"},\"existing_alternatives\":{\"score\":5,\"reason\":\"Healthcare.gov and general comparison sites exist but aren't gig-worker focused\"},\"willingness_to_pay\":{\"score\":6,\"reason\":\"Workers will use free comparison tools; monetization is via insurance commissions\"},\"market_size\":{\"score\":8,\"reason\":\"Tens of millions of gig workers in the US alone\"},\"scalability\":{\"score\":7,\"reason\":\"Digital platform scales but insurance partnerships take time to build\"},\"profitability_potential\":{\"score\":7,\"reason\":\"Insurance lead generation and commissions can be lucrative\"},\"defensibility\":{\"score\":5,\"reason\":\"Insurance carrier relationships and gig platform partnerships create barriers\"},\"time_to_value\":{\"score\":8,\"reason\":\"Users can compare quotes in minutes\"},\"founder_market_fit_requirement\":{\"score\":7,\"reason\":\"Insurance industry knowledge and regulatory understanding needed\"},\"overall_score\":6.5,\"summary\":\"Growing market with real need. Commission-based model aligns incentives. Key challenge is building insurance carrier partnerships and differentiating from general comparison sites. Partnerships with gig platforms like Uber or DoorDash could be a distribution advantage.\"}"
+      }
+    ]
+  },
+  {
+    "source_id": "seed_040",
+    "source_type": "original",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a startup and project evaluator. Given a project description, evaluate it across 10 business-viability dimensions, each scored 1-10 with a brief justification. Output valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Evaluate this project: A Chrome extension that blocks all social media sites during work hours with a customizable schedule."
+      },
+      {
+        "role": "assistant",
+        "content": "{\"pain_severity\":{\"score\":6,\"reason\":\"Social media distraction is a real productivity problem for many workers\"},\"pain_frequency\":{\"score\":9,\"reason\":\"Temptation to check social media occurs many times daily\"},\"existing_alternatives\":{\"score\":2,\"reason\":\"Freedom, Cold Turkey, and StayFocusd already do this well\"},\"willingness_to_pay\":{\"score\":4,\"reason\":\"Some users pay for productivity tools but many expect free browser extensions\"},\"market_size\":{\"score\":6,\"reason\":\"Large number of knowledge workers struggle with digital distraction\"},\"scalability\":{\"score\":9,\"reason\":\"Browser extension distributes trivially through Chrome Web Store\"},\"profitability_potential\":{\"score\":3,\"reason\":\"Crowded free market makes monetization difficult\"},\"defensibility\":{\"score\":2,\"reason\":\"Simple functionality easily replicated by competitors\"},\"time_to_value\":{\"score\":9,\"reason\":\"Install and immediately start blocking\"},\"founder_market_fit_requirement\":{\"score\":2,\"reason\":\"Basic web development skills sufficient\"},\"overall_score\":5.2,\"summary\":\"Real problem but saturated market with established free alternatives. Difficult to differentiate or monetize. Could work as a feature within a broader productivity suite rather than a standalone product.\"}"
+      }
+    ]
+  }
+]

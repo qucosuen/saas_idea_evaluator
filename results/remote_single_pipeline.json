@@ -1,0 +1,85 @@
+{
+  "job": "Accountant",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "hardware": {
+    "cpu_threads": 16,
+    "machine": "windows_remote"
+  },
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "latency_ms": 2314.5,
+      "tokens": 71,
+      "scores": {
+        "format_score": 1.0,
+        "step_count": 5,
+        "concreteness": 1.0,
+        "verb_hits": 8,
+        "vague_hits": 0,
+        "relevance": 0.2,
+        "pattern_hits": 1,
+        "stage_score": 0.76
+      }
+    },
+    {
+      "name": "problem_extractor",
+      "latency_ms": 7631.6,
+      "tokens": 242,
+      "scores": {
+        "constraint_adherence": 1.0,
+        "keyword_hits": 2,
+        "coverage": 1.0,
+        "problem_count": 5,
+        "alignment": 1.0,
+        "stage_score": 1.0
+      }
+    },
+    {
+      "name": "solution_mapper",
+      "latency_ms": 8675.8,
+      "tokens": 250,
+      "scores": {
+        "valid_choices": 0.2,
+        "solution_hits": 1,
+        "coverage": 0.8,
+        "solution_count": 4,
+        "fit_score": 0.333,
+        "stage_score": 0.427
+      }
+    },
+    {
+      "name": "evaluator",
+      "latency_ms": 5463.5,
+      "tokens": 139,
+      "scores": {
+        "format_score": 1.0,
+        "has_scores": true,
+        "range_score": 1.0,
+        "scores_found": [
+          1,
+          5,
+          5,
+          5,
+          2,
+          5,
+          5,
+          5,
+          3,
+          5
+        ],
+        "consistency": 1.0,
+        "stage_score": 1.0
+      },
+      "usefulness": {
+        "feasibility_scores": [],
+        "impact_scores": [],
+        "high_feasibility_count": 0,
+        "high_impact_count": 0,
+        "is_useful": false,
+        "usefulness_score": 0.0
+      }
+    }
+  ],
+  "total_latency_ms": 24085.4,
+  "final_score": 0.675
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLM Pipeline — Workflow Diagram</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg: #f4f6f9;
+    --stage-bg: #dbeafe; --stage-border: #93c5fd; --stage-text: #1e40af;
+    --problem-bg: #fee2e2; --problem-border: #fca5a5; --problem-text: #991b1b;
+    --solution-bg: #dcfce7; --solution-border: #86efac; --solution-text: #166534;
+    --eval-bg: #fef9c3; --eval-border: #fde047; --eval-text: #854d0e;
+    --text: #1e293b; --text2: #475569;
+    --font: 'Inter', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  .header {
+    background: #fff; border-bottom: 1px solid #e2e8f0;
+    padding: 14px 28px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .header h1 { font-size: 16px; font-weight: 700; color: var(--text); }
+  .header select {
+    padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 6px;
+    font-size: 13px; font-family: var(--font); background: #fff; cursor: pointer;
+  }
+  .header .meta { font-size: 12px; color: #94a3b8; }
+
+  .legend {
+    background: #fff; border-bottom: 1px solid #f1f5f9;
+    padding: 10px 28px; display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
+  .legend-box { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid; }
+  .legend-box.stage    { background: var(--stage-bg);    border-color: var(--stage-border); }
+  .legend-box.problem  { background: var(--problem-bg);  border-color: var(--problem-border); }
+  .legend-box.solution { background: var(--solution-bg); border-color: var(--solution-border); }
+  .legend-box.eval     { background: var(--eval-bg);     border-color: var(--eval-border); }
+
+  #content { position: relative; min-height: calc(100vh - 130px); }
+  .diagram-wrap { padding: 24px; overflow-x: auto; }
+  .diagram { position: relative; min-width: max-content; }
+
+  .conn-svg {
+    position: absolute; top: 0; left: 0;
+    pointer-events: none; z-index: 1;
+  }
+  .nodes { position: relative; z-index: 2; }
+
+  /* Cards use absolute positioning set by JS after measuring */
+  .card {
+    position: absolute;
+    border-radius: 10px; padding: 12px 14px;
+    text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); z-index: 10; }
+
+  .card-stage { background: var(--stage-bg); border: 2px solid var(--stage-border); }
+  .card-stage .title { font-size: 14px; font-weight: 700; color: var(--stage-text); }
+
+  .card-problem { background: var(--problem-bg); border: 2px solid var(--problem-border); }
+  .card-problem .text { font-size: 11px; color: var(--problem-text); line-height: 1.5; font-style: italic; }
+
+  .card-solution { background: var(--solution-bg); border: 2px solid var(--solution-border); }
+  .card-solution .sol-header {
+    font-size: 12px; font-weight: 700; color: var(--solution-text);
+    margin-bottom: 6px; padding-bottom: 5px; border-bottom: 1px solid var(--solution-border);
+  }
+  .card-solution .text { font-size: 11px; color: #1e293b; line-height: 1.5; }
+
+  .card-eval { background: var(--eval-bg); border: 2px solid var(--eval-border); }
+  .card-eval .eval-header { font-size: 11px; font-weight: 700; color: var(--eval-text); margin-bottom: 6px; }
+  .card-eval .scores { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; }
+  .pill { font-size: 10px; padding: 2px 7px; border-radius: 6px; font-weight: 600; background: rgba(0,0,0,0.05); color: var(--eval-text); }
+
+  .summary-bar {
+    background: #fff; border-top: 1px solid #e2e8f0;
+    padding: 12px 28px; display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .summary-stat { display: flex; flex-direction: column; gap: 1px; }
+  .summary-stat .sl { font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+  .summary-stat .sv { font-size: 15px; font-weight: 700; color: var(--text); }
+  .summary-stat .sv.ok { color: #16a34a; }
+  .summary-stat .sv.fail { color: #dc2626; }
+
+  .loading { text-align: center; padding: 100px; color: #94a3b8; }
+  .error { text-align: center; padding: 60px; color: #dc2626; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>SLM Pipeline — Workflow Diagram</h1>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <select id="jobSelect" aria-label="Select pipeline run"><option>Loading...</option></select>
+    <span class="meta" id="metaInfo"></span>
+  </div>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-box stage"></div> Workflow Stage</div>
+  <div class="legend-item"><div class="legend-box problem"></div> Problem</div>
+  <div class="legend-item"><div class="legend-box solution"></div> Solution</div>
+  <div class="legend-item"><div class="legend-box eval"></div> Evaluation</div>
+</div>
+<div id="content"><div class="loading">Loading pipeline data...</div></div>
+<div class="summary-bar" id="summaryBar" style="display:none"></div>
+
+<script>
+
+let allRuns = [];
+
+async function init() {
+  try {
+    const resp = await fetch('/api/data');
+    if (!resp.ok) throw new Error('API error');
+    const data = await resp.json();
+    allRuns = data.pipeline_runs || [];
+    if (!allRuns.length) {
+      document.getElementById('content').innerHTML = '<div class="error">No pipeline runs found.</div>';
+      return;
+    }
+    const sel = document.getElementById('jobSelect');
+    sel.innerHTML = allRuns.map((r, i) =>
+      `<option value="${i}">${esc(r.job)}${r.success ? ' \u2713' : ' \u2717'}</option>`
+    ).join('');
+    sel.addEventListener('change', () => renderPipeline(allRuns[+sel.value]));
+    renderPipeline(allRuns[0]);
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<div class="error">${esc(e.message)}</div>`;
+  }
+}
+
+function renderPipeline(run) {
+  const content = document.getElementById('content');
+  if (!run || !run.stages || run.stages.length < 4) {
+    content.innerHTML = '<div class="error">Incomplete pipeline data.</div>';
+    return;
+  }
+
+  const workflows = run.stages[0].parsed || [];
+  const problems  = run.stages[1].parsed || [];
+  const solutions = run.stages[2].parsed || [];
+  const evals     = run.stages[3].parsed || [];
+
+  const steps = workflows.map((w, i) => ({
+    title: w.title,
+    problem: problems[i] ? problems[i].problem : '',
+    category: problems[i] ? problems[i].category : '',
+    solutionType: solutions[i] ? solutions[i].solution_type : '',
+    rationale: solutions[i] ? solutions[i].rationale : '',
+    feasibility: evals[i] ? evals[i].feasibility : null,
+    impact: evals[i] ? evals[i].impact : null,
+    complexity: evals[i] ? evals[i].complexity : null,
+  }));
+
+  const n = steps.length;
+  const stageW = 160, probW = 170, solW = 180, evalW = 160;
+  const colSpacing = 210;
+  const padLeft = 70;
+  const vGap = 28; // vertical gap between cards
+
+  // Pass 1: render cards offscreen to measure heights
+  let measureHtml = '';
+  steps.forEach((step, i) => {
+    measureHtml += `<div id="m-stage-${i}" class="card card-stage" style="position:absolute;visibility:hidden;width:${stageW}px;">
+      <div class="title">${esc(step.title)}</div></div>`;
+    measureHtml += `<div id="m-prob-${i}" class="card card-problem" style="position:absolute;visibility:hidden;width:${probW}px;">
+      <div class="text">${esc(step.problem)}</div></div>`;
+    measureHtml += `<div id="m-sol-${i}" class="card card-solution" style="position:absolute;visibility:hidden;width:${solW}px;">
+      <div class="sol-header">${esc(step.solutionType)}</div>
+      <div class="text">${esc(step.rationale)}</div></div>`;
+    measureHtml += `<div id="m-eval-${i}" class="card card-eval" style="position:absolute;visibility:hidden;width:${evalW}px;">
+      <div class="eval-header">Evaluation</div>
+      <div class="scores">
+        ${step.feasibility !== null ? `<span class="pill">F:${step.feasibility}</span>` : ''}
+        ${step.impact !== null ? `<span class="pill">I:${step.impact}</span>` : ''}
+        ${step.complexity !== null ? `<span class="pill">C:${step.complexity}</span>` : ''}
+      </div></div>`;
+  });
+
+  content.innerHTML = `<div class="diagram-wrap"><div class="diagram" id="diagram">${measureHtml}</div></div>`;
+
+  // Measure
+  const heights = steps.map((_, i) => ({
+    stage: document.getElementById(`m-stage-${i}`).offsetHeight,
+    prob:  document.getElementById(`m-prob-${i}`).offsetHeight,
+    sol:   document.getElementById(`m-sol-${i}`).offsetHeight,
+    eval:  document.getElementById(`m-eval-${i}`).offsetHeight,
+  }));
+
+  // Compute max satellite stack height (prob + sol + eval + gaps) for above and below
+  let maxAbove = 0, maxBelow = 0;
+  steps.forEach((_, i) => {
+    const h = heights[i];
+    const stackH = h.prob + vGap + h.sol + vGap + h.eval + vGap;
+    if (i % 2 === 1) { // above
+      maxAbove = Math.max(maxAbove, stackH);
+    } else { // below
+      maxBelow = Math.max(maxBelow, stackH);
+    }
+  });
+
+  // Center Y: enough room for the tallest above-stack + half stage height
+  const maxStageH = Math.max(...heights.map(h => h.stage));
+  const centerY = maxAbove + maxStageH / 2 + 30;
+  const totalH = centerY + maxStageH / 2 + maxBelow + 50;
+  const totalW = padLeft * 2 + (n - 1) * colSpacing + solW;
+
+  // Pass 2: position everything
+  const positions = []; // {stage, prob, sol, eval} each with {x, y, w, h, cx, cy}
+
+  steps.forEach((step, i) => {
+    const h = heights[i];
+    const cx = padLeft + i * colSpacing + stageW / 2;
+    const above = (i % 2 === 1);
+
+    // Stage
+    const stageX = cx - stageW / 2;
+    const stageY = centerY - h.stage / 2;
+
+    let probX, probY, solX, solY, evalX, evalY;
+
+    if (above) {
+      // Stack upward: stage at center, problem above, solution above problem, eval above solution
+      probY = stageY - vGap - h.prob;
+      probX = cx - probW / 2;
+      solY = probY - vGap - h.sol;
+      solX = cx - solW / 2;
+      evalY = solY - vGap - h.eval;
+      evalX = cx - evalW / 2;
+    } else {
+      // Stack downward
+      probY = stageY + h.stage + vGap;
+      probX = cx - probW / 2;
+      solY = probY + h.prob + vGap;
+      solX = cx - solW / 2;
+      evalY = solY + h.sol + vGap;
+      evalX = cx - evalW / 2;
+    }
+
+    positions.push({
+      above,
+      stage: { x: stageX, y: stageY, w: stageW, h: h.stage, cx, cy: stageY + h.stage/2 },
+      prob:  { x: probX,  y: probY,  w: probW,  h: h.prob,  cx, cy: probY + h.prob/2 },
+      sol:   { x: solX,   y: solY,   w: solW,   h: h.sol,   cx, cy: solY + h.sol/2 },
+      eval:  { x: evalX,  y: evalY,  w: evalW,  h: h.eval,  cx, cy: evalY + h.eval/2 },
+    });
+  });
+
+  // Build final HTML
+  let nodesHtml = '';
+  let svgPaths = '';
+
+  steps.forEach((step, i) => {
+    const p = positions[i];
+
+    nodesHtml += `<div class="card card-stage" style="left:${p.stage.x}px;top:${p.stage.y}px;width:${stageW}px;">
+      <div class="title">${esc(step.title)}</div></div>`;
+
+    nodesHtml += `<div class="card card-problem" style="left:${p.prob.x}px;top:${p.prob.y}px;width:${probW}px;">
+      <div class="text">${esc(step.problem)}</div></div>`;
+
+    nodesHtml += `<div class="card card-solution" style="left:${p.sol.x}px;top:${p.sol.y}px;width:${solW}px;">
+      <div class="sol-header">${esc(step.solutionType)}</div>
+      <div class="text">${esc(step.rationale)}</div></div>`;
+
+    nodesHtml += `<div class="card card-eval" style="left:${p.eval.x}px;top:${p.eval.y}px;width:${evalW}px;">
+      <div class="eval-header">Evaluation</div>
+      <div class="scores">
+        ${step.feasibility !== null ? `<span class="pill">F:${step.feasibility}</span>` : ''}
+        ${step.impact !== null ? `<span class="pill">I:${step.impact}</span>` : ''}
+        ${step.complexity !== null ? `<span class="pill">C:${step.complexity}</span>` : ''}
+      </div></div>`;
+
+    // Arrows: Problem → Stage
+    if (p.above) {
+      svgPaths += arrowLine(p.prob.cx, p.prob.y + p.prob.h, p.stage.cx, p.stage.y, '#f87171', 'arrowRed');
+    } else {
+      svgPaths += arrowLine(p.prob.cx, p.prob.y, p.stage.cx, p.stage.y + p.stage.h, '#f87171', 'arrowRed');
+    }
+
+    // Arrows: Solution → Problem
+    if (p.above) {
+      svgPaths += arrowLine(p.sol.cx, p.sol.y + p.sol.h, p.prob.cx, p.prob.y, '#4ade80', 'arrowGreen');
+    } else {
+      svgPaths += arrowLine(p.sol.cx, p.sol.y, p.prob.cx, p.prob.y + p.prob.h, '#4ade80', 'arrowGreen');
+    }
+
+    // Arrows: Eval → Solution
+    if (p.above) {
+      svgPaths += arrowLine(p.eval.cx, p.eval.y + p.eval.h, p.sol.cx, p.sol.y, '#facc15', 'arrowYellow');
+    } else {
+      svgPaths += arrowLine(p.eval.cx, p.eval.y, p.sol.cx, p.sol.y + p.sol.h, '#facc15', 'arrowYellow');
+    }
+  });
+
+  // Horizontal spine arrows
+  for (let i = 0; i < n - 1; i++) {
+    const from = positions[i].stage, to = positions[i+1].stage;
+    svgPaths += `<line x1="${from.x + from.w + 2}" y1="${from.cy}" x2="${to.x - 2}" y2="${to.cy}"
+      stroke="#93c5fd" stroke-width="2.5" marker-end="url(#arrowBlue)"/>`;
+  }
+
+  const diagram = document.getElementById('diagram');
+  diagram.style.width = totalW + 'px';
+  diagram.style.height = totalH + 'px';
+  diagram.innerHTML = `
+    <svg class="conn-svg" viewBox="0 0 ${totalW} ${totalH}"
+         style="width:${totalW}px;height:${totalH}px;">
+      <defs>
+        <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="#f87171"/></marker>
+        <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="#4ade80"/></marker>
+        <marker id="arrowYellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="#facc15"/></marker>
+        <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="#93c5fd"/></marker>
+      </defs>
+      ${svgPaths}
+    </svg>
+    <div class="nodes">${nodesHtml}</div>`;
+
+  const totalMs = run.total_latency_ms || 0;
+  document.getElementById('metaInfo').textContent =
+    totalMs > 0 ? `Total: ${(totalMs/1000).toFixed(1)}s` : '';
+  renderSummary(run, steps);
+}
+
+function arrowLine(x1, y1, x2, y2, color, markerId) {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
+    stroke="${color}" stroke-width="2" marker-end="url(#${markerId})" opacity="0.7"/>`;
+}
+
+function renderSummary(run, steps) {
+  const bar = document.getElementById('summaryBar');
+  bar.style.display = 'flex';
+  const totalMs = run.total_latency_ms || 0;
+  const avgF = avg(steps.map(s => s.feasibility).filter(v => v !== null));
+  const avgI = avg(steps.map(s => s.impact).filter(v => v !== null));
+  const avgC = avg(steps.map(s => s.complexity).filter(v => v !== null));
+  bar.innerHTML = `
+    <div class="summary-stat"><span class="sl">Job</span><span class="sv">${esc(run.job)}</span></div>
+    <div class="summary-stat"><span class="sl">Status</span><span class="sv ${run.success?'ok':'fail'}">${run.success?'Success':'Failed'}</span></div>
+    <div class="summary-stat"><span class="sl">Latency</span><span class="sv">${totalMs>0?(totalMs/1000).toFixed(1)+'s':'cached'}</span></div>
+    <div class="summary-stat"><span class="sl">Steps</span><span class="sv">${steps.length}</span></div>
+    <div class="summary-stat"><span class="sl">Avg Feasibility</span><span class="sv">${avgF.toFixed(1)}/5</span></div>
+    <div class="summary-stat"><span class="sl">Avg Impact</span><span class="sv">${avgI.toFixed(1)}/5</span></div>
+    <div class="summary-stat"><span class="sl">Avg Complexity</span><span class="sv">${avgC.toFixed(1)}/5</span></div>
+  `;
+}
+
+function avg(a) { return a.length ? a.reduce((x,y) => x+y,0)/a.length : 0; }
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+init();
+</script>
+</body>
+</html>

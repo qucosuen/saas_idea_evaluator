@@ -1,0 +1,55 @@
+{
+  "model": "qwen2.5-1.5b-instruct-q4_k_m",
+  "champion": true,
+  "jobs_evaluated": 4,
+  "jobs_planned": 6,
+  "note": "2 hard-difficulty jobs timed out. Results from 2 easy + 2 medium jobs.",
+  "timestamp": "2026-04-13T08:30:00Z",
+  "final_score": {
+    "mean": 0.564,
+    "std": 0.137,
+    "min": 0.358,
+    "max": 0.687
+  },
+  "per_job_results": [
+    {"job": "Customer Support Agent", "difficulty": "easy", "score": 0.593, "latency_ms": 239327,
+     "stage1": {"format_score": 1.000, "concreteness": 0.200, "relevance": 0.400, "stage_score": 0.580, "step_count": 5, "verb_hits": 1, "pattern_hits": 2}},
+    {"job": "Data Entry Clerk", "difficulty": "easy", "score": 0.687, "latency_ms": 175074,
+     "stage1": {"format_score": 1.000, "concreteness": 1.000, "relevance": 0.200, "stage_score": 0.760, "step_count": 5, "verb_hits": 7, "pattern_hits": 1}},
+    {"job": "Office Manager", "difficulty": "medium", "score": 0.617, "latency_ms": 56707,
+     "stage1": {"format_score": 1.000, "concreteness": 0.600, "relevance": 0.000, "stage_score": 0.580, "step_count": 5, "verb_hits": 3, "pattern_hits": 0}},
+    {"job": "Sales Representative", "difficulty": "medium", "score": 0.358, "latency_ms": 172421,
+     "stage1": {"format_score": 0.140, "concreteness": 0.000, "relevance": 0.000, "stage_score": 0.056, "step_count": 1, "verb_hits": 0, "pattern_hits": 0,
+                "note": "Degenerate output — model entered repetition loop (Step 1: Step 1: Step 1:...)"}}
+  ],
+  "stage1_summary": {
+    "avg_format_score": 0.785,
+    "avg_concreteness": 0.450,
+    "avg_relevance": 0.150,
+    "avg_stage_score": 0.494,
+    "format_compliance_rate": 0.75,
+    "note": "3/4 jobs produced perfect 5-step format. Sales Representative triggered a repetition loop."
+  },
+  "by_difficulty": {
+    "easy": {"mean": 0.640, "count": 2},
+    "medium": {"mean": 0.488, "count": 2}
+  },
+  "latency": {
+    "avg_total_ms": 160882,
+    "min_total_ms": 56707,
+    "max_total_ms": 239327,
+    "avg_per_stage_ms": 40220
+  },
+  "observations": [
+    "Format compliance varies — model sometimes generates more or fewer than 5 steps",
+    "Score calibration is reasonable for easy jobs (0.64 avg) but drops for medium (0.49 avg)",
+    "Latency is dominated by token generation — 4 stages × ~40s each on CPU",
+    "Sales Representative scored lowest (0.358) — model struggled with sales-specific workflow patterns",
+    "Data Entry Clerk scored highest (0.687) — straightforward workflow with clear action verbs"
+  ],
+  "success_criteria": {
+    "format_gte_90pct": false,
+    "pipeline_stable": true,
+    "latency_under_500ms": false
+  }
+}

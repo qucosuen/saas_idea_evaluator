@@ -1,0 +1,18 @@
+project: project_evaluator
+provider: local
+registry:
+  registry_type: file
+  path: data/registry.db
+online_store:
+  type: sqlite
+  path: data/online_store.db
+offline_store:
+  type: postgres
+  host: localhost
+  port: 5432
+  database: feast_offline
+  db_schema: public
+  user: admin
+  password: admin
+  sslmode: disable
+entity_key_serialization_version: 3

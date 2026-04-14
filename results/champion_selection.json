@@ -1,0 +1,235 @@
+{
+  "metric": "QLE (Quality-Latency Efficiency)",
+  "formula": "QLE = Quality_Score \u00d7 Latency_Penalty, where Latency_Penalty = 1/(1 + t/T_ref)",
+  "T_ref_seconds": 30.0,
+  "quality_components": {
+    "json_validity": {
+      "weight": 25,
+      "description": "Output parses as valid JSON"
+    },
+    "schema_compliance": {
+      "weight": 20,
+      "description": "All 10 dimensions present with score and reason"
+    },
+    "score_calibration": {
+      "weight": 25,
+      "description": "Overall score falls within expected range for the idea quality"
+    },
+    "reason_specificity": {
+      "weight": 15,
+      "description": "Average reason length >= 40 characters"
+    },
+    "score_differentiation": {
+      "weight": 15,
+      "description": "Standard deviation of dimension scores >= 2.5"
+    }
+  },
+  "hardware": {
+    "cpu": "Intel i7-1185G7",
+    "threads": 4,
+    "backend": "llama.cpp GGUF Q4_K_M"
+  },
+  "timestamp": "2026-04-13T07:35:20.948161",
+  "champion": "Qwen2.5-1.5B-Instruct",
+  "champion_qle": 49.7,
+  "results": [
+    {
+      "model": "Qwen2.5-0.5B-Instruct",
+      "avg_quality": 8.3,
+      "avg_latency_seconds": 47.5,
+      "avg_latency_penalty": 0.387,
+      "avg_qle": 3.2,
+      "test_results": [
+        {
+          "description": "An app that helps freelancers track unpaid invoices and auto...",
+          "expected_tier": "strong",
+          "latency_seconds": 72.7,
+          "tokens": 400,
+          "quality_score": 0.0,
+          "latency_penalty": 0.292,
+          "qle": 0.0,
+          "details": {
+            "json_valid": false
+          }
+        },
+        {
+          "description": "A browser extension that changes all website backgrounds to ...",
+          "expected_tier": "weak",
+          "latency_seconds": 41.2,
+          "tokens": 212,
+          "quality_score": 25.0,
+          "latency_penalty": 0.422,
+          "qle": 10.5,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": false,
+            "dims_present": 0,
+            "overall_score": 8,
+            "calibration": 0,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 0,
+            "differentiation": 0.0,
+            "quality_score": 25.0
+          }
+        },
+        {
+          "description": "An AI-powered platform that automatically generates and file...",
+          "expected_tier": "strong",
+          "latency_seconds": 28.5,
+          "tokens": 400,
+          "quality_score": 0.0,
+          "latency_penalty": 0.513,
+          "qle": 0.0,
+          "details": {
+            "json_valid": false
+          }
+        }
+      ]
+    },
+    {
+      "model": "Qwen2.5-1.5B-Instruct",
+      "avg_quality": 69.1,
+      "avg_latency_seconds": 11.7,
+      "avg_latency_penalty": 0.72,
+      "avg_qle": 49.7,
+      "test_results": [
+        {
+          "description": "An app that helps freelancers track unpaid invoices and auto...",
+          "expected_tier": "strong",
+          "latency_seconds": 15.8,
+          "tokens": 103,
+          "quality_score": 78.6,
+          "latency_penalty": 0.655,
+          "qle": 51.5,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": true,
+            "dims_present": 10,
+            "overall_score": 8,
+            "calibration": 0.9,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 1.85,
+            "differentiation": 0.741,
+            "quality_score": 78.6
+          }
+        },
+        {
+          "description": "A browser extension that changes all website backgrounds to ...",
+          "expected_tier": "weak",
+          "latency_seconds": 8.1,
+          "tokens": 66,
+          "quality_score": 46.2,
+          "latency_penalty": 0.787,
+          "qle": 36.4,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": false,
+            "dims_present": 0,
+            "overall_score": 2,
+            "calibration": 0.85,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 0,
+            "differentiation": 0.0,
+            "quality_score": 46.2
+          }
+        },
+        {
+          "description": "An AI-powered platform that automatically generates and file...",
+          "expected_tier": "strong",
+          "latency_seconds": 11.1,
+          "tokens": 103,
+          "quality_score": 82.4,
+          "latency_penalty": 0.73,
+          "qle": 60.1,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": true,
+            "dims_present": 10,
+            "overall_score": 8,
+            "calibration": 0.95,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 2.27,
+            "differentiation": 0.909,
+            "quality_score": 82.4
+          }
+        }
+      ]
+    },
+    {
+      "model": "Qwen2.5-3B-Instruct",
+      "avg_quality": 69.9,
+      "avg_latency_seconds": 32.9,
+      "avg_latency_penalty": 0.477,
+      "avg_qle": 33.3,
+      "test_results": [
+        {
+          "description": "An app that helps freelancers track unpaid invoices and auto...",
+          "expected_tier": "strong",
+          "latency_seconds": 34.4,
+          "tokens": 185,
+          "quality_score": 70.1,
+          "latency_penalty": 0.466,
+          "qle": 32.7,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": true,
+            "dims_present": 10,
+            "overall_score": 6,
+            "calibration": 0.7,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 1.27,
+            "differentiation": 0.508,
+            "quality_score": 70.1
+          }
+        },
+        {
+          "description": "A browser extension that changes all website backgrounds to ...",
+          "expected_tier": "weak",
+          "latency_seconds": 32.8,
+          "tokens": 180,
+          "quality_score": 69.4,
+          "latency_penalty": 0.477,
+          "qle": 33.2,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": true,
+            "dims_present": 10,
+            "overall_score": 4,
+            "calibration": 0.75,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 0.95,
+            "differentiation": 0.379,
+            "quality_score": 69.4
+          }
+        },
+        {
+          "description": "An AI-powered platform that automatically generates and file...",
+          "expected_tier": "strong",
+          "latency_seconds": 31.5,
+          "tokens": 172,
+          "quality_score": 70.2,
+          "latency_penalty": 0.487,
+          "qle": 34.2,
+          "details": {
+            "json_valid": true,
+            "schema_compliance": true,
+            "dims_present": 10,
+            "overall_score": 6,
+            "calibration": 0.65,
+            "avg_reason_length": 0,
+            "reason_quality": 0.0,
+            "score_std": 1.49,
+            "differentiation": 0.598,
+            "quality_score": 70.2
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "test_001",
+    "description": "An app that helps freelancers track unpaid invoices and auto-send payment reminders via email and SMS.",
+    "category": "SaaS/Fintech",
+    "expected_quality": "good_idea"
+  },
+  {
+    "id": "test_002",
+    "description": "A social network exclusively for people who collect vintage typewriters. Users can post photos of their collections, trade machines, and attend virtual meetups.",
+    "category": "Social/Niche",
+    "expected_quality": "niche_idea"
+  },
+  {
+    "id": "test_003",
+    "description": "An AI-powered platform that automatically generates and files patent applications for inventors, handling prior art search, claim drafting, and USPTO submission.",
+    "category": "LegalTech/AI",
+    "expected_quality": "ambitious_idea"
+  },
+  {
+    "id": "test_004",
+    "description": "A browser extension that changes all website backgrounds to the color blue.",
+    "category": "Utility",
+    "expected_quality": "weak_idea"
+  },
+  {
+    "id": "test_005",
+    "description": "A B2B platform that connects small restaurants with local farms for direct produce sourcing, cutting out distributors and reducing food costs by 20-30%.",
+    "category": "Marketplace/FoodTech",
+    "expected_quality": "good_idea"
+  }
+]
