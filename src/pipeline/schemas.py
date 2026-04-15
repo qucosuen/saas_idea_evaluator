@@ -7,21 +7,30 @@ from dataclasses import dataclass, field
 
 
 @dataclass
-class WorkflowStep:
+class TaskStep:
     step_number: int
-    title: str
     description: str
 
 
 @dataclass
-class Problem:
+class WorkflowTask:
+    task_number: int
+    title: str
+    steps: list[TaskStep] = field(default_factory=list)
+
+
+@dataclass
+class StepAnalysis:
+    task_number: int
     step_number: int
-    problem: str
-    category: str  # time-consuming | repetitive | error-prone | manual | tedious
+    step_description: str
+    current_solution: str   # what tool/method is currently used for this step
+    problem: str            # problem with the current solution (empty string if none)
 
 
 @dataclass
 class Solution:
+    task_number: int
     step_number: int
     problem: str
     solution_type: str  # Automation Script | OCR Extraction | API Integration | Dashboard | Notification System
@@ -30,6 +39,7 @@ class Solution:
 
 @dataclass
 class Evaluation:
+    task_number: int
     step_number: int
     solution_type: str
     feasibility: int  # 1-5

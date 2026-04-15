@@ -2,13 +2,14 @@
 
 ## 1. Overview
 
-This diagram represents a **data processing workflow** enhanced with:
-- Identified **problems** at each stage
+This diagram represents a **job workflow** enhanced with:
+- Daily **tasks** a job worker performs, each broken into sequential **steps**
+- Identified **problems** at each task
 - Corresponding **automation solutions**
 
-The structure is a **horizontal pipeline** with vertical relationships:
-- Workflow stages (center row)
-- Problems (attached to stages)
+The structure is a **horizontal pipeline** of tasks with vertical relationships:
+- Tasks (center row) — each containing a sequence of steps
+- Problems (attached to tasks)
 - Solutions (attached to problems)
 
 ---
@@ -17,29 +18,43 @@ The structure is a **horizontal pipeline** with vertical relationships:
 
 ### 2.1 Main Flow (Horizontal)
 
-A single row of stages:
+A single row of tasks:
 
 [Data Entry] → [Data Validation] → [Data Cleaning] → [Data Reporting] → [Data Backup]
 
-- All nodes aligned horizontally
+- All task nodes aligned horizontally
 - Equal spacing between nodes
 - Connected using right-pointing arrows
 
 ---
 
-### 2.2 Vertical Structure Per Stage
+### 2.2 Task Detail
 
-Each stage has:
+Each task contains a sequence of steps describing how to complete that task:
+
+```
+Task: Data Entry
+  Step 1: Open the data entry form
+  Step 2: Input data from source documents
+  Step 3: Verify entered data against source
+  Step 4: Submit the completed form
+```
+
+---
+
+### 2.3 Vertical Structure Per Task
+
+Each task has:
 
 Option A (Top-down):
 [Solution]
    ↓
 [Problem]
    ↓
-[Stage]
+[Task + Steps]
 
 Option B (Bottom-up):
-[Stage]
+[Task + Steps]
    ↓
 [Problem]
    ↓
@@ -47,10 +62,10 @@ Option B (Bottom-up):
 
 ---
 
-### 2.3 Legend (Top-left)
+### 2.4 Legend (Top-left)
 
 Three vertically stacked boxes:
-- Blue → Workflow Stage
+- Blue → Task (with steps)
 - Red → Problem
 - Green → Solution
 
@@ -58,15 +73,23 @@ Three vertically stacked boxes:
 
 ## 3. Components
 
-### 3.1 Workflow Stage Node
+### 3.1 Task Node
 
 - Background: Light Blue
 - Border: Blue
 - Shape: Rounded rectangle
-- Text: Centered, bold
+- Structure:
+  - Header: Task title (bold)
+  - Body: Numbered list of steps to complete the task
 
 Example:
-"Data Entry"
+```
+Data Entry
+  1. Open the data entry form
+  2. Input data from source documents
+  3. Verify entered data against source
+  4. Submit the completed form
+```
 
 ---
 
@@ -75,7 +98,7 @@ Example:
 - Background: Light Red / Pink
 - Border: Red
 - Shape: Rounded rectangle
-- Text: Multi-line description
+- Text: Multi-line description of the problem with this task
 
 Example:
 "Inputting data from various sources into the database is time-consuming and prone to errors."
@@ -88,17 +111,17 @@ Example:
 - Border: Green
 - Shape: Rounded rectangle
 - Structure:
-  - Header: "automation script"
+  - Header: Solution type (e.g. "automation script")
   - Body: Description text
 
 ---
 
 ### 3.4 Arrows
 
-- Horizontal: connect stages
+- Horizontal: connect tasks (left to right)
 - Vertical:
   - Solution → Problem
-  - Problem → Stage
+  - Problem → Task
 - Style:
   - Thin lines
   - Arrowheads enabled
@@ -109,22 +132,27 @@ Example:
 ## 4. Relationships (Data Mapping)
 
 ### Data Entry
+- Steps: Open form → Input data → Verify entries → Submit form
 - Problem: Manual input is slow and error-prone
 - Solution: Automate data entry using templates
 
 ### Data Validation
+- Steps: Retrieve entries → Run validation rules → Flag errors → Correct flagged items
 - Problem: Repetitive manual checking
 - Solution: Automated validation tools
 
 ### Data Cleaning
+- Steps: Identify duplicates → Merge records → Standardize formats → Verify cleaned data
 - Problem: Duplicate and inconsistent data
 - Solution: Automated cleaning tools
 
 ### Data Reporting
+- Steps: Query database → Aggregate metrics → Generate charts → Compile report
 - Problem: Manual report generation
 - Solution: Automated reporting tools
 
 ### Data Backup
+- Steps: Select data scope → Compress files → Transfer to backup storage → Verify backup integrity
 - Problem: Manual secure storage effort
 - Solution: Automated backup tools
 
@@ -144,10 +172,16 @@ Example:
 
 ```json
 {
-  "stages": [
+  "tasks": [
     {
       "id": "data-entry",
       "label": "Data Entry",
+      "steps": [
+        "Open the data entry form",
+        "Input data from source documents",
+        "Verify entered data against source",
+        "Submit the completed form"
+      ],
       "problem": "Manual input is slow and error-prone",
       "solution": "Automate data entry using templates"
     }
@@ -207,13 +241,15 @@ Example:
 
 The implementation is considered complete when:
 
-- All 5 workflow stages are displayed horizontally
-- Each stage has:
+- All tasks are displayed horizontally
+- Each task shows:
+  - Task title
+  - Numbered list of steps to complete the task
   - One problem node
   - One solution node
 - All arrows correctly represent:
-  - Workflow progression (horizontal)
-  - Relationships (vertical)
+  - Task progression (horizontal)
+  - Relationships (vertical: Solution → Problem → Task)
 - Legend is visible and clearly explains color meaning
 - Layout is:
   - Visually balanced

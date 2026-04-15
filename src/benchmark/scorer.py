@@ -12,18 +12,22 @@ from src.benchmark.metrics import (
 from src.benchmark.pipeline import PipelineResult
 
 
-def score_pipeline(result: PipelineResult, expected_patterns: list[str]) -> dict:
+def score_pipeline(result: PipelineResult, expected_patterns: list[str],
+                   min_tasks: int = 3, critical_tasks: list[str] | None = None,
+                   expected_solutions: list[str] | None = None) -> dict:
     """Score all stages of a pipeline run and compute weighted final score."""
 
     # Stage 1
-    s1 = score_stage1_workflow(result.workflow, expected_patterns)
+    s1 = score_stage1_workflow(result.workflow, expected_patterns,
+                               min_tasks=min_tasks, critical_tasks=critical_tasks)
 
-    # Stage 2 — extract step text for alignment check
-    workflow_steps = [l.strip() for l in result.workflow.split("\n") if l.strip()]
-    s2 = score_stage2_problems(result.problems, workflow_steps)
+    # Stage 2 — extract task/step text for alignment check
+    workflow_lines = [l.strip() for l in result.workflow.split("\n") if l.strip()]
+    s2 = score_stage2_problems(result.problems, workflow_lines,
+                               expected_solutions=expected_solutions)
 
     # Stage 3
-    s3 = score_stage3_solutions(result.solutions, s2.get("problem_count", 5))
+    s3 = score_stage3_solutions(result.solutions, s2.get("problems_found", 5))
 
     # Stage 4
     s4 = score_stage4_evaluation(result.evaluation)
@@ -53,7 +57,7 @@ def score_pipeline(result: PipelineResult, expected_patterns: list[str]) -> dict
     return {
         "job": result.job,
         "stage_1_workflow": s1,
-        "stage_2_problems": s2,
+        "stage_2_step_analysis": s2,
         "stage_3_solutions": s3,
         "stage_4_evaluation": s4,
         "end_to_end": e2e,

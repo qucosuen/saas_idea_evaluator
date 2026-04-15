@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    "Sales Representative"
+  ],
+  "results": [
+    {
+      "job": "Sales Representative",
+      "format_score": 1.0,
+      "step_count": 5,
+      "duplication_penalty": 0.0,
+      "total_duplicates": 0,
+      "stage_score": 0.7,
+      "latency_ms": 39607.8,
+      "output": "Step 1: Step into the office to greet customers and initiate sales conversations.\nStep 2: Research potential leads using online databases, social media platforms, or industry reports for targeted outreach opportunities. \nStep 3: Schedule meetings with prospects based on identified needs through a CRM system like Salesforce or Microsoft Dynamics.\nStep 4: Present product features in detail during the meeting to close deals and generate sales revenue by offering solutions that meet customer demands accurately.\nStep 5: Follow up after each sale, providing ongoing support for any issues customers may encounter."
+    }
+  ],
+  "summary": {
+    "format_score_avg": 1.0,
+    "dup_penalty_avg": 0.0,
+    "duplication_rate": 0.0,
+    "stage_score_avg": 0.7
+  }
+}

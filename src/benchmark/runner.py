@@ -62,7 +62,10 @@ def run_benchmark(model_path: Path, dataset: list[dict], max_jobs: int | None = 
         print(f"[{i+1}/{len(jobs)}] {job} ({difficulty})", end=" ... ", flush=True)
 
         result = runner.run(job)
-        scores = score_pipeline(result, patterns)
+        scores = score_pipeline(result, patterns,
+                                min_tasks=job_data.get("min_tasks", 3),
+                                critical_tasks=job_data.get("critical_tasks"),
+                                expected_solutions=job_data.get("expected_solutions"))
         scores["difficulty"] = difficulty
 
         all_scores.append(scores)
@@ -88,7 +91,7 @@ def generate_report(scores: list[dict], model_name: str) -> dict:
     n = len(scores)
 
     # Per-stage averages
-    stage_names = ["stage_1_workflow", "stage_2_problems", "stage_3_solutions", "stage_4_evaluation"]
+    stage_names = ["stage_1_workflow", "stage_2_step_analysis", "stage_3_solutions", "stage_4_evaluation"]
     stage_avgs = {}
     for sn in stage_names:
         vals = [s[sn]["stage_score"] for s in scores]

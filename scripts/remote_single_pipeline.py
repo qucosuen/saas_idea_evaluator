@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from llama_cpp import Llama
-from src.benchmark.prompts import (
+from src.pipeline.prompts import (
     STAGE1_SYSTEM, STAGE1_USER, STAGE2_SYSTEM, STAGE2_USER,
     STAGE3_SYSTEM, STAGE3_USER, STAGE4_SYSTEM, STAGE4_USER,
 )

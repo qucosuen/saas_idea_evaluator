@@ -26,13 +26,13 @@ Build an offline-capable system that discovers automation opportunities from rea
 ```
 Job Input
   ↓
-Stage 1: Workflow Generator
+Stage 1: Workflow Generator (Job → Tasks with Steps)
   ↓
-Stage 2: Problem Extractor
+Stage 2: Step Analyzer (Steps → Current Solutions & Problems)
   ↓
-Stage 3: Solution Mapper
+Stage 3: Solution Mapper (Problems → Automation Solutions)
   ↓
-Stage 4: Evaluator
+Stage 4: Evaluator (Solutions → Scores)
   ↓
 Structured Output
 ```
@@ -107,15 +107,19 @@ evaluation = stage4(solutions)
 
 ### Stage 1
 
-* Format correctness
+* Format correctness (task/step structure)
 * Concreteness score
 * Relevance score
+* Coherence score (sequential flow within tasks)
+* Duplication penalty
+* Emptiness penalty
 
 ### Stage 2
 
-* Constraint adherence
-* Coverage
-* Alignment
+* Coverage (every step analyzed)
+* Solution specificity (references real tools/methods)
+* Problem quality (specific, actionable)
+* Alignment (relevant to the step)
 
 ### Stage 3
 

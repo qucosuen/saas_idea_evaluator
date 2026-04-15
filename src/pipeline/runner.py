@@ -91,12 +91,15 @@ class PipelineRunner:
         with open(path, "w") as f:
             json.dump({"output": output}, f)
 
-    def _generate(self, system: str, user: str) -> tuple[str, float, int]:
-        """Generate with optional cache lookup."""
+    def _generate(self, system: str, user: str, stage: str | None = None) -> tuple[str, float, int]:
+        """Generate with optional cache lookup. Uses per-stage config from config.yaml."""
         key = self._cache_key(system, user)
         cached = self._get_cached(key)
         if cached:
             return cached, 0.0, 0
+
+        from src.config import get_generation_params
+        params = get_generation_params(stage)
 
         start = time.perf_counter()
         resp = self.model.create_chat_completion(
@@ -104,8 +107,7 @@ class PipelineRunner:
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
             ],
-            max_tokens=self.max_tokens,
-            temperature=0.0,
+            **params,
         )
         elapsed_ms = (time.perf_counter() - start) * 1000
         output = resp["choices"][0]["message"]["content"]
@@ -114,13 +116,13 @@ class PipelineRunner:
         self._set_cached(key, output)
         return output, elapsed_ms, tokens
 
-    def _run_stage(self, name, system, user, validator) -> StageOutput:
+    def _run_stage(self, name, system, user, validator, stage: str | None = None) -> StageOutput:
         """Run a single stage with retry on validation failure."""
         last_raw = ""
         total_ms = 0.0
         total_tok = 0
         for attempt in range(1, self.max_retries + 1):
-            raw, ms, tok = self._generate(system, user)
+            raw, ms, tok = self._generate(system, user, stage)
             total_ms += ms
             total_tok += tok
             last_raw = raw
@@ -138,55 +140,63 @@ class PipelineRunner:
 
         return StageOutput(name, last_raw, None, total_ms, total_tok, self.max_retries, False)
 
-    def run(self, job: str) -> PipelineOutput:
-        """Execute the full 4-stage pipeline."""
+    def run(self, job: str, max_stages: int = 4) -> PipelineOutput:
+        """Execute the pipeline. Use max_stages to stop early (1-4)."""
         result = PipelineOutput(job=job)
 
-        # Stage 1: Workflow Generator
+        # Stage 1: Workflow Generator (Job → Tasks with Steps)
         s1 = self._run_stage(
             "workflow_generator",
             STAGE1_SYSTEM, STAGE1_USER.format(job=job),
             validate_stage1,
+            stage="stage1_workflow",
         )
         result.stages.append(s1)
-        if not s1.valid:
+        if not s1.valid or max_stages <= 1:
             result.total_latency_ms = s1.latency_ms
+            result.success = s1.valid
             return result
 
-        # Format workflow for next stage
         workflow_text = json.dumps([asdict(s) for s in s1.parsed], indent=2)
 
-        # Stage 2: Problem Extractor
+        # Stage 2: Step Analyzer (Steps → Current Solutions & Problems)
         s2 = self._run_stage(
-            "problem_extractor",
+            "step_analyzer",
             STAGE2_SYSTEM, STAGE2_USER.format(workflow=workflow_text),
             validate_stage2,
+            stage="stage2_problems",
         )
         result.stages.append(s2)
-        if not s2.valid:
+        if not s2.valid or max_stages <= 2:
             result.total_latency_ms = sum(s.latency_ms for s in result.stages)
+            result.success = all(s.valid for s in result.stages)
             return result
 
-        problems_text = json.dumps([asdict(p) for p in s2.parsed], indent=2)
+        # Filter to only steps with problems for Stage 3
+        analyses_with_problems = [asdict(a) for a in s2.parsed if a.problem.strip()]
+        problems_text = json.dumps(analyses_with_problems, indent=2)
 
-        # Stage 3: Solution Mapper
+        # Stage 3: Solution Mapper (Problems → Automation Solutions)
         s3 = self._run_stage(
             "solution_mapper",
             STAGE3_SYSTEM, STAGE3_USER.format(problems=problems_text),
             validate_stage3,
+            stage="stage3_solutions",
         )
         result.stages.append(s3)
-        if not s3.valid:
+        if not s3.valid or max_stages <= 3:
             result.total_latency_ms = sum(s.latency_ms for s in result.stages)
+            result.success = all(s.valid for s in result.stages)
             return result
 
         solutions_text = json.dumps([asdict(s) for s in s3.parsed], indent=2)
 
-        # Stage 4: Evaluator
+        # Stage 4: Evaluator (Solutions → Scores)
         s4 = self._run_stage(
             "evaluator",
             STAGE4_SYSTEM, STAGE4_USER.format(solutions=solutions_text),
             validate_stage4,
+            stage="stage4_evaluation",
         )
         result.stages.append(s4)
 

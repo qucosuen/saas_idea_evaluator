@@ -32,6 +32,7 @@ def print_result(output):
     print(f"\n{'='*60}")
     print(f"  JOB: {output.job}")
     print(f"  Status: {'✓ Success' if output.success else '✗ Failed'}")
+    print(f"  Stages run: {len(output.stages)}")
     print(f"  Total latency: {output.total_latency_ms:.0f}ms")
     print(f"{'='*60}")
 
@@ -42,11 +43,35 @@ def print_result(output):
         if stage.valid and stage.parsed:
             for item in stage.parsed:
                 d = asdict(item)
-                step = d.pop("step_number", "?")
-                parts = [f"{k}={v}" for k, v in d.items() if v]
-                print(f"    Step {step}: {', '.join(parts[:3])}")
+                # Handle Stage 1 tasks-with-steps
+                task_num = d.pop("task_number", d.pop("step_number", "?"))
+                steps = d.pop("steps", None)
+                title = d.pop("title", "")
+                if title:
+                    print(f"    Task {task_num}: {title}")
+                    if steps:
+                        for s in steps:
+                            print(f"      Step {s['step_number']}: {s['description']}")
+                # Handle Stage 2 step analysis
+                elif "current_solution" in d:
+                    step_num = d.get("step_number", "?")
+                    step_desc = d.get("step_description", "")
+                    sol = d.get("current_solution", "")
+                    prob = d.get("problem", "")
+                    print(f"    T{task_num}.S{step_num}: {step_desc}")
+                    print(f"      Solution: {sol}")
+                    if prob:
+                        print(f"      Problem:  {prob}")
+                else:
+                    step_num = d.pop("step_number", "")
+                    label = f"T{task_num}" + (f".S{step_num}" if step_num else "")
+                    parts = [f"{k}={v}" for k, v in d.items() if v]
+                    print(f"    {label}: {', '.join(parts[:3])}")
         elif not stage.valid:
-            print(f"    Raw: {stage.raw[:150]}...")
+            print(f"    ── Raw output ──")
+            for line in stage.raw.strip().split("\n"):
+                print(f"    {line.rstrip()}")
+            print(f"    ── End raw output ──")
 
     print(f"\n{'='*60}")
 
@@ -55,15 +80,24 @@ def main():
     parser = argparse.ArgumentParser(description="Local-first LLM pipeline: Job → Workflow → Problems → Solutions → Evaluation")
     parser.add_argument("job", nargs="?", help="Job title to analyze")
     parser.add_argument("--model", help="Path to GGUF model")
+    parser.add_argument("--remote", action="store_true",
+                        help="Use HuggingFace Inference API instead of local model (requires HF_TOKEN)")
     parser.add_argument("--json", action="store_true", help="Output JSON")
     parser.add_argument("--cache", action="store_true", help="Enable response caching")
     parser.add_argument("--max-tokens", type=int, default=350)
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--stages", type=int, default=4, choices=[1, 2, 3, 4],
+                        help="Number of stages to run (1-4, default: 4)")
     args = parser.parse_args()
 
-    model_path = find_model(args.model)
-    print(f"Loading {model_path.name}...", file=sys.stderr)
-    model = load_model(model_path)
+    if args.remote:
+        from src.pipeline.model import load_remote_model
+        print("Using HuggingFace Inference API...", file=sys.stderr)
+        model = load_remote_model()
+    else:
+        model_path = find_model(args.model)
+        print(f"Loading {model_path.name}...", file=sys.stderr)
+        model = load_model(model_path)
 
     runner = PipelineRunner(
         model,
@@ -73,7 +107,7 @@ def main():
     )
 
     def run_job(job_title):
-        result = runner.run(job_title)
+        result = runner.run(job_title, max_stages=args.stages)
         if args.json:
             print(json.dumps(result.to_dict(), indent=2))
         else:
