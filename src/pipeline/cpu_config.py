@@ -37,12 +37,20 @@ def get_thread_count(cpu_percent: int | None = None) -> int:
       1. cpu_percent argument (if provided)
       2. CPU_PERCENT from .env file
       3. CPU_PERCENT environment variable
-      4. Default: 50
+      4. cpu.percent from config.yaml
+      5. Default: 50
     """
     if cpu_percent is None:
         env_vars = _load_env()
-        raw = env_vars.get("CPU_PERCENT") or os.environ.get("CPU_PERCENT", "50")
-        cpu_percent = int(raw)
+        raw = env_vars.get("CPU_PERCENT") or os.environ.get("CPU_PERCENT")
+        if raw:
+            cpu_percent = int(raw)
+        else:
+            try:
+                from src.config import get_cpu_percent
+                cpu_percent = get_cpu_percent()
+            except Exception:
+                cpu_percent = 50
 
     cpu_percent = max(10, min(100, cpu_percent))  # clamp to 10-100
     total = os.cpu_count() or 4

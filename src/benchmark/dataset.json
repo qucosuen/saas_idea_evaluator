@@ -1,32 +1,121 @@
 [
-  {"job": "Data Entry Clerk", "difficulty": "easy", "expected_patterns": ["data entry", "typing", "spreadsheet", "records", "filing"]},
-  {"job": "Customer Support Agent", "difficulty": "easy", "expected_patterns": ["tickets", "customer", "response", "inquiry", "resolve"]},
-  {"job": "Receptionist", "difficulty": "easy", "expected_patterns": ["greeting", "scheduling", "phone", "appointment", "visitor"]},
-  {"job": "Warehouse Worker", "difficulty": "easy", "expected_patterns": ["inventory", "picking", "packing", "shipping", "stock"]},
-  {"job": "Retail Cashier", "difficulty": "easy", "expected_patterns": ["checkout", "payment", "scanning", "register", "receipt"]},
-  {"job": "File Clerk", "difficulty": "easy", "expected_patterns": ["filing", "sorting", "organizing", "documents", "archive"]},
-  {"job": "Mail Sorter", "difficulty": "easy", "expected_patterns": ["sorting", "delivery", "packages", "routing", "labels"]},
-  {"job": "Parking Lot Attendant", "difficulty": "easy", "expected_patterns": ["parking", "tickets", "vehicles", "payment", "monitoring"]},
-  {"job": "Library Assistant", "difficulty": "easy", "expected_patterns": ["cataloging", "shelving", "checkout", "returns", "patron"]},
-  {"job": "Janitor", "difficulty": "easy", "expected_patterns": ["cleaning", "maintenance", "supplies", "inspection", "schedule"]},
-  {"job": "Accountant", "difficulty": "medium", "expected_patterns": ["data entry", "verification", "reporting", "reconciliation", "audit"]},
-  {"job": "HR Manager", "difficulty": "medium", "expected_patterns": ["recruitment", "onboarding", "compliance", "performance", "payroll"]},
-  {"job": "Marketing Coordinator", "difficulty": "medium", "expected_patterns": ["campaign", "content", "analytics", "scheduling", "reporting"]},
-  {"job": "Sales Representative", "difficulty": "medium", "expected_patterns": ["prospecting", "outreach", "follow-up", "CRM", "closing"]},
-  {"job": "Office Manager", "difficulty": "medium", "expected_patterns": ["scheduling", "procurement", "coordination", "budgeting", "communication"]},
-  {"job": "Insurance Claims Adjuster", "difficulty": "medium", "expected_patterns": ["claims", "investigation", "documentation", "assessment", "settlement"]},
-  {"job": "Real Estate Agent", "difficulty": "medium", "expected_patterns": ["listings", "showings", "contracts", "negotiation", "marketing"]},
-  {"job": "Paralegal", "difficulty": "medium", "expected_patterns": ["research", "documents", "filing", "case management", "review"]},
-  {"job": "IT Help Desk Technician", "difficulty": "medium", "expected_patterns": ["troubleshooting", "tickets", "installation", "configuration", "escalation"]},
-  {"job": "Event Planner", "difficulty": "medium", "expected_patterns": ["venue", "vendors", "logistics", "budget", "coordination"]},
-  {"job": "Supply Chain Manager", "difficulty": "hard", "expected_patterns": ["procurement", "logistics", "forecasting", "vendor management", "inventory optimization"]},
-  {"job": "Construction Project Manager", "difficulty": "hard", "expected_patterns": ["scheduling", "subcontractors", "permits", "budgeting", "safety compliance"]},
-  {"job": "Hospital Administrator", "difficulty": "hard", "expected_patterns": ["staffing", "compliance", "budgeting", "patient flow", "regulatory"]},
-  {"job": "Investment Portfolio Manager", "difficulty": "hard", "expected_patterns": ["analysis", "risk assessment", "rebalancing", "reporting", "compliance"]},
-  {"job": "Logistics Director", "difficulty": "hard", "expected_patterns": ["routing", "fleet management", "warehousing", "customs", "optimization"]},
-  {"job": "Manufacturing Plant Supervisor", "difficulty": "hard", "expected_patterns": ["production scheduling", "quality control", "maintenance", "safety", "workforce"]},
-  {"job": "Pharmaceutical Compliance Officer", "difficulty": "hard", "expected_patterns": ["regulatory", "documentation", "audit", "reporting", "training"]},
-  {"job": "University Registrar", "difficulty": "hard", "expected_patterns": ["enrollment", "transcripts", "scheduling", "compliance", "records"]},
-  {"job": "Chief Financial Officer", "difficulty": "hard", "expected_patterns": ["forecasting", "reporting", "compliance", "strategy", "risk management"]},
-  {"job": "Air Traffic Controller", "difficulty": "hard", "expected_patterns": ["monitoring", "communication", "sequencing", "safety", "coordination"]}
+  {"job": "Data Entry Clerk", "difficulty": "easy", "expected_patterns": ["data entry", "typing", "spreadsheet", "records", "filing"],
+   "min_tasks": 3, "critical_tasks": ["data entry", "validation", "filing", "reporting"],
+   "expected_solutions": ["spreadsheet", "excel", "database", "software", "scanner", "ocr"]},
+
+  {"job": "Customer Support Agent", "difficulty": "easy", "expected_patterns": ["tickets", "customer", "response", "inquiry", "resolve"],
+   "min_tasks": 3, "critical_tasks": ["ticket", "response", "escalation", "follow-up", "resolution"],
+   "expected_solutions": ["crm", "zendesk", "freshdesk", "helpdesk", "ticketing", "email", "chat"]},
+
+  {"job": "Receptionist", "difficulty": "easy", "expected_patterns": ["greeting", "scheduling", "phone", "appointment", "visitor"],
+   "min_tasks": 3, "critical_tasks": ["greeting", "scheduling", "phone", "visitor", "mail"],
+   "expected_solutions": ["calendar", "phone system", "email", "scheduling software", "google"]},
+
+  {"job": "Warehouse Worker", "difficulty": "easy", "expected_patterns": ["inventory", "picking", "packing", "shipping", "stock"],
+   "min_tasks": 3, "critical_tasks": ["receiving", "picking", "packing", "shipping", "inventory"],
+   "expected_solutions": ["wms", "barcode", "scanner", "forklift", "inventory system"]},
+
+  {"job": "Retail Cashier", "difficulty": "easy", "expected_patterns": ["checkout", "payment", "scanning", "register", "receipt"],
+   "min_tasks": 3, "critical_tasks": ["checkout", "payment", "scanning", "register", "customer"],
+   "expected_solutions": ["pos", "register", "scanner", "card reader", "receipt printer"]},
+
+  {"job": "File Clerk", "difficulty": "easy", "expected_patterns": ["filing", "sorting", "organizing", "documents", "archive"],
+   "min_tasks": 3, "critical_tasks": ["filing", "sorting", "retrieval", "archiving", "labeling"],
+   "expected_solutions": ["filing system", "database", "scanner", "document management"]},
+
+  {"job": "Mail Sorter", "difficulty": "easy", "expected_patterns": ["sorting", "delivery", "packages", "routing", "labels"],
+   "min_tasks": 3, "critical_tasks": ["sorting", "routing", "delivery", "scanning", "loading"],
+   "expected_solutions": ["sorting machine", "barcode", "scanner", "conveyor", "tracking system"]},
+
+  {"job": "Parking Lot Attendant", "difficulty": "easy", "expected_patterns": ["parking", "tickets", "vehicles", "payment", "monitoring"],
+   "min_tasks": 3, "critical_tasks": ["ticketing", "payment", "monitoring", "directing", "security"],
+   "expected_solutions": ["ticket machine", "payment terminal", "camera", "barrier gate"]},
+
+  {"job": "Library Assistant", "difficulty": "easy", "expected_patterns": ["cataloging", "shelving", "checkout", "returns", "patron"],
+   "min_tasks": 3, "critical_tasks": ["checkout", "returns", "shelving", "cataloging", "patron"],
+   "expected_solutions": ["library system", "barcode", "database", "catalog software"]},
+
+  {"job": "Janitor", "difficulty": "easy", "expected_patterns": ["cleaning", "maintenance", "supplies", "inspection", "schedule"],
+   "min_tasks": 3, "critical_tasks": ["cleaning", "maintenance", "inspection", "restocking", "waste"],
+   "expected_solutions": ["cleaning equipment", "checklist", "schedule", "supply management"]},
+
+  {"job": "Accountant", "difficulty": "medium", "expected_patterns": ["data entry", "verification", "reporting", "reconciliation", "audit"],
+   "min_tasks": 4, "critical_tasks": ["bookkeeping", "reconciliation", "reporting", "tax", "audit", "invoicing"],
+   "expected_solutions": ["quickbooks", "excel", "erp", "sap", "accounting software", "xero"]},
+
+  {"job": "HR Manager", "difficulty": "medium", "expected_patterns": ["recruitment", "onboarding", "compliance", "performance", "payroll"],
+   "min_tasks": 4, "critical_tasks": ["recruitment", "onboarding", "payroll", "performance", "compliance", "training"],
+   "expected_solutions": ["hris", "workday", "bamboohr", "ats", "payroll system", "linkedin"]},
+
+  {"job": "Marketing Coordinator", "difficulty": "medium", "expected_patterns": ["campaign", "content", "analytics", "scheduling", "reporting"],
+   "min_tasks": 4, "critical_tasks": ["campaign", "content", "social media", "analytics", "email marketing"],
+   "expected_solutions": ["hubspot", "mailchimp", "google analytics", "hootsuite", "canva", "cms"]},
+
+  {"job": "Sales Representative", "difficulty": "medium", "expected_patterns": ["prospecting", "outreach", "follow-up", "CRM", "closing"],
+   "min_tasks": 4, "critical_tasks": ["prospecting", "outreach", "demo", "negotiation", "closing", "follow-up"],
+   "expected_solutions": ["crm", "salesforce", "hubspot", "email", "linkedin", "phone"]},
+
+  {"job": "Office Manager", "difficulty": "medium", "expected_patterns": ["scheduling", "procurement", "coordination", "budgeting", "communication"],
+   "min_tasks": 4, "critical_tasks": ["scheduling", "procurement", "budgeting", "coordination", "facilities"],
+   "expected_solutions": ["calendar", "email", "spreadsheet", "procurement system", "slack", "teams"]},
+
+  {"job": "Insurance Claims Adjuster", "difficulty": "medium", "expected_patterns": ["claims", "investigation", "documentation", "assessment", "settlement"],
+   "min_tasks": 4, "critical_tasks": ["claims review", "investigation", "assessment", "documentation", "settlement"],
+   "expected_solutions": ["claims system", "database", "phone", "email", "inspection tools"]},
+
+  {"job": "Real Estate Agent", "difficulty": "medium", "expected_patterns": ["listings", "showings", "contracts", "negotiation", "marketing"],
+   "min_tasks": 4, "critical_tasks": ["listings", "showings", "negotiation", "contracts", "marketing", "client"],
+   "expected_solutions": ["mls", "crm", "email", "virtual tour", "docusign", "zillow"]},
+
+  {"job": "Paralegal", "difficulty": "medium", "expected_patterns": ["research", "documents", "filing", "case management", "review"],
+   "min_tasks": 4, "critical_tasks": ["research", "drafting", "filing", "case management", "document review"],
+   "expected_solutions": ["westlaw", "lexisnexis", "case management system", "document management"]},
+
+  {"job": "IT Help Desk Technician", "difficulty": "medium", "expected_patterns": ["troubleshooting", "tickets", "installation", "configuration", "escalation"],
+   "min_tasks": 4, "critical_tasks": ["ticket triage", "troubleshooting", "installation", "escalation", "documentation"],
+   "expected_solutions": ["ticketing system", "jira", "servicenow", "remote desktop", "active directory"]},
+
+  {"job": "Event Planner", "difficulty": "medium", "expected_patterns": ["venue", "vendors", "logistics", "budget", "coordination"],
+   "min_tasks": 4, "critical_tasks": ["venue", "vendor", "logistics", "budget", "guest management"],
+   "expected_solutions": ["event software", "spreadsheet", "email", "project management", "calendar"]},
+
+  {"job": "Supply Chain Manager", "difficulty": "hard", "expected_patterns": ["procurement", "logistics", "forecasting", "vendor management", "inventory optimization"],
+   "min_tasks": 5, "critical_tasks": ["procurement", "logistics", "forecasting", "vendor management", "inventory", "compliance"],
+   "expected_solutions": ["erp", "sap", "oracle", "supply chain software", "analytics", "warehouse management"]},
+
+  {"job": "Construction Project Manager", "difficulty": "hard", "expected_patterns": ["scheduling", "subcontractors", "permits", "budgeting", "safety compliance"],
+   "min_tasks": 5, "critical_tasks": ["scheduling", "budgeting", "subcontractor", "permits", "safety", "inspection"],
+   "expected_solutions": ["project management", "primavera", "procore", "autocad", "bim", "scheduling software"]},
+
+  {"job": "Hospital Administrator", "difficulty": "hard", "expected_patterns": ["staffing", "compliance", "budgeting", "patient flow", "regulatory"],
+   "min_tasks": 5, "critical_tasks": ["staffing", "compliance", "budgeting", "patient flow", "quality", "regulatory"],
+   "expected_solutions": ["ehr", "epic", "scheduling system", "compliance software", "analytics"]},
+
+  {"job": "Investment Portfolio Manager", "difficulty": "hard", "expected_patterns": ["analysis", "risk assessment", "rebalancing", "reporting", "compliance"],
+   "min_tasks": 5, "critical_tasks": ["analysis", "risk assessment", "rebalancing", "reporting", "compliance", "client"],
+   "expected_solutions": ["bloomberg", "trading platform", "risk management", "excel", "analytics", "portfolio system"]},
+
+  {"job": "Logistics Director", "difficulty": "hard", "expected_patterns": ["routing", "fleet management", "warehousing", "customs", "optimization"],
+   "min_tasks": 5, "critical_tasks": ["routing", "fleet", "warehousing", "customs", "optimization", "tracking"],
+   "expected_solutions": ["tms", "fleet management", "gps", "warehouse system", "erp", "tracking software"]},
+
+  {"job": "Manufacturing Plant Supervisor", "difficulty": "hard", "expected_patterns": ["production scheduling", "quality control", "maintenance", "safety", "workforce"],
+   "min_tasks": 5, "critical_tasks": ["production", "quality control", "maintenance", "safety", "workforce", "scheduling"],
+   "expected_solutions": ["mes", "erp", "scada", "quality system", "maintenance software", "scheduling"]},
+
+  {"job": "Pharmaceutical Compliance Officer", "difficulty": "hard", "expected_patterns": ["regulatory", "documentation", "audit", "reporting", "training"],
+   "min_tasks": 5, "critical_tasks": ["regulatory", "documentation", "audit", "reporting", "training", "inspection"],
+   "expected_solutions": ["compliance software", "document management", "audit system", "training platform"]},
+
+  {"job": "University Registrar", "difficulty": "hard", "expected_patterns": ["enrollment", "transcripts", "scheduling", "compliance", "records"],
+   "min_tasks": 5, "critical_tasks": ["enrollment", "transcripts", "scheduling", "records", "compliance", "graduation"],
+   "expected_solutions": ["sis", "student information system", "database", "scheduling software", "portal"]},
+
+  {"job": "Chief Financial Officer", "difficulty": "hard", "expected_patterns": ["forecasting", "reporting", "compliance", "strategy", "risk management"],
+   "min_tasks": 5, "critical_tasks": ["forecasting", "reporting", "compliance", "strategy", "risk", "budgeting", "investor"],
+   "expected_solutions": ["erp", "sap", "oracle", "excel", "analytics", "financial software", "bloomberg"]},
+
+  {"job": "Air Traffic Controller", "difficulty": "hard", "expected_patterns": ["monitoring", "communication", "sequencing", "safety", "coordination"],
+   "min_tasks": 5, "critical_tasks": ["monitoring", "communication", "sequencing", "separation", "coordination", "emergency"],
+   "expected_solutions": ["radar", "communication system", "flight management", "atc system", "surveillance"]}
 ]

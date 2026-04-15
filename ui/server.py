@@ -1,4 +1,4 @@
-"""Workflow Diagram Dashboard server. Run: python ui/server.py → http://localhost:3000"""
+"""Dashboard server. Run: python ui/server.py → http://localhost:3000"""
 import json
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -14,10 +14,9 @@ def load_json(path):
 
 
 def get_data():
-    """Collect pipeline run results for the workflow diagram."""
     d = {}
 
-    # Load all pipeline_*.json results
+    # Pipeline runs
     runs = []
     results_dir = ROOT / "results"
     if results_dir.exists():
@@ -30,7 +29,8 @@ def get_data():
                 continue
     d["pipeline_runs"] = runs
 
-    # Champion info for header
+    # Benchmark results
+    d["stage1_benchmark"] = load_json("results/benchmark/stage1_benchmark.json") or {}
     d["champion"] = load_json("results/champion_selection.json") or {}
 
     return d
@@ -61,5 +61,5 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print(f"Workflow Diagram Dashboard: http://localhost:{PORT}")
+    print(f"Dashboard: http://localhost:{PORT}")
     HTTPServer(("0.0.0.0", PORT), Handler).serve_forever()

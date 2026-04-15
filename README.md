@@ -48,7 +48,7 @@ python evaluate_fast.py
 
 ### 2. Automation Pipeline (`src/pipeline/`)
 
-4-stage pipeline: Job → Workflow → Problems → Solutions → Evaluation.
+4-stage pipeline: Job → Tasks (with Steps) → Step Analysis (Current Solutions & Problems) → Automation Solutions → Evaluation.
 
 ```bash
 # CLI (single job)
@@ -57,11 +57,30 @@ python -m src.pipeline.cli "Accountant"
 # CLI with JSON output and caching
 python -m src.pipeline.cli --json --cache "Data Entry Clerk"
 
+# Remote inference via HuggingFace API (fast, free, no local GPU needed)
+python -m src.pipeline.cli --remote "Devops Engineer"
+
+# Run and save result
+python scripts/run_and_save.py "Devops Engineer" --remote
+
+# Run specific stages only (1-4)
+python -m src.pipeline.cli --stages 1 "Accountant"
+
 # REST API
 python -m src.pipeline.api
 curl -X POST http://localhost:8000/analyze -H "Content-Type: application/json" \
   -d '{"job": "Accountant"}'
 ```
+
+#### Remote Inference Setup
+
+The `--remote` flag uses the HuggingFace Inference API instead of a local GGUF model. ~1-3s per stage vs ~30-100s locally.
+
+1. Get a token at https://huggingface.co/settings/tokens (enable "Make calls to Inference Providers")
+2. Set it: `export HF_TOKEN=hf_your_token_here`
+3. Run with `--remote`: `python -m src.pipeline.cli --remote "Devops Engineer"`
+
+Free tier: ~few hundred requests/hour. Same prompts, same pipeline, same output — just runs on HuggingFace's servers.
 
 Configuration via `.env`:
 ```
@@ -85,6 +104,39 @@ python -m src.benchmark.runner --sample 2 --mlflow
 # Specific model
 python -m src.benchmark.runner --model models/gguf/qwen2.5-3b-instruct-q4_k_m.gguf
 ```
+
+#### Stage 1 Benchmark (`scripts/benchmark_stage1.py`)
+
+Runs only Stage 1 (Workflow Generator) across all 30 jobs and reports format, concreteness, relevance, and duplication scores to MLflow.
+
+```bash
+python scripts/benchmark_stage1.py
+# Outputs: results/benchmark/stage1_benchmark.json
+# Reports to MLflow: experiment SLM-Project-Evaluator-Candidates, run "stage1-benchmark-champion"
+```
+
+#### Format & Duplication Benchmark (`scripts/benchmark_format_dup.py`)
+
+Focused benchmark for Stage 1 format score and duplication penalty. Flexible input — run on specific jobs, from a file, or auto-select the worst offenders.
+
+```bash
+# Default: top 5 worst-duplication jobs from last benchmark
+python scripts/benchmark_format_dup.py
+
+# Custom jobs via CLI args
+python scripts/benchmark_format_dup.py "Library Assistant" "Janitor" "Accountant"
+
+# From a file (one job title per line)
+python scripts/benchmark_format_dup.py --file my_jobs.txt
+
+# All 30 benchmark jobs
+python scripts/benchmark_format_dup.py --all
+
+# Top N worst-duplication jobs
+python scripts/benchmark_format_dup.py --top 10
+```
+
+Output: `results/benchmark/format_dup_benchmark.json`
 
 ### 4. Champion Selection (`scripts/champion_selection.py`)
 

@@ -3,360 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLM Pipeline — Workflow Diagram</title>
+<title>SLM Pipeline Dashboard</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
   :root {
-    --bg: #f4f6f9;
-    --stage-bg: #dbeafe; --stage-border: #93c5fd; --stage-text: #1e40af;
+    --bg: #f4f6f9; --bg2: #fff;
+    --task-bg: #dbeafe; --task-border: #93c5fd; --task-text: #1e40af;
+    --step-bg: #f0f4ff; --step-border: #c7d2fe; --step-text: #3730a3;
+    --current-bg: #f5f3ff; --current-border: #c4b5fd; --current-text: #5b21b6;
     --problem-bg: #fee2e2; --problem-border: #fca5a5; --problem-text: #991b1b;
     --solution-bg: #dcfce7; --solution-border: #86efac; --solution-text: #166534;
     --eval-bg: #fef9c3; --eval-border: #fde047; --eval-text: #854d0e;
-    --text: #1e293b; --text2: #475569;
+    --text: #1e293b; --text2: #475569; --text3: #94a3b8;
     --font: 'Inter', system-ui, sans-serif;
+    --good: #16a34a; --warn: #d97706; --bad: #dc2626;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
 
-  .header {
-    background: #fff; border-bottom: 1px solid #e2e8f0;
-    padding: 14px 28px; display: flex; align-items: center;
-    justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  }
-  .header h1 { font-size: 16px; font-weight: 700; color: var(--text); }
-  .header select {
-    padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 6px;
-    font-size: 13px; font-family: var(--font); background: #fff; cursor: pointer;
-  }
-  .header .meta { font-size: 12px; color: #94a3b8; }
+  .header { background: var(--bg2); border-bottom: 1px solid #e2e8f0; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .header h1 { font-size: 15px; font-weight: 700; }
+  .header select { padding: 5px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 12px; font-family: var(--font); background: #fff; }
+  .header .meta { font-size: 11px; color: var(--text3); }
 
-  .legend {
-    background: #fff; border-bottom: 1px solid #f1f5f9;
-    padding: 10px 28px; display: flex; gap: 20px; flex-wrap: wrap;
-  }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
-  .legend-box { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid; }
-  .legend-box.stage    { background: var(--stage-bg);    border-color: var(--stage-border); }
-  .legend-box.problem  { background: var(--problem-bg);  border-color: var(--problem-border); }
-  .legend-box.solution { background: var(--solution-bg); border-color: var(--solution-border); }
-  .legend-box.eval     { background: var(--eval-bg);     border-color: var(--eval-border); }
+  .tabs { display: flex; gap: 0; background: var(--bg2); border-bottom: 2px solid #e2e8f0; padding: 0 24px; }
+  .tab { padding: 10px 20px; font-size: 13px; font-weight: 600; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .tab:hover { color: var(--text2); }
+  .tab.active { color: var(--task-text); border-bottom-color: var(--task-text); }
 
-  #content { position: relative; min-height: calc(100vh - 130px); }
-  .diagram-wrap { padding: 24px; overflow-x: auto; }
-  .diagram { position: relative; min-width: max-content; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
 
-  .conn-svg {
-    position: absolute; top: 0; left: 0;
-    pointer-events: none; z-index: 1;
-  }
-  .nodes { position: relative; z-index: 2; }
+  /* Pipeline tab */
+  #pipelineTab { padding: 16px 24px; }
+  .task-section { background: var(--bg2); border-radius: 10px; border: 2px solid var(--task-border); margin-bottom: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .task-header { background: var(--task-bg); padding: 10px 16px; font-size: 14px; font-weight: 700; color: var(--task-text); border-bottom: 1px solid var(--task-border); }
+  .task-body { padding: 12px 16px; }
+  .col-headers { display: grid; grid-template-columns: 2fr 2fr 2fr 2fr 130px; gap: 8px; padding-bottom: 6px; border-bottom: 2px solid #e2e8f0; margin-bottom: 4px; }
+  .col-headers span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text3); }
+  .step-row { display: grid; grid-template-columns: 2fr 2fr 2fr 2fr 130px; gap: 8px; align-items: stretch; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+  .step-row:last-child { border-bottom: none; }
+  .cell { border-radius: 7px; padding: 8px 10px; font-size: 11px; line-height: 1.5; }
+  .cell-step { background: var(--step-bg); border: 1px solid var(--step-border); color: var(--step-text); }
+  .cell-current { background: var(--current-bg); border: 1px solid var(--current-border); color: var(--current-text); }
+  .cell-problem { background: var(--problem-bg); border: 1px solid var(--problem-border); color: var(--problem-text); font-style: italic; }
+  .cell-solution { background: var(--solution-bg); border: 1px solid var(--solution-border); color: var(--solution-text); }
+  .cell-eval { background: var(--eval-bg); border: 1px solid var(--eval-border); color: var(--eval-text); text-align: center; }
+  .cell-solution .sol-type { font-weight: 700; font-size: 10px; text-transform: uppercase; margin-bottom: 3px; }
+  .pill { font-size: 10px; padding: 2px 6px; border-radius: 5px; font-weight: 600; background: rgba(0,0,0,0.06); }
+  .no-data { color: var(--text3); font-size: 10px; font-style: italic; }
 
-  /* Cards use absolute positioning set by JS after measuring */
-  .card {
-    position: absolute;
-    border-radius: 10px; padding: 12px 14px;
-    text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); z-index: 10; }
+  /* Benchmark tab */
+  #benchmarkTab { padding: 16px 24px; }
+  .bench-section { background: var(--bg2); border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 16px; overflow: hidden; }
+  .bench-header { padding: 10px 16px; font-size: 13px; font-weight: 700; color: var(--text); border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+  .bench-body { padding: 12px 16px; }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .metric-card { padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .metric-card .label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+  .metric-card .value { font-size: 20px; font-weight: 700; }
+  .metric-card .detail { font-size: 10px; color: var(--text3); margin-top: 2px; }
+  .score-good { color: var(--good); }
+  .score-warn { color: var(--warn); }
+  .score-bad { color: var(--bad); }
 
-  .card-stage { background: var(--stage-bg); border: 2px solid var(--stage-border); }
-  .card-stage .title { font-size: 14px; font-weight: 700; color: var(--stage-text); }
+  .bench-jobs { margin-top: 12px; }
+  .bench-jobs table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .bench-jobs th { text-align: left; padding: 6px 8px; font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
+  .bench-jobs td { padding: 5px 8px; border-bottom: 1px solid #f1f5f9; }
+  .bench-jobs tr:hover { background: #f8fafc; }
 
-  .card-problem { background: var(--problem-bg); border: 2px solid var(--problem-border); }
-  .card-problem .text { font-size: 11px; color: var(--problem-text); line-height: 1.5; font-style: italic; }
-
-  .card-solution { background: var(--solution-bg); border: 2px solid var(--solution-border); }
-  .card-solution .sol-header {
-    font-size: 12px; font-weight: 700; color: var(--solution-text);
-    margin-bottom: 6px; padding-bottom: 5px; border-bottom: 1px solid var(--solution-border);
-  }
-  .card-solution .text { font-size: 11px; color: #1e293b; line-height: 1.5; }
-
-  .card-eval { background: var(--eval-bg); border: 2px solid var(--eval-border); }
-  .card-eval .eval-header { font-size: 11px; font-weight: 700; color: var(--eval-text); margin-bottom: 6px; }
-  .card-eval .scores { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; }
-  .pill { font-size: 10px; padding: 2px 7px; border-radius: 6px; font-weight: 600; background: rgba(0,0,0,0.05); color: var(--eval-text); }
-
-  .summary-bar {
-    background: #fff; border-top: 1px solid #e2e8f0;
-    padding: 12px 28px; display: flex; gap: 24px; flex-wrap: wrap;
-  }
+  .summary-bar { background: var(--bg2); border-top: 1px solid #e2e8f0; padding: 10px 24px; display: flex; gap: 20px; flex-wrap: wrap; position: sticky; bottom: 0; }
   .summary-stat { display: flex; flex-direction: column; gap: 1px; }
-  .summary-stat .sl { font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-  .summary-stat .sv { font-size: 15px; font-weight: 700; color: var(--text); }
-  .summary-stat .sv.ok { color: #16a34a; }
-  .summary-stat .sv.fail { color: #dc2626; }
+  .summary-stat .sl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+  .summary-stat .sv { font-size: 14px; font-weight: 700; }
+  .sv.ok { color: var(--good); } .sv.fail { color: var(--bad); }
 
-  .loading { text-align: center; padding: 100px; color: #94a3b8; }
-  .error { text-align: center; padding: 60px; color: #dc2626; font-size: 14px; }
+  .loading { text-align: center; padding: 80px; color: var(--text3); }
+  .error { text-align: center; padding: 40px; color: var(--bad); font-size: 13px; }
 </style>
 </head>
 <body>
-
 <div class="header">
-  <h1>SLM Pipeline — Workflow Diagram</h1>
-  <div style="display:flex;align-items:center;gap:12px;">
+  <h1>SLM Pipeline Dashboard</h1>
+  <div style="display:flex;align-items:center;gap:10px;">
     <select id="jobSelect" aria-label="Select pipeline run"><option>Loading...</option></select>
     <span class="meta" id="metaInfo"></span>
   </div>
 </div>
-<div class="legend">
-  <div class="legend-item"><div class="legend-box stage"></div> Workflow Stage</div>
-  <div class="legend-item"><div class="legend-box problem"></div> Problem</div>
-  <div class="legend-item"><div class="legend-box solution"></div> Solution</div>
-  <div class="legend-item"><div class="legend-box eval"></div> Evaluation</div>
+<div class="tabs">
+  <div class="tab active" data-tab="pipelineTab">Pipeline Results</div>
+  <div class="tab" data-tab="benchmarkTab">Stage 1 Benchmark</div>
 </div>
-<div id="content"><div class="loading">Loading pipeline data...</div></div>
+<div id="pipelineTab" class="tab-content active"><div class="loading">Loading...</div></div>
+<div id="benchmarkTab" class="tab-content"></div>
 <div class="summary-bar" id="summaryBar" style="display:none"></div>
-
 <script>
 
-let allRuns = [];
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+let allRuns = [], benchData = {};
 
 async function init() {
   try {
     const resp = await fetch('/api/data');
-    if (!resp.ok) throw new Error('API error');
     const data = await resp.json();
     allRuns = data.pipeline_runs || [];
-    if (!allRuns.length) {
-      document.getElementById('content').innerHTML = '<div class="error">No pipeline runs found.</div>';
-      return;
+    benchData = data.stage1_benchmark || {};
+
+    if (allRuns.length) {
+      const sel = document.getElementById('jobSelect');
+      sel.innerHTML = allRuns.map((r, i) =>
+        `<option value="${i}">${esc(r.job)}${r.success ? ' \u2713' : ' \u2717'}</option>`
+      ).join('');
+      sel.addEventListener('change', () => renderPipeline(allRuns[+sel.value]));
+      renderPipeline(allRuns[0]);
+    } else {
+      document.getElementById('pipelineTab').innerHTML = '<div class="error">No pipeline runs found.</div>';
     }
-    const sel = document.getElementById('jobSelect');
-    sel.innerHTML = allRuns.map((r, i) =>
-      `<option value="${i}">${esc(r.job)}${r.success ? ' \u2713' : ' \u2717'}</option>`
-    ).join('');
-    sel.addEventListener('change', () => renderPipeline(allRuns[+sel.value]));
-    renderPipeline(allRuns[0]);
+
+    renderBenchmark();
   } catch (e) {
-    document.getElementById('content').innerHTML = `<div class="error">${esc(e.message)}</div>`;
+    document.getElementById('pipelineTab').innerHTML = `<div class="error">${esc(e.message)}</div>`;
   }
 }
 
+// ── Pipeline tab ──
 function renderPipeline(run) {
-  const content = document.getElementById('content');
-  if (!run || !run.stages || run.stages.length < 4) {
-    content.innerHTML = '<div class="error">Incomplete pipeline data.</div>';
-    return;
+  const el = document.getElementById('pipelineTab');
+  if (!run || !run.stages || !run.stages[0] || !run.stages[0].valid) {
+    el.innerHTML = '<div class="error">No valid Stage 1 data.</div>'; return;
   }
+  const rawTasks = run.stages[0].parsed || [];
+  let tasks;
+  if (rawTasks.length > 0 && rawTasks[0].steps) {
+    tasks = rawTasks;
+  } else {
+    tasks = rawTasks.map((item, i) => ({
+      task_number: item.step_number || item.task_number || i + 1,
+      title: item.title || '', steps: [{ step_number: 1, description: item.description || '' }],
+    }));
+  }
+  const analyses = run.stages[1] && run.stages[1].valid ? run.stages[1].parsed || [] : [];
+  const solutions = run.stages[2] && run.stages[2].valid ? run.stages[2].parsed || [] : [];
+  const evals = run.stages[3] && run.stages[3].valid ? run.stages[3].parsed || [] : [];
 
-  const workflows = run.stages[0].parsed || [];
-  const problems  = run.stages[1].parsed || [];
-  const solutions = run.stages[2].parsed || [];
-  const evals     = run.stages[3].parsed || [];
+  const aMap = {}, sMap = {}, eMap = {};
+  analyses.forEach(a => { aMap[`${a.task_number||a.step_number||0}-${a.step_number||0}`] = a; });
+  solutions.forEach(s => { sMap[`${s.task_number||s.step_number||0}-${s.step_number||0}`] = s; });
+  evals.forEach(e => { eMap[`${e.task_number||e.step_number||0}-${e.step_number||0}`] = e; });
 
-  const steps = workflows.map((w, i) => ({
-    title: w.title,
-    problem: problems[i] ? problems[i].problem : '',
-    category: problems[i] ? problems[i].category : '',
-    solutionType: solutions[i] ? solutions[i].solution_type : '',
-    rationale: solutions[i] ? solutions[i].rationale : '',
-    feasibility: evals[i] ? evals[i].feasibility : null,
-    impact: evals[i] ? evals[i].impact : null,
-    complexity: evals[i] ? evals[i].complexity : null,
-  }));
-
-  const n = steps.length;
-  const stageW = 160, probW = 170, solW = 180, evalW = 160;
-  const colSpacing = 210;
-  const padLeft = 70;
-  const vGap = 28; // vertical gap between cards
-
-  // Pass 1: render cards offscreen to measure heights
-  let measureHtml = '';
-  steps.forEach((step, i) => {
-    measureHtml += `<div id="m-stage-${i}" class="card card-stage" style="position:absolute;visibility:hidden;width:${stageW}px;">
-      <div class="title">${esc(step.title)}</div></div>`;
-    measureHtml += `<div id="m-prob-${i}" class="card card-problem" style="position:absolute;visibility:hidden;width:${probW}px;">
-      <div class="text">${esc(step.problem)}</div></div>`;
-    measureHtml += `<div id="m-sol-${i}" class="card card-solution" style="position:absolute;visibility:hidden;width:${solW}px;">
-      <div class="sol-header">${esc(step.solutionType)}</div>
-      <div class="text">${esc(step.rationale)}</div></div>`;
-    measureHtml += `<div id="m-eval-${i}" class="card card-eval" style="position:absolute;visibility:hidden;width:${evalW}px;">
-      <div class="eval-header">Evaluation</div>
-      <div class="scores">
-        ${step.feasibility !== null ? `<span class="pill">F:${step.feasibility}</span>` : ''}
-        ${step.impact !== null ? `<span class="pill">I:${step.impact}</span>` : ''}
-        ${step.complexity !== null ? `<span class="pill">C:${step.complexity}</span>` : ''}
-      </div></div>`;
-  });
-
-  content.innerHTML = `<div class="diagram-wrap"><div class="diagram" id="diagram">${measureHtml}</div></div>`;
-
-  // Measure
-  const heights = steps.map((_, i) => ({
-    stage: document.getElementById(`m-stage-${i}`).offsetHeight,
-    prob:  document.getElementById(`m-prob-${i}`).offsetHeight,
-    sol:   document.getElementById(`m-sol-${i}`).offsetHeight,
-    eval:  document.getElementById(`m-eval-${i}`).offsetHeight,
-  }));
-
-  // Compute max satellite stack height (prob + sol + eval + gaps) for above and below
-  let maxAbove = 0, maxBelow = 0;
-  steps.forEach((_, i) => {
-    const h = heights[i];
-    const stackH = h.prob + vGap + h.sol + vGap + h.eval + vGap;
-    if (i % 2 === 1) { // above
-      maxAbove = Math.max(maxAbove, stackH);
-    } else { // below
-      maxBelow = Math.max(maxBelow, stackH);
-    }
-  });
-
-  // Center Y: enough room for the tallest above-stack + half stage height
-  const maxStageH = Math.max(...heights.map(h => h.stage));
-  const centerY = maxAbove + maxStageH / 2 + 30;
-  const totalH = centerY + maxStageH / 2 + maxBelow + 50;
-  const totalW = padLeft * 2 + (n - 1) * colSpacing + solW;
-
-  // Pass 2: position everything
-  const positions = []; // {stage, prob, sol, eval} each with {x, y, w, h, cx, cy}
-
-  steps.forEach((step, i) => {
-    const h = heights[i];
-    const cx = padLeft + i * colSpacing + stageW / 2;
-    const above = (i % 2 === 1);
-
-    // Stage
-    const stageX = cx - stageW / 2;
-    const stageY = centerY - h.stage / 2;
-
-    let probX, probY, solX, solY, evalX, evalY;
-
-    if (above) {
-      // Stack upward: stage at center, problem above, solution above problem, eval above solution
-      probY = stageY - vGap - h.prob;
-      probX = cx - probW / 2;
-      solY = probY - vGap - h.sol;
-      solX = cx - solW / 2;
-      evalY = solY - vGap - h.eval;
-      evalX = cx - evalW / 2;
-    } else {
-      // Stack downward
-      probY = stageY + h.stage + vGap;
-      probX = cx - probW / 2;
-      solY = probY + h.prob + vGap;
-      solX = cx - solW / 2;
-      evalY = solY + h.sol + vGap;
-      evalX = cx - evalW / 2;
-    }
-
-    positions.push({
-      above,
-      stage: { x: stageX, y: stageY, w: stageW, h: h.stage, cx, cy: stageY + h.stage/2 },
-      prob:  { x: probX,  y: probY,  w: probW,  h: h.prob,  cx, cy: probY + h.prob/2 },
-      sol:   { x: solX,   y: solY,   w: solW,   h: h.sol,   cx, cy: solY + h.sol/2 },
-      eval:  { x: evalX,  y: evalY,  w: evalW,  h: h.eval,  cx, cy: evalY + h.eval/2 },
+  let html = '';
+  tasks.forEach(task => {
+    const tn = task.task_number || 0;
+    html += `<div class="task-section"><div class="task-header">Task ${tn}: ${esc(task.title)}</div><div class="task-body">
+      <div class="col-headers"><span>Step</span><span>Current Solution</span><span>Problem</span><span>Automation</span><span>Score</span></div>`;
+    (task.steps || []).forEach(step => {
+      const key = `${tn}-${step.step_number}`;
+      const a = aMap[key], s = sMap[key], ev = eMap[key];
+      html += `<div class="step-row">
+        <div class="cell cell-step"><strong>Step ${step.step_number}</strong><br>${esc(step.description)}</div>
+        <div class="cell cell-current">${a ? esc(a.current_solution) : '<span class="no-data">\u2014</span>'}</div>
+        <div class="cell cell-problem">${a && a.problem ? esc(a.problem) : '<span class="no-data">No problem</span>'}</div>
+        <div class="cell cell-solution">${s ? `<div class="sol-type">${esc(s.solution_type)}</div>${esc(s.rationale)}` : '<span class="no-data">\u2014</span>'}</div>
+        <div class="cell cell-eval">${ev ? `<span class="pill">F:${ev.feasibility}</span> <span class="pill">I:${ev.impact}</span> <span class="pill">C:${ev.complexity}</span>` : '<span class="no-data">\u2014</span>'}</div>
+      </div>`;
     });
+    html += '</div></div>';
   });
-
-  // Build final HTML
-  let nodesHtml = '';
-  let svgPaths = '';
-
-  steps.forEach((step, i) => {
-    const p = positions[i];
-
-    nodesHtml += `<div class="card card-stage" style="left:${p.stage.x}px;top:${p.stage.y}px;width:${stageW}px;">
-      <div class="title">${esc(step.title)}</div></div>`;
-
-    nodesHtml += `<div class="card card-problem" style="left:${p.prob.x}px;top:${p.prob.y}px;width:${probW}px;">
-      <div class="text">${esc(step.problem)}</div></div>`;
-
-    nodesHtml += `<div class="card card-solution" style="left:${p.sol.x}px;top:${p.sol.y}px;width:${solW}px;">
-      <div class="sol-header">${esc(step.solutionType)}</div>
-      <div class="text">${esc(step.rationale)}</div></div>`;
-
-    nodesHtml += `<div class="card card-eval" style="left:${p.eval.x}px;top:${p.eval.y}px;width:${evalW}px;">
-      <div class="eval-header">Evaluation</div>
-      <div class="scores">
-        ${step.feasibility !== null ? `<span class="pill">F:${step.feasibility}</span>` : ''}
-        ${step.impact !== null ? `<span class="pill">I:${step.impact}</span>` : ''}
-        ${step.complexity !== null ? `<span class="pill">C:${step.complexity}</span>` : ''}
-      </div></div>`;
-
-    // Arrows: Problem → Stage
-    if (p.above) {
-      svgPaths += arrowLine(p.prob.cx, p.prob.y + p.prob.h, p.stage.cx, p.stage.y, '#f87171', 'arrowRed');
-    } else {
-      svgPaths += arrowLine(p.prob.cx, p.prob.y, p.stage.cx, p.stage.y + p.stage.h, '#f87171', 'arrowRed');
-    }
-
-    // Arrows: Solution → Problem
-    if (p.above) {
-      svgPaths += arrowLine(p.sol.cx, p.sol.y + p.sol.h, p.prob.cx, p.prob.y, '#4ade80', 'arrowGreen');
-    } else {
-      svgPaths += arrowLine(p.sol.cx, p.sol.y, p.prob.cx, p.prob.y + p.prob.h, '#4ade80', 'arrowGreen');
-    }
-
-    // Arrows: Eval → Solution
-    if (p.above) {
-      svgPaths += arrowLine(p.eval.cx, p.eval.y + p.eval.h, p.sol.cx, p.sol.y, '#facc15', 'arrowYellow');
-    } else {
-      svgPaths += arrowLine(p.eval.cx, p.eval.y, p.sol.cx, p.sol.y + p.sol.h, '#facc15', 'arrowYellow');
-    }
-  });
-
-  // Horizontal spine arrows
-  for (let i = 0; i < n - 1; i++) {
-    const from = positions[i].stage, to = positions[i+1].stage;
-    svgPaths += `<line x1="${from.x + from.w + 2}" y1="${from.cy}" x2="${to.x - 2}" y2="${to.cy}"
-      stroke="#93c5fd" stroke-width="2.5" marker-end="url(#arrowBlue)"/>`;
-  }
-
-  const diagram = document.getElementById('diagram');
-  diagram.style.width = totalW + 'px';
-  diagram.style.height = totalH + 'px';
-  diagram.innerHTML = `
-    <svg class="conn-svg" viewBox="0 0 ${totalW} ${totalH}"
-         style="width:${totalW}px;height:${totalH}px;">
-      <defs>
-        <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="#f87171"/></marker>
-        <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="#4ade80"/></marker>
-        <marker id="arrowYellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="#facc15"/></marker>
-        <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="#93c5fd"/></marker>
-      </defs>
-      ${svgPaths}
-    </svg>
-    <div class="nodes">${nodesHtml}</div>`;
+  el.innerHTML = html;
 
   const totalMs = run.total_latency_ms || 0;
-  document.getElementById('metaInfo').textContent =
-    totalMs > 0 ? `Total: ${(totalMs/1000).toFixed(1)}s` : '';
-  renderSummary(run, steps);
-}
-
-function arrowLine(x1, y1, x2, y2, color, markerId) {
-  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
-    stroke="${color}" stroke-width="2" marker-end="url(#${markerId})" opacity="0.7"/>`;
-}
-
-function renderSummary(run, steps) {
+  document.getElementById('metaInfo').textContent = totalMs > 0 ? `${(totalMs/1000).toFixed(1)}s` : '';
   const bar = document.getElementById('summaryBar');
   bar.style.display = 'flex';
-  const totalMs = run.total_latency_ms || 0;
-  const avgF = avg(steps.map(s => s.feasibility).filter(v => v !== null));
-  const avgI = avg(steps.map(s => s.impact).filter(v => v !== null));
-  const avgC = avg(steps.map(s => s.complexity).filter(v => v !== null));
+  const totalSteps = tasks.reduce((s,t) => s + (t.steps||[]).length, 0);
+  const avgF = avg(evals.map(e => e.feasibility));
+  const avgI = avg(evals.map(e => e.impact));
   bar.innerHTML = `
     <div class="summary-stat"><span class="sl">Job</span><span class="sv">${esc(run.job)}</span></div>
     <div class="summary-stat"><span class="sl">Status</span><span class="sv ${run.success?'ok':'fail'}">${run.success?'Success':'Failed'}</span></div>
-    <div class="summary-stat"><span class="sl">Latency</span><span class="sv">${totalMs>0?(totalMs/1000).toFixed(1)+'s':'cached'}</span></div>
-    <div class="summary-stat"><span class="sl">Steps</span><span class="sv">${steps.length}</span></div>
-    <div class="summary-stat"><span class="sl">Avg Feasibility</span><span class="sv">${avgF.toFixed(1)}/5</span></div>
-    <div class="summary-stat"><span class="sl">Avg Impact</span><span class="sv">${avgI.toFixed(1)}/5</span></div>
-    <div class="summary-stat"><span class="sl">Avg Complexity</span><span class="sv">${avgC.toFixed(1)}/5</span></div>
-  `;
+    <div class="summary-stat"><span class="sl">Tasks</span><span class="sv">${tasks.length}</span></div>
+    <div class="summary-stat"><span class="sl">Steps</span><span class="sv">${totalSteps}</span></div>
+    <div class="summary-stat"><span class="sl">Solutions</span><span class="sv">${solutions.length}</span></div>
+    <div class="summary-stat"><span class="sl">Avg F</span><span class="sv">${evals.length?avgF.toFixed(1):'\u2014'}/5</span></div>
+    <div class="summary-stat"><span class="sl">Avg I</span><span class="sv">${evals.length?avgI.toFixed(1):'\u2014'}/5</span></div>
+    <div class="summary-stat"><span class="sl">Latency</span><span class="sv">${totalMs>0?(totalMs/1000).toFixed(0)+'s':'cached'}</span></div>`;
 }
 
-function avg(a) { return a.length ? a.reduce((x,y) => x+y,0)/a.length : 0; }
+// ── Benchmark tab ──
+function renderBenchmark() {
+  const el = document.getElementById('benchmarkTab');
+  const summary = benchData.summary;
+  if (!summary) { el.innerHTML = '<div class="error">No benchmark data. Run: python scripts/benchmark_stage1.py --remote</div>'; return; }
+  const scores = benchData.detailed_scores || [];
+
+  function mc(val) { return val >= 0.7 ? 'score-good' : val >= 0.4 ? 'score-warn' : 'score-bad'; }
+  function mv(obj) { return obj && obj.mean !== undefined ? obj.mean : obj || 0; }
+
+  let html = '';
+
+  // Structure section
+  html += `<div class="bench-section"><div class="bench-header">\u2460 STRUCTURE \u2014 does the output have the right shape?</div><div class="bench-body"><div class="metric-grid">`;
+  html += metricCard('Format', mv(summary.format_score), 'Tasks present, each with 5+ steps');
+  html += metricCard('Task Count', mv(summary.task_count_score), `Avg ${summary.avg_task_count||'?'} tasks per job`);
+  html += metricCard('Emptiness', mv(summary.emptiness_penalty), `${((summary.emptiness_rate||0)*100).toFixed(0)}% jobs have short tasks`, true);
+  html += metricCard('Duplication', mv(summary.duplication_penalty), `${((summary.duplication_rate||0)*100).toFixed(0)}% jobs affected`, true);
+  html += `</div></div></div>`;
+
+  // Content section
+  html += `<div class="bench-section"><div class="bench-header">\u2461 CONTENT \u2014 is the content good?</div><div class="bench-body"><div class="metric-grid">`;
+  html += metricCard('Criticality', mv(summary.criticality_score), 'Tasks match expected critical tasks');
+  html += metricCard('Concreteness', mv(summary.concreteness), 'Action verbs, no vague terms');
+  html += metricCard('Relevance', mv(summary.relevance), 'Matches expected job keywords');
+  html += `</div></div></div>`;
+
+  // Flow section
+  html += `<div class="bench-section"><div class="bench-header">\u2462 FLOW \u2014 do steps make sense together?</div><div class="bench-body"><div class="metric-grid">`;
+  html += metricCard('Coherence', mv(summary.coherence), 'Steps flow logically within tasks');
+  html += `</div></div></div>`;
+
+  // Overall
+  html += `<div class="bench-section"><div class="bench-header">\u2463 OVERALL</div><div class="bench-body"><div class="metric-grid">`;
+  html += metricCard('Stage Score', mv(summary.stage_score), `${summary.jobs_evaluated||0} jobs evaluated`);
+  html += metricCard('Avg Latency', (mv(summary.latency_ms)/1000).toFixed(1)+'s', 'Per job', false, true);
+  const diffs = ['easy','medium','hard'];
+  diffs.forEach(d => {
+    const k = d + '_stage_score';
+    if (summary[k]) html += metricCard(d.charAt(0).toUpperCase()+d.slice(1), summary[k].mean, `n=${summary[k].count}`);
+  });
+  html += `</div></div></div>`;
+
+  // Per-job table
+  if (scores.length) {
+    html += `<div class="bench-section"><div class="bench-header">Per-Job Scores</div><div class="bench-body"><div class="bench-jobs"><table>
+      <tr><th>Job</th><th>Diff</th><th>Tasks</th><th>Steps</th><th>Fmt</th><th>Cnt</th><th>Crit</th><th>Conc</th><th>Rel</th><th>Coh</th><th>Score</th></tr>`;
+    scores.forEach(s => {
+      const sc = s.stage_score;
+      html += `<tr>
+        <td>${esc(s.job)}</td><td>${s.difficulty||''}</td>
+        <td>${s.task_count||0}</td><td>${s.total_steps||0}</td>
+        <td class="${mc(s.format_score)}">${(s.format_score||0).toFixed(2)}</td>
+        <td class="${mc(s.task_count_score||0)}">${(s.task_count_score||0).toFixed(2)}</td>
+        <td class="${mc(s.criticality_score||0)}">${(s.criticality_score||0).toFixed(2)}</td>
+        <td class="${mc(s.concreteness)}">${(s.concreteness||0).toFixed(2)}</td>
+        <td class="${mc(s.relevance)}">${(s.relevance||0).toFixed(2)}</td>
+        <td class="${mc(s.coherence||0)}">${(s.coherence||0).toFixed(2)}</td>
+        <td class="${mc(sc)}"><strong>${sc.toFixed(3)}</strong></td>
+      </tr>`;
+    });
+    html += '</table></div></div></div>';
+  }
+
+  el.innerHTML = html;
+}
+
+function metricCard(label, value, detail, isPenalty, isRaw) {
+  const numVal = typeof value === 'number' ? value : parseFloat(value);
+  let cls = '';
+  if (!isRaw) {
+    if (isPenalty) cls = numVal <= 0.01 ? 'score-good' : numVal <= 0.1 ? 'score-warn' : 'score-bad';
+    else cls = numVal >= 0.7 ? 'score-good' : numVal >= 0.4 ? 'score-warn' : 'score-bad';
+  }
+  const display = typeof value === 'string' ? value : numVal.toFixed(3);
+  return `<div class="metric-card"><div class="label">${esc(label)}</div><div class="value ${cls}">${display}</div><div class="detail">${esc(detail||'')}</div></div>`;
+}
+
+function avg(a) { return a.length ? a.reduce((x,y) => x+y, 0) / a.length : 0; }
 function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
 init();

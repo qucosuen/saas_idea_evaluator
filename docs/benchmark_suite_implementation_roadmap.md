@@ -69,43 +69,68 @@ Store dataset as JSON:
 
 ## Stage 1: Workflow Generator
 
+### Output Structure
+
+Given a job title, the model outputs a list of daily tasks. Each task contains a sequence of steps describing how to complete it.
+
 ### Metrics
 
 #### 1. Format Check
 
-* Exactly 5 steps
-* Correct prefix: `Step X:`
+* Correct task/step structure
+* Each task has a title and numbered steps
 
 #### 2. Concreteness Score
 
-* Detect action verbs
+* Detect action verbs in steps
 * Penalize vague terms
 
 #### 3. Relevance Score
 
-* Match against expected keywords
+* Match against expected keywords for the job
+
+#### 4. Coherence Score
+
+* Steps within each task form a logical sequence
+* Word overlap between consecutive steps
+* Transition cues (e.g. "then", "after", "using")
+* Temporal ordering (early steps gather, late steps output)
+
+#### 5. Duplication Penalty
+
+* Detect repeated task/step content
+
+#### 6. Emptiness Penalty
+
+* Detect tasks or steps with no meaningful content
 
 ---
 
 ## Stage 2: Problem Extractor
 
+### Output Structure
+
+For each step within each task from Stage 1, the model identifies:
+- The current modern solution used for that step (e.g. software, tool, process)
+- Any problems with that current solution (if problems exist)
+
 ### Metrics
 
-#### 1. Constraint Adherence
+#### 1. Coverage
 
-* Must include one of:
+* Every step from Stage 1 has a corresponding analysis
 
-  * time-consuming
-  * repetitive
-  * error-prone
+#### 2. Solution Specificity
 
-#### 2. Coverage
+* Current solutions reference real tools, software, or methods (not vague)
 
-* Exactly 5 problems
+#### 3. Problem Quality
 
-#### 3. Alignment
+* Problems are specific and actionable, not generic complaints
 
-* Match problem type to step semantics
+#### 4. Alignment
+
+* Solutions and problems are relevant to the step they reference
 
 ---
 
