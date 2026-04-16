@@ -98,12 +98,110 @@ OUTPUT FORMAT:
 
 STAGE1_USER = "List the critical daily tasks with detailed steps for: {job}"
 
-STAGE2_SYSTEM = """You analyze workflow steps. For each step, identify the current modern solution (tool, software, or method) used today, and any problem with that solution.
-Output ONLY a JSON array. One entry per step across all tasks.
-Each: {"task_number": N, "step_number": M, "step_description": "the step", "current_solution": "what tool/method is used today", "problem": "problem with this solution, or empty string if none"}
+STAGE2_SYSTEM = """You analyze workflow steps and identify current solutions and their limitations.
 
-Example:
-[{"task_number":1,"step_number":1,"step_description":"Collect returned books from the drop-off bin.","current_solution":"Manual collection by staff walking to the bin","problem":"Time-consuming during peak hours when bin overflows"},{"task_number":1,"step_number":2,"step_description":"Scan each book barcode to check it in.","current_solution":"Handheld barcode scanner with library management system","problem":"Scanner misreads damaged barcodes, requiring manual entry"},{"task_number":1,"step_number":3,"step_description":"Inspect books for damage and flag issues.","current_solution":"Visual inspection by staff","problem":"Inconsistent damage assessment between different staff members"}]"""
+Output ONLY a JSON array. One entry per step.
+
+STRICT RULES:
+- Each step must include:
+  - a REALISTIC current solution (tool, software, or method)
+  - a SPECIFIC problem (not generic)
+- Each problem MUST be one of:
+  - time-consuming
+  - repetitive
+  - error-prone
+- The problem MUST explain WHY the current solution fails
+- If no clear problem exists, set problem to ""
+
+AVOID:
+- Generic problems like "inefficient process"
+- Repeating the step description
+- Vague reasoning
+
+OUTPUT FORMAT:
+[
+  {
+    "task_number": 1,
+    "step_number": 1,
+    "step_description": "Pull the latest code from the GitHub repository using Git.",
+    "current_solution": "Developers manually run git pull from GitHub repository via CLI or IDE",
+    "problem": "Manual pulling across multiple environments is time-consuming and can lead to inconsistent code versions",
+    "problem_type": "time-consuming"
+  },
+  {
+    "task_number": 1,
+    "step_number": 2,
+    "step_description": "Trigger the CI pipeline in Jenkins to run automated tests and build artifacts.",
+    "current_solution": "CI pipeline triggered manually or via webhook in Jenkins",
+    "problem": "Pipeline failures require repeated manual re-triggering, making the process repetitive",
+    "problem_type": "repetitive"
+  },
+  {
+    "task_number": 1,
+    "step_number": 3,
+    "step_description": "Build a Docker image for the application using Docker CLI.",
+    "current_solution": "Docker image built using docker build command in CI environment",
+    "problem": "Build failures due to inconsistent dependencies are error-prone and hard to debug",
+    "problem_type": "error-prone"
+  },
+  {
+    "task_number": 1,
+    "step_number": 4,
+    "step_description": "Push the Docker image to a container registry such as AWS ECR.",
+    "current_solution": "Docker images pushed manually or via CI pipeline to AWS ECR",
+    "problem": "Authentication token expiration can interrupt pushes, requiring manual re-authentication",
+    "problem_type": "error-prone"
+  },
+  {
+    "task_number": 1,
+    "step_number": 5,
+    "step_description": "Deploy the updated container to a Kubernetes cluster using kubectl.",
+    "current_solution": "Deployment executed using kubectl apply commands or Helm charts",
+    "problem": "Manual deployment steps across environments are time-consuming and prone to configuration drift",
+    "problem_type": "time-consuming"
+  },
+  {
+    "task_number": 2,
+    "step_number": 1,
+    "step_description": "Collect system and application metrics using Prometheus exporters.",
+    "current_solution": "Metrics collected via Prometheus exporters configured per service",
+    "problem": "",
+    "problem_type": ""
+  },
+  {
+    "task_number": 2,
+    "step_number": 2,
+    "step_description": "Visualize metrics on Grafana dashboards for CPU, memory, and latency.",
+    "current_solution": "Grafana dashboards manually configured and updated by engineers",
+    "problem": "Updating dashboards for new services is repetitive and requires manual configuration",
+    "problem_type": "repetitive"
+  },
+  {
+    "task_number": 2,
+    "step_number": 3,
+    "step_description": "Configure alert rules in Prometheus Alertmanager for threshold breaches.",
+    "current_solution": "Alert rules defined in YAML configuration files for Alertmanager",
+    "problem": "Incorrect threshold configuration can lead to missed alerts or false positives, making it error-prone",
+    "problem_type": "error-prone"
+  },
+  {
+    "task_number": 2,
+    "step_number": 4,
+    "step_description": "Receive and review alerts through Slack or PagerDuty notifications.",
+    "current_solution": "Alerts sent via Slack or PagerDuty integrations",
+    "problem": "",
+    "problem_type": ""
+  },
+  {
+    "task_number": 2,
+    "step_number": 5,
+    "step_description": "Investigate logs using Elasticsearch and Kibana to identify root causes.",
+    "current_solution": "Logs queried manually in Kibana dashboards",
+    "problem": "Manual log searching across multiple services is time-consuming and inefficient",
+    "problem_type": "time-consuming"
+  }
+]
+"""
 
 STAGE2_USER = "Analyze each step in this workflow — identify the current solution and any problems:\n{workflow}"
 
