@@ -1,0 +1,615 @@
+{
+  "job": "Data Engineer",
+  "success": true,
+  "total_latency_ms": 146936.2,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 32377.2,
+      "tokens": 699,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "title": "Data Collection",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Identify data sources required for project."
+            },
+            {
+              "step_number": 2,
+              "description": "Develop data collection strategy including tools and methods."
+            },
+            {
+              "step_number": 3,
+              "description": "Set up data pipelines using ETL (Extract, Transform, Load) tools."
+            }
+          ]
+        },
+        {
+          "task_number": 2,
+          "title": "Data Storage",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Choose appropriate storage solutions such as databases or cloud services."
+            },
+            {
+              "step_number": 2,
+              "description": "Configure storage systems according to chosen solution."
+            },
+            {
+              "step_number": 3,
+              "description": "Implement backup and disaster recovery strategies."
+            }
+          ]
+        },
+        {
+          "task_number": 3,
+          "title": "Data Processing",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Design data processing algorithms and scripts."
+            },
+            {
+              "step_number": 2,
+              "description": "Write code to process raw data."
+            },
+            {
+              "step_number": 3,
+              "description": "Test processed data for accuracy and completeness."
+            },
+            {
+              "step_number": 4,
+              "description": "Optimize performance of data processing operations."
+            }
+          ]
+        },
+        {
+          "task_number": 4,
+          "title": "Data Analysis",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Define analysis objectives and research questions."
+            },
+            {
+              "step_number": 2,
+              "description": "Select appropriate analytical techniques and tools."
+            },
+            {
+              "step_number": 3,
+              "description": "Analyze collected data using selected tools."
+            },
+            {
+              "step_number": 4,
+              "description": "Interpret results and draw conclusions."
+            },
+            {
+              "step_number": 5,
+              "description": "Document findings and insights."
+            }
+          ]
+        },
+        {
+          "task_number": 5,
+          "title": "Reporting and Visualization",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Create reports summarizing key findings."
+            },
+            {
+              "step_number": 2,
+              "description": "Visualize data through charts, graphs, and dashboards."
+            },
+            {
+              "step_number": 3,
+              "description": "Share reports and visualizations with stakeholders."
+            }
+          ]
+        },
+        {
+          "task_number": 6,
+          "title": "Documentation and Maintenance",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Maintain documentation of data pipeline configurations, processes, and tools."
+            },
+            {
+              "step_number": 2,
+              "description": "Regularly update documentation as needed."
+            },
+            {
+              "step_number": 3,
+              "description": "Monitor and maintain data infrastructure and systems."
+            }
+          ]
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "step_analyzer",
+      "valid": true,
+      "latency_ms": 40573.4,
+      "tokens": 1311,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "step_description": "Identify data sources required for project.",
+          "current_solution": "Manual identification and listing of data sources.",
+          "problem": "Requires significant time and effort to manually list and categorize data sources."
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "step_description": "Develop data collection strategy including tools and methods.",
+          "current_solution": "Manual development of data collection strategy.",
+          "problem": "Lacks systematic approach and may not be efficient or scalable."
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "step_description": "Set up data pipelines using ETL (Extract, Transform, Load) tools.",
+          "current_solution": "Manual setup of ETL tools.",
+          "problem": "May require extensive customization and integration efforts."
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "step_description": "Choose appropriate storage solutions such as databases or cloud services.",
+          "current_solution": "Manual selection of storage solutions.",
+          "problem": "Lack of standardized criteria for choosing storage solutions."
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "step_description": "Configure storage systems according to chosen solution.",
+          "current_solution": "Manual configuration of storage systems.",
+          "problem": "May lead to inefficiencies and potential data loss due to human error."
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "step_description": "Implement backup and disaster recovery strategies.",
+          "current_solution": "Manual implementation of backup and disaster recovery strategies.",
+          "problem": "Risk of human error leading to incomplete or ineffective backups."
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "step_description": "Design data processing algorithms and scripts.",
+          "current_solution": "Manual design of data processing algorithms and scripts.",
+          "problem": "Lack of standardization and scalability."
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "step_description": "Write code to process raw data.",
+          "current_solution": "Manual writing of code.",
+          "problem": "High risk of errors and bugs due to lack of automated testing and validation."
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "step_description": "Test processed data for accuracy and completeness.",
+          "current_solution": "Manual testing of processed data.",
+          "problem": "Risk of overlooking critical errors and inconsistencies."
+        },
+        {
+          "task_number": 3,
+          "step_number": 4,
+          "step_description": "Optimize performance of data processing operations.",
+          "current_solution": "Manual optimization of performance.",
+          "problem": "Difficulty in identifying bottlenecks and optimizing resources effectively."
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "step_description": "Define analysis objectives and research questions.",
+          "current_solution": "Manual definition of analysis objectives and research questions.",
+          "problem": "Lack of structured approach and potential for inconsistent outcomes."
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "step_description": "Select appropriate analytical techniques and tools.",
+          "current_solution": "Manual selection of analytical techniques and tools.",
+          "problem": "Lack of expertise and potentially outdated tools."
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "step_description": "Analyze collected data using selected tools.",
+          "current_solution": "Manual analysis of data using selected tools.",
+          "problem": "Potential for bias and subjective interpretation."
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "step_description": "Interpret results and draw conclusions.",
+          "current_solution": "Manual interpretation of results and drawing conclusions.",
+          "problem": "Risk of missing important patterns or trends."
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "step_description": "Document findings and insights.",
+          "current_solution": "Manual documentation of findings and insights.",
+          "problem": "Risk of incomplete or inaccurate documentation."
+        },
+        {
+          "task_number": 5,
+          "step_number": 1,
+          "step_description": "Create reports summarizing key findings.",
+          "current_solution": "Manual creation of reports.",
+          "problem": "Risk of errors and omissions in report content."
+        },
+        {
+          "task_number": 5,
+          "step_number": 2,
+          "step_description": "Visualize data through charts, graphs, and dashboards.",
+          "current_solution": "Manual visualization of data.",
+          "problem": "Risk of poor quality visuals and difficulty in communicating insights."
+        },
+        {
+          "task_number": 5,
+          "step_number": 3,
+          "step_description": "Share reports and visualizations with stakeholders.",
+          "current_solution": "Manual sharing of reports and visualizations.",
+          "problem": "Risk of delays and missed deadlines."
+        },
+        {
+          "task_number": 6,
+          "step_number": 1,
+          "step_description": "Maintain documentation of data pipeline configurations, processes, and tools.",
+          "current_solution": "Manual maintenance of documentation.",
+          "problem": "Risk of outdated information and potential loss of knowledge."
+        },
+        {
+          "task_number": 6,
+          "step_number": 2,
+          "step_description": "Regularly update documentation as needed.",
+          "current_solution": "Manual updating of documentation.",
+          "problem": "Risk of neglecting updates and losing track of changes."
+        },
+        {
+          "task_number": 6,
+          "step_number": 3,
+          "step_description": "Monitor and maintain data infrastructure and systems.",
+          "current_solution": "Manual monitoring and maintenance of data infrastructure and systems.",
+          "problem": "Risk of overlooking critical issues and potential downtime."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "solution_mapper",
+      "valid": true,
+      "latency_ms": 39574.6,
+      "tokens": 1273,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "problem": "Requires significant time and effort to manually list and categorize data sources.",
+          "solution_type": "automation script",
+          "rationale": "Automated data source identification tool can efficiently gather and organize data sources."
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "problem": "Lacks systematic approach and may not be efficient or scalable.",
+          "solution_type": "automation script",
+          "rationale": "Automated data collection strategy generation script can streamline the process."
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "problem": "May require extensive customization and integration efforts.",
+          "solution_type": "automation script",
+          "rationale": "Automated ETL tool can automate the setup process more efficiently."
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "problem": "Lack of standardized criteria for choosing storage solutions.",
+          "solution_type": "automation script",
+          "rationale": "Automated storage solution selection tool can provide consistent recommendations based on predefined criteria."
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "problem": "May lead to inefficiencies and potential data loss due to human error.",
+          "solution_type": "automation script",
+          "rationale": "Automated configuration tool can reduce the likelihood of manual mistakes."
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "problem": "Risk of human error leading to incomplete or ineffective backups.",
+          "solution_type": "automation script",
+          "rationale": "Automated backup and disaster recovery tool can ensure consistency and reliability."
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "problem": "Lack of standardization and scalability.",
+          "solution_type": "automation script",
+          "rationale": "Automated algorithm and script design tool can optimize performance across different datasets."
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "problem": "High risk of errors and bugs due to lack of automated testing and validation.",
+          "solution_type": "automation script",
+          "rationale": "Automated coding tool can catch errors early and improve overall code quality."
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "problem": "Difficulty in identifying bottlenecks and optimizing resources effectively.",
+          "solution_type": "automation script",
+          "rationale": "Automated optimization tool can analyze resource usage and suggest improvements."
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "problem": "Lack of structured approach and potential for inconsistent outcomes.",
+          "solution_type": "automation script",
+          "rationale": "Automated objective definition tool can create a structured framework for analysis."
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "problem": "Lack of expertise and potentially outdated tools.",
+          "solution_type": "automation script",
+          "rationale": "Automated tool selection tool can recommend current and relevant analytical techniques."
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "problem": "Potential for bias and subjective interpretation.",
+          "solution_type": "automation script",
+          "rationale": "Automated analysis tool can minimize human influence by automating the decision-making process."
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "problem": "Risk of missing important patterns or trends.",
+          "solution_type": "automation script",
+          "rationale": "Automated interpretation tool can identify hidden patterns and trends automatically."
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "problem": "Risk of incomplete or inaccurate documentation.",
+          "solution_type": "automation script",
+          "rationale": "Automated documentation tool can generate accurate and comprehensive documentation."
+        },
+        {
+          "task_number": 5,
+          "step_number": 1,
+          "problem": "Risk of errors and omissions in report content.",
+          "solution_type": "automation script",
+          "rationale": "Automated report generation tool can ensure the integrity and accuracy of the final product."
+        },
+        {
+          "task_number": 5,
+          "step_number": 2,
+          "problem": "Risk of poor quality visuals and difficulty in communicating insights.",
+          "solution_type": "automation script",
+          "rationale": "Automated visualization tool can produce high-quality, visually appealing graphics."
+        },
+        {
+          "task_number": 5,
+          "step_number": 3,
+          "problem": "Risk of delays and missed deadlines.",
+          "solution_type": "automation script",
+          "rationale": "Automated reporting and distribution tool can manage timelines and ensure timely delivery."
+        },
+        {
+          "task_number": 6,
+          "step_number": 1,
+          "problem": "Risk of outdated information and potential loss of knowledge.",
+          "solution_type": "automation script",
+          "rationale": "Automated documentation maintenance tool can keep records updated and accessible."
+        },
+        {
+          "task_number": 6,
+          "step_number": 2,
+          "problem": "Risk of neglecting updates and losing track of changes.",
+          "solution_type": "automation script",
+          "rationale": "Automated documentation update tool can monitor and enforce regular updates."
+        },
+        {
+          "task_number": 6,
+          "step_number": 3,
+          "problem": "Risk of overlooking critical issues and potential downtime.",
+          "solution_type": "automation script",
+          "rationale": "Automated monitoring and maintenance tool can detect and address underlying issues proactively."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "evaluator",
+      "valid": true,
+      "latency_ms": 34411.0,
+      "tokens": 1107,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "solution_type": "automated data source identification tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "solution_type": "automated data collection strategy generation script",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "solution_type": "automated ETL tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "solution_type": "automated storage solution selection tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "solution_type": "automated configuration tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "solution_type": "automated backup and disaster recovery tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "solution_type": "automated algorithm and script design tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "solution_type": "automated coding tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "solution_type": "automated optimization tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "solution_type": "automated objective definition tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "solution_type": "automated tool selection tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "solution_type": "automated analysis tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "solution_type": "automated interpretation tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "solution_type": "automated documentation tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 5,
+          "step_number": 1,
+          "solution_type": "automated report generation tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 5,
+          "step_number": 2,
+          "solution_type": "automated visualization tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 5,
+          "step_number": 3,
+          "solution_type": "automated reporting and distribution tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 6,
+          "step_number": 1,
+          "solution_type": "automated documentation maintenance tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 6,
+          "step_number": 2,
+          "solution_type": "automated documentation update tool",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 6,
+          "step_number": 3,
+          "solution_type": "automated monitoring and maintenance tool",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        }
+      ],
+      "raw": null
+    }
+  ],
+  "elapsed_s": 146.9
+}

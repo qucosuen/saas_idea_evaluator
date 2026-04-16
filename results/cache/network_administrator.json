@@ -1,0 +1,157 @@
+{
+  "job": "Network Administrator",
+  "success": false,
+  "total_latency_ms": 117077.1,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 25130.8,
+      "tokens": 793,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "title": "Monitor System Performance",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Check CPU usage, memory utilization, disk space, and network traffic."
+            },
+            {
+              "step_number": 2,
+              "description": "Review logs for any errors or warnings."
+            },
+            {
+              "step_number": 3,
+              "description": "Alert IT support if performance issues are detected."
+            }
+          ]
+        },
+        {
+          "task_number": 2,
+          "title": "Patch Vulnerabilities",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Identify outdated software and hardware components."
+            },
+            {
+              "step_number": 2,
+              "description": "Research available patches and updates."
+            },
+            {
+              "step_number": 3,
+              "description": "Apply necessary patches and updates to systems."
+            },
+            {
+              "step_number": 4,
+              "description": "Test applications after patching to ensure they function correctly."
+            },
+            {
+              "step_number": 5,
+              "description": "Document all actions taken and results."
+            }
+          ]
+        },
+        {
+          "task_number": 3,
+          "title": "Maintain Hardware Equipment",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Perform routine maintenance checks on servers, routers, switches, and other equipment."
+            },
+            {
+              "step_number": 2,
+              "description": "Replace failed hardware components as needed."
+            },
+            {
+              "step_number": 3,
+              "description": "Ensure proper cooling and ventilation for equipment."
+            },
+            {
+              "step_number": 4,
+              "description": "Clean dust off equipment to prevent overheating."
+            },
+            {
+              "step_number": 5,
+              "description": "Document all maintenance activities performed."
+            }
+          ]
+        },
+        {
+          "task_number": 4,
+          "title": "Upgrade Software Applications",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Analyze current application usage and identify areas needing improvement."
+            },
+            {
+              "step_number": 2,
+              "description": "Research potential upgrades that can enhance functionality or security."
+            },
+            {
+              "step_number": 3,
+              "description": "Develop a plan for implementing the upgrade."
+            },
+            {
+              "step_number": 4,
+              "description": "Execute the upgrade process following established procedures."
+            },
+            {
+              "step_number": 5,
+              "description": "Test upgraded applications to confirm they work properly."
+            },
+            {
+              "step_number": 6,
+              "description": "Document the entire upgrade process and results."
+            }
+          ]
+        },
+        {
+          "task_number": 5,
+          "title": "Secure Network Infrastructure",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Assess current network vulnerabilities using vulnerability scanners."
+            },
+            {
+              "step_number": 2,
+              "description": "Implement firewall rules and access controls."
+            },
+            {
+              "step_number": 3,
+              "description": "Configure intrusion detection and prevention systems (IDPS)."
+            },
+            {
+              "step_number": 4,
+              "description": "Regularly update IDPS signatures and configurations."
+            },
+            {
+              "step_number": 5,
+              "description": "Train staff on best practices for secure network use."
+            },
+            {
+              "step_number": 6,
+              "description": "Monitor network activity for suspicious behavior."
+            }
+          ]
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "step_analyzer",
+      "valid": false,
+      "latency_ms": 91946.3,
+      "tokens": 2992,
+      "attempts": 2,
+      "parsed": null,
+      "raw": "[\n  {\n    \"task_number\": 1,\n    \"step_number\": 1,\n    \"step_description\": \"Check CPU usage, memory utilization, disk space, and network traffic.\",\n    \"current_solution\": \"Manual monitoring through tools like Task Manager, Resource Monitor, and Event Viewer.\",\n    \"problem\": \"Requires frequent manual checking which can be time-consuming and prone to human error.\"\n  },\n  {\n    \"task_number\": 1,\n    \"step_number\": 2,\n    \"step_description\": \"Review logs for any errors or warnings.\",\n    \"current_s"
+    }
+  ],
+  "elapsed_s": 117.1
+}

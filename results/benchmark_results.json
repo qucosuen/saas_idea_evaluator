@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "jobs_evaluated": 1,
+    "timestamp": "2026-04-16T09:49:39.334238+00:00",
+    "final_score": {
+      "mean": 0.363,
+      "std": 0
+    },
+    "task_score": {
+      "mean": 0.658,
+      "coverage": 0.2,
+      "relevance": 1.0,
+      "specificity": 0.591,
+      "non_redundancy": 1.0
+    },
+    "step_score": {
+      "mean": 0.874,
+      "atomicity": 1.0,
+      "logical_ordering": 0.923,
+      "actionability": 1.0,
+      "specificity": 0.573
+    },
+    "problem_score": {
+      "mean": 0,
+      "specificity": 0,
+      "realism": 0,
+      "causality": 0
+    },
+    "solution_score": {
+      "mean": 0,
+      "correctness": 0,
+      "specificity": 0,
+      "diversity": 0,
+      "feasibility": 0,
+      "novelty": 0
+    },
+    "eval_score": {
+      "mean": 0,
+      "variance": 0,
+      "justification": 0,
+      "specificity": 0,
+      "usefulness": 0
+    },
+    "system": {
+      "consistency": 1.0,
+      "redundancy": 0,
+      "constraint_adherence": 1.0,
+      "practicality": 0.25
+    },
+    "success_rate": 0.0,
+    "hard_score": 0.363
+  },
+  "results": [
+    {
+      "job": "DevOps Engineer",
+      "difficulty": "hard",
+      "success": false,
+      "task_scores": {
+        "coverage": 0.2,
+        "relevance": 1.0,
+        "specificity": 0.591,
+        "non_redundancy": 1.0,
+        "score": 0.658
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.923,
+        "actionability": 1.0,
+        "specificity": 0.573,
+        "score": 0.874
+      },
+      "problem_scores": {
+        "specificity": 0,
+        "realism": 0,
+        "causality": 0,
+        "score": 0
+      },
+      "solution_scores": {
+        "correctness": 0,
+        "specificity": 0,
+        "diversity": 0,
+        "feasibility": 0,
+        "novelty": 0,
+        "score": 0
+      },
+      "eval_scores": {
+        "variance": 0,
+        "justification": 0,
+        "specificity": 0,
+        "usefulness": 0,
+        "score": 0
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.25
+      },
+      "final_score": 0.363,
+      "latency_ms": 127683.0,
+      "elapsed_s": 127.7
+    }
+  ]
+}

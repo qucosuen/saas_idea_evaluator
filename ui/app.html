@@ -16,7 +16,7 @@
     --eval-bg: #fef9c3; --eval-border: #fde047; --eval-text: #854d0e;
     --text: #1e293b; --text2: #475569; --text3: #94a3b8;
     --font: 'Inter', system-ui, sans-serif;
-    --good: #16a34a; --warn: #d97706; --bad: #dc2626;
+    --good: #16a34a; --bad: #dc2626;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
@@ -26,16 +26,16 @@
   .header select { padding: 5px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 12px; font-family: var(--font); background: #fff; }
   .header .meta { font-size: 11px; color: var(--text3); }
 
-  .tabs { display: flex; gap: 0; background: var(--bg2); border-bottom: 2px solid #e2e8f0; padding: 0 24px; }
-  .tab { padding: 10px 20px; font-size: 13px; font-weight: 600; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
-  .tab:hover { color: var(--text2); }
-  .tab.active { color: var(--task-text); border-bottom-color: var(--task-text); }
+  .legend { background: var(--bg2); border-bottom: 1px solid #f1f5f9; padding: 8px 24px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text2); }
+  .legend-box { width: 10px; height: 10px; border-radius: 3px; border: 1.5px solid; }
+  .legend-box.step { background: var(--step-bg); border-color: var(--step-border); }
+  .legend-box.current { background: var(--current-bg); border-color: var(--current-border); }
+  .legend-box.problem { background: var(--problem-bg); border-color: var(--problem-border); }
+  .legend-box.solution { background: var(--solution-bg); border-color: var(--solution-border); }
+  .legend-box.eval { background: var(--eval-bg); border-color: var(--eval-border); }
 
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
-
-  /* Pipeline tab */
-  #pipelineTab { padding: 16px 24px; }
+  #content { padding: 16px 24px; }
   .task-section { background: var(--bg2); border-radius: 10px; border: 2px solid var(--task-border); margin-bottom: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
   .task-header { background: var(--task-bg); padding: 10px 16px; font-size: 14px; font-weight: 700; color: var(--task-text); border-bottom: 1px solid var(--task-border); }
   .task-body { padding: 12px 16px; }
@@ -53,26 +53,6 @@
   .pill { font-size: 10px; padding: 2px 6px; border-radius: 5px; font-weight: 600; background: rgba(0,0,0,0.06); }
   .no-data { color: var(--text3); font-size: 10px; font-style: italic; }
 
-  /* Benchmark tab */
-  #benchmarkTab { padding: 16px 24px; }
-  .bench-section { background: var(--bg2); border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 16px; overflow: hidden; }
-  .bench-header { padding: 10px 16px; font-size: 13px; font-weight: 700; color: var(--text); border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
-  .bench-body { padding: 12px 16px; }
-  .metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-  .metric-card { padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; }
-  .metric-card .label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
-  .metric-card .value { font-size: 20px; font-weight: 700; }
-  .metric-card .detail { font-size: 10px; color: var(--text3); margin-top: 2px; }
-  .score-good { color: var(--good); }
-  .score-warn { color: var(--warn); }
-  .score-bad { color: var(--bad); }
-
-  .bench-jobs { margin-top: 12px; }
-  .bench-jobs table { width: 100%; border-collapse: collapse; font-size: 11px; }
-  .bench-jobs th { text-align: left; padding: 6px 8px; font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; border-bottom: 2px solid #e2e8f0; }
-  .bench-jobs td { padding: 5px 8px; border-bottom: 1px solid #f1f5f9; }
-  .bench-jobs tr:hover { background: #f8fafc; }
-
   .summary-bar { background: var(--bg2); border-top: 1px solid #e2e8f0; padding: 10px 24px; display: flex; gap: 20px; flex-wrap: wrap; position: sticky; bottom: 0; }
   .summary-stat { display: flex; flex-direction: column; gap: 1px; }
   .summary-stat .sl { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
@@ -87,108 +67,68 @@
 <div class="header">
   <h1>SLM Pipeline Dashboard</h1>
   <div style="display:flex;align-items:center;gap:10px;">
-    <select id="jobSelect" aria-label="Select pipeline run"><option>Loading...</option></select>
+    <select id="jobSelect"><option>Loading...</option></select>
     <span class="meta" id="metaInfo"></span>
   </div>
 </div>
-<div class="tabs">
-  <div class="tab active" data-tab="pipelineTab">Pipeline Results</div>
-  <div class="tab" data-tab="benchmarkTab">Stage 1 Benchmark</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-box step"></div> Step</div>
+  <div class="legend-item"><div class="legend-box current"></div> Current Solution</div>
+  <div class="legend-item"><div class="legend-box problem"></div> Problem</div>
+  <div class="legend-item"><div class="legend-box solution"></div> Automation</div>
+  <div class="legend-item"><div class="legend-box eval"></div> Evaluation</div>
 </div>
-<div id="pipelineTab" class="tab-content active"><div class="loading">Loading...</div></div>
-<div id="benchmarkTab" class="tab-content"></div>
+<div id="content"><div class="loading">Loading...</div></div>
 <div class="summary-bar" id="summaryBar" style="display:none"></div>
 <script>
-
-// Tab switching
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
-
-let allRuns = [], benchData = {};
-
+let allRuns = [];
 async function init() {
   try {
     const resp = await fetch('/api/data');
     const data = await resp.json();
     allRuns = data.pipeline_runs || [];
-    benchData = data.stage1_benchmark || {};
-
-    if (allRuns.length) {
-      const sel = document.getElementById('jobSelect');
-      sel.innerHTML = allRuns.map((r, i) =>
-        `<option value="${i}">${esc(r.job)}${r.success ? ' \u2713' : ' \u2717'}</option>`
-      ).join('');
-      sel.addEventListener('change', () => renderPipeline(allRuns[+sel.value]));
-      renderPipeline(allRuns[0]);
-    } else {
-      document.getElementById('pipelineTab').innerHTML = '<div class="error">No pipeline runs found.</div>';
-    }
-
-    renderBenchmark();
-  } catch (e) {
-    document.getElementById('pipelineTab').innerHTML = `<div class="error">${esc(e.message)}</div>`;
-  }
+    if (!allRuns.length) { document.getElementById('content').innerHTML = '<div class="error">No pipeline runs. Run: python scripts/run_and_save.py "Job" --remote</div>'; return; }
+    const sel = document.getElementById('jobSelect');
+    sel.innerHTML = allRuns.map((r,i) => `<option value="${i}">${esc(r.job)}${r.success?' \u2713':' \u2717'}</option>`).join('');
+    sel.addEventListener('change', () => render(allRuns[+sel.value]));
+    render(allRuns[0]);
+  } catch(e) { document.getElementById('content').innerHTML = `<div class="error">${esc(e.message)}</div>`; }
 }
-
-// ── Pipeline tab ──
-function renderPipeline(run) {
-  const el = document.getElementById('pipelineTab');
-  if (!run || !run.stages || !run.stages[0] || !run.stages[0].valid) {
-    el.innerHTML = '<div class="error">No valid Stage 1 data.</div>'; return;
-  }
-  const rawTasks = run.stages[0].parsed || [];
-  let tasks;
-  if (rawTasks.length > 0 && rawTasks[0].steps) {
-    tasks = rawTasks;
-  } else {
-    tasks = rawTasks.map((item, i) => ({
-      task_number: item.step_number || item.task_number || i + 1,
-      title: item.title || '', steps: [{ step_number: 1, description: item.description || '' }],
-    }));
-  }
-  const analyses = run.stages[1] && run.stages[1].valid ? run.stages[1].parsed || [] : [];
-  const solutions = run.stages[2] && run.stages[2].valid ? run.stages[2].parsed || [] : [];
-  const evals = run.stages[3] && run.stages[3].valid ? run.stages[3].parsed || [] : [];
-
-  const aMap = {}, sMap = {}, eMap = {};
-  analyses.forEach(a => { aMap[`${a.task_number||a.step_number||0}-${a.step_number||0}`] = a; });
-  solutions.forEach(s => { sMap[`${s.task_number||s.step_number||0}-${s.step_number||0}`] = s; });
-  evals.forEach(e => { eMap[`${e.task_number||e.step_number||0}-${e.step_number||0}`] = e; });
-
-  let html = '';
-  tasks.forEach(task => {
-    const tn = task.task_number || 0;
-    html += `<div class="task-section"><div class="task-header">Task ${tn}: ${esc(task.title)}</div><div class="task-body">
+function render(run) {
+  const el = document.getElementById('content');
+  if (!run||!run.stages||!run.stages[0]||!run.stages[0].valid) { el.innerHTML='<div class="error">No valid data.</div>'; return; }
+  const raw = run.stages[0].parsed||[];
+  let tasks = raw.length>0&&raw[0].steps ? raw : raw.map((item,i)=>({task_number:item.step_number||item.task_number||i+1,title:item.title||'',steps:[{step_number:1,description:item.description||''}]}));
+  const analyses = run.stages[1]&&run.stages[1].valid ? run.stages[1].parsed||[] : [];
+  const solutions = run.stages[2]&&run.stages[2].valid ? run.stages[2].parsed||[] : [];
+  const evals = run.stages[3]&&run.stages[3].valid ? run.stages[3].parsed||[] : [];
+  const aMap={},sMap={},eMap={};
+  analyses.forEach(a=>{aMap[`${a.task_number||a.step_number||0}-${a.step_number||0}`]=a;});
+  solutions.forEach(s=>{sMap[`${s.task_number||s.step_number||0}-${s.step_number||0}`]=s;});
+  evals.forEach(e=>{eMap[`${e.task_number||e.step_number||0}-${e.step_number||0}`]=e;});
+  let html='';
+  tasks.forEach(task=>{
+    const tn=task.task_number||0;
+    html+=`<div class="task-section"><div class="task-header">Task ${tn}: ${esc(task.title)}</div><div class="task-body">
       <div class="col-headers"><span>Step</span><span>Current Solution</span><span>Problem</span><span>Automation</span><span>Score</span></div>`;
-    (task.steps || []).forEach(step => {
-      const key = `${tn}-${step.step_number}`;
-      const a = aMap[key], s = sMap[key], ev = eMap[key];
-      html += `<div class="step-row">
+    (task.steps||[]).forEach(step=>{
+      const key=`${tn}-${step.step_number}`;const a=aMap[key],s=sMap[key],ev=eMap[key];
+      html+=`<div class="step-row">
         <div class="cell cell-step"><strong>Step ${step.step_number}</strong><br>${esc(step.description)}</div>
-        <div class="cell cell-current">${a ? esc(a.current_solution) : '<span class="no-data">\u2014</span>'}</div>
-        <div class="cell cell-problem">${a && a.problem ? esc(a.problem) : '<span class="no-data">No problem</span>'}</div>
-        <div class="cell cell-solution">${s ? `<div class="sol-type">${esc(s.solution_type)}</div>${esc(s.rationale)}` : '<span class="no-data">\u2014</span>'}</div>
-        <div class="cell cell-eval">${ev ? `<span class="pill">F:${ev.feasibility}</span> <span class="pill">I:${ev.impact}</span> <span class="pill">C:${ev.complexity}</span>` : '<span class="no-data">\u2014</span>'}</div>
+        <div class="cell cell-current">${a?esc(a.current_solution):'<span class="no-data">\u2014</span>'}</div>
+        <div class="cell cell-problem">${a&&a.problem?esc(a.problem):'<span class="no-data">No problem</span>'}</div>
+        <div class="cell cell-solution">${s?`<div class="sol-type">${esc(s.solution_type)}</div>${esc(s.rationale)}`:'<span class="no-data">\u2014</span>'}</div>
+        <div class="cell cell-eval">${ev?`<span class="pill">F:${ev.feasibility}</span> <span class="pill">I:${ev.impact}</span> <span class="pill">C:${ev.complexity}</span>`:'<span class="no-data">\u2014</span>'}</div>
       </div>`;
     });
-    html += '</div></div>';
+    html+='</div></div>';
   });
-  el.innerHTML = html;
-
-  const totalMs = run.total_latency_ms || 0;
-  document.getElementById('metaInfo').textContent = totalMs > 0 ? `${(totalMs/1000).toFixed(1)}s` : '';
-  const bar = document.getElementById('summaryBar');
-  bar.style.display = 'flex';
-  const totalSteps = tasks.reduce((s,t) => s + (t.steps||[]).length, 0);
-  const avgF = avg(evals.map(e => e.feasibility));
-  const avgI = avg(evals.map(e => e.impact));
-  bar.innerHTML = `
+  el.innerHTML=html;
+  document.getElementById('metaInfo').textContent=run.total_latency_ms>0?`${(run.total_latency_ms/1000).toFixed(1)}s`:'';
+  const bar=document.getElementById('summaryBar');bar.style.display='flex';
+  const totalSteps=tasks.reduce((s,t)=>s+(t.steps||[]).length,0);
+  const avgF=avg(evals.map(e=>e.feasibility)),avgI=avg(evals.map(e=>e.impact));
+  bar.innerHTML=`
     <div class="summary-stat"><span class="sl">Job</span><span class="sv">${esc(run.job)}</span></div>
     <div class="summary-stat"><span class="sl">Status</span><span class="sv ${run.success?'ok':'fail'}">${run.success?'Success':'Failed'}</span></div>
     <div class="summary-stat"><span class="sl">Tasks</span><span class="sv">${tasks.length}</span></div>
@@ -196,90 +136,10 @@ function renderPipeline(run) {
     <div class="summary-stat"><span class="sl">Solutions</span><span class="sv">${solutions.length}</span></div>
     <div class="summary-stat"><span class="sl">Avg F</span><span class="sv">${evals.length?avgF.toFixed(1):'\u2014'}/5</span></div>
     <div class="summary-stat"><span class="sl">Avg I</span><span class="sv">${evals.length?avgI.toFixed(1):'\u2014'}/5</span></div>
-    <div class="summary-stat"><span class="sl">Latency</span><span class="sv">${totalMs>0?(totalMs/1000).toFixed(0)+'s':'cached'}</span></div>`;
+    <div class="summary-stat"><span class="sl">Latency</span><span class="sv">${run.total_latency_ms>0?(run.total_latency_ms/1000).toFixed(0)+'s':'cached'}</span></div>`;
 }
-
-// ── Benchmark tab ──
-function renderBenchmark() {
-  const el = document.getElementById('benchmarkTab');
-  const summary = benchData.summary;
-  if (!summary) { el.innerHTML = '<div class="error">No benchmark data. Run: python scripts/benchmark_stage1.py --remote</div>'; return; }
-  const scores = benchData.detailed_scores || [];
-
-  function mc(val) { return val >= 0.7 ? 'score-good' : val >= 0.4 ? 'score-warn' : 'score-bad'; }
-  function mv(obj) { return obj && obj.mean !== undefined ? obj.mean : obj || 0; }
-
-  let html = '';
-
-  // Structure section
-  html += `<div class="bench-section"><div class="bench-header">\u2460 STRUCTURE \u2014 does the output have the right shape?</div><div class="bench-body"><div class="metric-grid">`;
-  html += metricCard('Format', mv(summary.format_score), 'Tasks present, each with 5+ steps');
-  html += metricCard('Task Count', mv(summary.task_count_score), `Avg ${summary.avg_task_count||'?'} tasks per job`);
-  html += metricCard('Emptiness', mv(summary.emptiness_penalty), `${((summary.emptiness_rate||0)*100).toFixed(0)}% jobs have short tasks`, true);
-  html += metricCard('Duplication', mv(summary.duplication_penalty), `${((summary.duplication_rate||0)*100).toFixed(0)}% jobs affected`, true);
-  html += `</div></div></div>`;
-
-  // Content section
-  html += `<div class="bench-section"><div class="bench-header">\u2461 CONTENT \u2014 is the content good?</div><div class="bench-body"><div class="metric-grid">`;
-  html += metricCard('Criticality', mv(summary.criticality_score), 'Tasks match expected critical tasks');
-  html += metricCard('Concreteness', mv(summary.concreteness), 'Action verbs, no vague terms');
-  html += metricCard('Relevance', mv(summary.relevance), 'Matches expected job keywords');
-  html += `</div></div></div>`;
-
-  // Flow section
-  html += `<div class="bench-section"><div class="bench-header">\u2462 FLOW \u2014 do steps make sense together?</div><div class="bench-body"><div class="metric-grid">`;
-  html += metricCard('Coherence', mv(summary.coherence), 'Steps flow logically within tasks');
-  html += `</div></div></div>`;
-
-  // Overall
-  html += `<div class="bench-section"><div class="bench-header">\u2463 OVERALL</div><div class="bench-body"><div class="metric-grid">`;
-  html += metricCard('Stage Score', mv(summary.stage_score), `${summary.jobs_evaluated||0} jobs evaluated`);
-  html += metricCard('Avg Latency', (mv(summary.latency_ms)/1000).toFixed(1)+'s', 'Per job', false, true);
-  const diffs = ['easy','medium','hard'];
-  diffs.forEach(d => {
-    const k = d + '_stage_score';
-    if (summary[k]) html += metricCard(d.charAt(0).toUpperCase()+d.slice(1), summary[k].mean, `n=${summary[k].count}`);
-  });
-  html += `</div></div></div>`;
-
-  // Per-job table
-  if (scores.length) {
-    html += `<div class="bench-section"><div class="bench-header">Per-Job Scores</div><div class="bench-body"><div class="bench-jobs"><table>
-      <tr><th>Job</th><th>Diff</th><th>Tasks</th><th>Steps</th><th>Fmt</th><th>Cnt</th><th>Crit</th><th>Conc</th><th>Rel</th><th>Coh</th><th>Score</th></tr>`;
-    scores.forEach(s => {
-      const sc = s.stage_score;
-      html += `<tr>
-        <td>${esc(s.job)}</td><td>${s.difficulty||''}</td>
-        <td>${s.task_count||0}</td><td>${s.total_steps||0}</td>
-        <td class="${mc(s.format_score)}">${(s.format_score||0).toFixed(2)}</td>
-        <td class="${mc(s.task_count_score||0)}">${(s.task_count_score||0).toFixed(2)}</td>
-        <td class="${mc(s.criticality_score||0)}">${(s.criticality_score||0).toFixed(2)}</td>
-        <td class="${mc(s.concreteness)}">${(s.concreteness||0).toFixed(2)}</td>
-        <td class="${mc(s.relevance)}">${(s.relevance||0).toFixed(2)}</td>
-        <td class="${mc(s.coherence||0)}">${(s.coherence||0).toFixed(2)}</td>
-        <td class="${mc(sc)}"><strong>${sc.toFixed(3)}</strong></td>
-      </tr>`;
-    });
-    html += '</table></div></div></div>';
-  }
-
-  el.innerHTML = html;
-}
-
-function metricCard(label, value, detail, isPenalty, isRaw) {
-  const numVal = typeof value === 'number' ? value : parseFloat(value);
-  let cls = '';
-  if (!isRaw) {
-    if (isPenalty) cls = numVal <= 0.01 ? 'score-good' : numVal <= 0.1 ? 'score-warn' : 'score-bad';
-    else cls = numVal >= 0.7 ? 'score-good' : numVal >= 0.4 ? 'score-warn' : 'score-bad';
-  }
-  const display = typeof value === 'string' ? value : numVal.toFixed(3);
-  return `<div class="metric-card"><div class="label">${esc(label)}</div><div class="value ${cls}">${display}</div><div class="detail">${esc(detail||'')}</div></div>`;
-}
-
-function avg(a) { return a.length ? a.reduce((x,y) => x+y, 0) / a.length : 0; }
-function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-
+function avg(a){return a.length?a.reduce((x,y)=>x+y,0)/a.length:0;}
+function esc(s){if(!s)return '';const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 init();
 </script>
 </body>

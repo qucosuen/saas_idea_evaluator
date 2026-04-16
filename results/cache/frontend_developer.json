@@ -1,0 +1,157 @@
+{
+  "job": "Frontend Developer",
+  "success": false,
+  "total_latency_ms": 116562.0,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 25005.2,
+      "tokens": 790,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "title": "Code Development",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Review project requirements and design specifications."
+            },
+            {
+              "step_number": 2,
+              "description": "Set up development environment (e.g., IDE, tools)."
+            },
+            {
+              "step_number": 3,
+              "description": "Implement code according to the design specifications."
+            },
+            {
+              "step_number": 4,
+              "description": "Write unit tests for newly implemented features."
+            },
+            {
+              "step_number": 5,
+              "description": "Deploy code changes to staging environment."
+            }
+          ]
+        },
+        {
+          "task_number": 2,
+          "title": "Bug Fixes",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Monitor application performance and user feedback."
+            },
+            {
+              "step_number": 2,
+              "description": "Identify bugs or errors reported by users or automated testing."
+            },
+            {
+              "step_number": 3,
+              "description": "Locate the source of the bug within the codebase."
+            },
+            {
+              "step_number": 4,
+              "description": "Debug the issue and fix the code accordingly."
+            },
+            {
+              "step_number": 5,
+              "description": "Re-test the affected functionality to ensure correctness."
+            }
+          ]
+        },
+        {
+          "task_number": 3,
+          "title": "Documentation Updates",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Review existing documentation for accuracy and completeness."
+            },
+            {
+              "step_number": 2,
+              "description": "Create or update relevant sections of the documentation."
+            },
+            {
+              "step_number": 3,
+              "description": "Ensure all technical terms and concepts are explained clearly."
+            },
+            {
+              "step_number": 4,
+              "description": "Test the updated documentation to confirm its usability."
+            },
+            {
+              "step_number": 5,
+              "description": "Publish the updated documentation to the website or repository."
+            }
+          ]
+        },
+        {
+          "task_number": 4,
+          "title": "Performance Optimization",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Analyze current application performance metrics."
+            },
+            {
+              "step_number": 2,
+              "description": "Identify areas where performance can be improved."
+            },
+            {
+              "step_number": 3,
+              "description": "Research and implement optimization techniques."
+            },
+            {
+              "step_number": 4,
+              "description": "Monitor the impact of optimizations over time."
+            },
+            {
+              "step_number": 5,
+              "description": "Adjust strategies if necessary based on ongoing performance data."
+            }
+          ]
+        },
+        {
+          "task_number": 5,
+          "title": "Collaboration and Communication",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Attend team meetings and participate actively."
+            },
+            {
+              "step_number": 2,
+              "description": "Respond promptly to emails and messages related to the project."
+            },
+            {
+              "step_number": 3,
+              "description": "Contribute to discussions and provide constructive feedback."
+            },
+            {
+              "step_number": 4,
+              "description": "Stay informed about project progress through regular updates."
+            },
+            {
+              "step_number": 5,
+              "description": "Resolve conflicts and maintain a positive work environment."
+            }
+          ]
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "step_analyzer",
+      "valid": false,
+      "latency_ms": 91556.8,
+      "tokens": 2992,
+      "attempts": 2,
+      "parsed": null,
+      "raw": "[\n  {\n    \"task_number\": 1,\n    \"step_number\": 1,\n    \"step_description\": \"Review project requirements and design specifications.\",\n    \"current_solution\": \"Manual review using spreadsheets or other document management systems.\",\n    \"problem\": \"Slow process due to manual checking and potential human error.\"\n  },\n  {\n    \"task_number\": 1,\n    \"step_number\": 2,\n    \"step_description\": \"Set up development environment (e.g., IDE, tools).\",\n    \"current_solution\": \"Automated setup scripts and config"
+    }
+  ],
+  "elapsed_s": 116.6
+}

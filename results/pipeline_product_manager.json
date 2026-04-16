@@ -1,0 +1,235 @@
+{
+  "job": "Product Manager",
+  "success": false,
+  "total_latency_ms": 131989.3,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 40039.8,
+      "tokens": 1296,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "title": "Product Launch Preparation",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Review product requirements and specifications."
+            },
+            {
+              "step_number": 2,
+              "description": "Prepare marketing materials such as brochures, videos, and press releases."
+            },
+            {
+              "step_number": 3,
+              "description": "Create a launch plan including timelines, budget, and key milestones."
+            },
+            {
+              "step_number": 4,
+              "description": "Coordinate with sales team to finalize pricing and distribution plans."
+            },
+            {
+              "step_number": 5,
+              "description": "Ensure all necessary permits and approvals are obtained."
+            }
+          ]
+        },
+        {
+          "task_number": 2,
+          "title": "Market Research and Analysis",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Conduct market research to understand competitors and target audience."
+            },
+            {
+              "step_number": 2,
+              "description": "Analyze data from surveys, focus groups, and other sources."
+            },
+            {
+              "step_number": 3,
+              "description": "Identify trends, gaps, and opportunities in the market."
+            },
+            {
+              "step_number": 4,
+              "description": "Develop insights that can inform product development decisions."
+            },
+            {
+              "step_number": 5,
+              "description": "Share findings with stakeholders and adjust strategy accordingly."
+            }
+          ]
+        },
+        {
+          "task_number": 3,
+          "title": "Product Development",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Based on market research, develop a detailed product roadmap."
+            },
+            {
+              "step_number": 2,
+              "description": "Design prototypes or models of the product."
+            },
+            {
+              "step_number": 3,
+              "description": "Engage cross-functional teams (design, engineering, marketing) for feedback."
+            },
+            {
+              "step_number": 4,
+              "description": "Iterate on design and functionality based on feedback until final version is approved."
+            },
+            {
+              "step_number": 5,
+              "description": "Secure any required certifications or regulatory approvals."
+            }
+          ]
+        },
+        {
+          "task_number": 4,
+          "title": "Quality Assurance",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Set up quality assurance processes to ensure product meets standards."
+            },
+            {
+              "step_number": 2,
+              "description": "Perform initial testing to identify potential defects."
+            },
+            {
+              "step_number": 3,
+              "description": "Run comprehensive tests to validate product performance."
+            },
+            {
+              "step_number": 4,
+              "description": "Document results of QA process and address any issues found."
+            },
+            {
+              "step_number": 5,
+              "description": "Release product only after passing rigorous testing."
+            }
+          ]
+        },
+        {
+          "task_number": 5,
+          "title": "Launch Marketing Campaigns",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Craft messaging and creative elements for various marketing channels."
+            },
+            {
+              "step_number": 2,
+              "description": "Select appropriate media outlets and platforms for campaign deployment."
+            },
+            {
+              "step_number": 3,
+              "description": "Schedule content and ad placements across chosen channels."
+            },
+            {
+              "step_number": 4,
+              "description": "Monitor campaign performance using analytics tools."
+            },
+            {
+              "step_number": 5,
+              "description": "Adjust strategies based on campaign metrics and consumer feedback."
+            }
+          ]
+        },
+        {
+          "task_number": 6,
+          "title": "Customer Feedback Management",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Gather customer feedback through surveys, reviews, and direct communication."
+            },
+            {
+              "step_number": 2,
+              "description": "Analyze collected feedback to identify common themes and concerns."
+            },
+            {
+              "step_number": 3,
+              "description": "Respond promptly to customer inquiries and complaints."
+            },
+            {
+              "step_number": 4,
+              "description": "Implement changes based on feedback received."
+            },
+            {
+              "step_number": 5,
+              "description": "Follow up with customers to gauge satisfaction levels."
+            }
+          ]
+        },
+        {
+          "task_number": 7,
+          "title": "Sales and Distribution Planning",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Forecast demand for products based on historical data and current trends."
+            },
+            {
+              "step_number": 2,
+              "description": "Determine optimal inventory levels and reorder points."
+            },
+            {
+              "step_number": 3,
+              "description": "Plan logistics for shipping and distribution."
+            },
+            {
+              "step_number": 4,
+              "description": "Negotiate contracts with suppliers and distributors."
+            },
+            {
+              "step_number": 5,
+              "description": "Train sales teams on product features and benefits."
+            }
+          ]
+        },
+        {
+          "task_number": 8,
+          "title": "Financial Reporting and Budgeting",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Track financial performance against the launch plan."
+            },
+            {
+              "step_number": 2,
+              "description": "Generate monthly/quarterly financial reports."
+            },
+            {
+              "step_number": 3,
+              "description": "Review budgets and make adjustments if needed."
+            },
+            {
+              "step_number": 4,
+              "description": "Prepare quarterly and annual financial statements."
+            },
+            {
+              "step_number": 5,
+              "description": "Communicate financial updates to stakeholders."
+            }
+          ]
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "step_analyzer",
+      "valid": false,
+      "latency_ms": 91949.5,
+      "tokens": 2992,
+      "attempts": 2,
+      "parsed": null,
+      "raw": "[\n  {\n    \"task_number\": 1,\n    \"step_number\": 1,\n    \"step_description\": \"Review product requirements and specifications.\",\n    \"current_solution\": \"Manual review by project managers and designers\",\n    \"problem\": \"Can be time-consuming and may lead to inconsistencies\"\n  },\n  {\n    \"task_number\": 1,\n    \"step_number\": 2,\n    \"step_description\": \"Prepare marketing materials such as brochures, videos, and press releases.\",\n    \"current_solution\": \"Manual creation and editing of documents\",\n    \"p"
+    }
+  ],
+  "elapsed_s": 132.0
+}

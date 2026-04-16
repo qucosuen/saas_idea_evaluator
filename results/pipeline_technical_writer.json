@@ -1,0 +1,551 @@
+{
+  "job": "Technical Writer",
+  "success": true,
+  "total_latency_ms": 127547.4,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 21506.1,
+      "tokens": 679,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "title": "Write Content",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Research and gather information related to the project."
+            },
+            {
+              "step_number": 2,
+              "description": "Draft initial content using templates or guidelines provided by the client."
+            },
+            {
+              "step_number": 3,
+              "description": "Review and revise drafts multiple times until they meet quality standards."
+            },
+            {
+              "step_number": 4,
+              "description": "Collaborate with other team members (e.g., designers) to ensure consistency across all materials."
+            }
+          ]
+        },
+        {
+          "task_number": 2,
+          "title": "Edit and Proofread",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Use software tools like Grammarly or Microsoft Word's built-in spell checker to identify errors."
+            },
+            {
+              "step_number": 2,
+              "description": "Read through the content carefully to catch any typos, grammatical mistakes, or awkward phrasing."
+            },
+            {
+              "step_number": 3,
+              "description": "Check for logical flow and coherence throughout the document."
+            },
+            {
+              "step_number": 4,
+              "description": "Ensure that all technical terms are accurately defined and used consistently."
+            },
+            {
+              "step_number": 5,
+              "description": "Get feedback from stakeholders before finalizing the draft."
+            }
+          ]
+        },
+        {
+          "task_number": 3,
+          "title": "Format and Style",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Choose appropriate fonts, colors, and layout styles according to the project requirements."
+            },
+            {
+              "step_number": 2,
+              "description": "Apply consistent formatting rules throughout the document."
+            },
+            {
+              "step_number": 3,
+              "description": "Add tables, images, and charts where necessary to enhance readability and clarity."
+            },
+            {
+              "step_number": 4,
+              "description": "Adjust margins, line spacing, and page breaks as needed."
+            },
+            {
+              "step_number": 5,
+              "description": "Save the final version in various formats (PDF, HTML, etc.)"
+            }
+          ]
+        },
+        {
+          "task_number": 4,
+          "title": "Submit and Review",
+          "steps": [
+            {
+              "step_number": 1,
+              "description": "Prepare the final document for submission to the client or publisher."
+            },
+            {
+              "step_number": 2,
+              "description": "Send the completed document via email or upload it to the designated platform."
+            },
+            {
+              "step_number": 3,
+              "description": "Monitor progress and respond promptly to any requests for revisions."
+            },
+            {
+              "step_number": 4,
+              "description": "Review submitted documents for completeness and accuracy."
+            },
+            {
+              "step_number": 5,
+              "description": "Notify the client when the document is ready for review."
+            }
+          ]
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "step_analyzer",
+      "valid": true,
+      "latency_ms": 40853.6,
+      "tokens": 1325,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "step_description": "Research and gather information related to the project.",
+          "current_solution": "Manual research and gathering of information using reference materials and internet searches.",
+          "problem": "Time-consuming and prone to human error due to inconsistent sources and lack of automation."
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "step_description": "Draft initial content using templates or guidelines provided by the client.",
+          "current_solution": "Manual drafting using templates or guidelines provided by the client.",
+          "problem": "May not align perfectly with the client's specific needs and may require significant editing."
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "step_description": "Review and revise drafts multiple times until they meet quality standards.",
+          "current_solution": "Manual review and revision process involving multiple rounds of edits.",
+          "problem": "Can be time-consuming and requires extensive attention to detail."
+        },
+        {
+          "task_number": 1,
+          "step_number": 4,
+          "step_description": "Collaborate with other team members (e.g., designers) to ensure consistency across all materials.",
+          "current_solution": "Manual coordination and communication among team members.",
+          "problem": "Lack of real-time collaboration tools can lead to inconsistencies and delays."
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "step_description": "Use software tools like Grammarly or Microsoft Word's built-in spell checker to identify errors.",
+          "current_solution": "Software tools such as Grammarly or Microsoft Word's built-in spell checker.",
+          "problem": "Automated checks can miss certain errors, especially complex grammar issues."
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "step_description": "Read through the content carefully to catch any typos, grammatical mistakes, or awkward phrasing.",
+          "current_solution": "Manual reading and proofreading process.",
+          "problem": "Takes considerable time and effort, especially for lengthy documents."
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "step_description": "Check for logical flow and coherence throughout the document.",
+          "current_solution": "Manual checking for logical flow and coherence.",
+          "problem": "Difficult to detect subtle inconsistencies without thorough review."
+        },
+        {
+          "task_number": 2,
+          "step_number": 4,
+          "step_description": "Ensure that all technical terms are accurately defined and used consistently.",
+          "current_solution": "Manual definition and consistency checking.",
+          "problem": "Risk of inconsistency due to varying definitions and usage practices."
+        },
+        {
+          "task_number": 2,
+          "step_number": 5,
+          "step_description": "Get feedback from stakeholders before finalizing the draft.",
+          "current_solution": "Feedback solicitation from stakeholders.",
+          "problem": "Requires active listening and response from stakeholders, which can be challenging."
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "step_description": "Choose appropriate fonts, colors, and layout styles according to the project requirements.",
+          "current_solution": "Manual selection based on project requirements.",
+          "problem": "Subjectivity in choosing font, color, and layout styles."
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "step_description": "Apply consistent formatting rules throughout the document.",
+          "current_solution": "Manual application of formatting rules.",
+          "problem": "Consistency can be difficult to maintain without automated tools."
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "step_description": "Add tables, images, and charts where necessary to enhance readability and clarity.",
+          "current_solution": "Manual addition of tables, images, and charts.",
+          "problem": "Effort-intensive task, especially for large-scale projects."
+        },
+        {
+          "task_number": 3,
+          "step_number": 4,
+          "step_description": "Adjust margins, line spacing, and page breaks as needed.",
+          "current_solution": "Manual adjustment of margins, line spacing, and page breaks.",
+          "problem": "Manual adjustments can be time-consuming and prone to errors."
+        },
+        {
+          "task_number": 3,
+          "step_number": 5,
+          "step_description": "Save the final version in various formats (PDF, HTML, etc.).",
+          "current_solution": "Manual saving of files in various formats.",
+          "problem": "Manual file conversion processes can introduce errors and take up additional time."
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "step_description": "Prepare the final document for submission to the client or publisher.",
+          "current_solution": "Manual preparation for submission.",
+          "problem": "Manual work involved in preparing the document for submission."
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "step_description": "Send the completed document via email or upload it to the designated platform.",
+          "current_solution": "Email or platform-based submission methods.",
+          "problem": "Dependence on external systems and potential connectivity issues."
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "step_description": "Monitor progress and respond promptly to any requests for revisions.",
+          "current_solution": "Monitoring and responding manually.",
+          "problem": "High workload and potential for missed deadlines."
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "step_description": "Review submitted documents for completeness and accuracy.",
+          "current_solution": "Manual review of submitted documents.",
+          "problem": "Manual verification can be time-consuming and prone to errors."
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "step_description": "Notify the client when the document is ready for review.",
+          "current_solution": "Notification of readiness to the client.",
+          "problem": "Potential delay in receiving timely notifications."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "solution_mapper",
+      "valid": true,
+      "latency_ms": 35758.8,
+      "tokens": 1157,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "problem": "Inconsistent sources and manual research",
+          "solution_type": "automation script",
+          "rationale": "Automated data collection and analysis tools can provide more reliable and consistent sources compared to manual research."
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "problem": "Manual drafting and editing",
+          "solution_type": "automation script",
+          "rationale": "AI-driven text generation and editing tools can help streamline the drafting and revising process."
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "problem": "Manual review and editing",
+          "solution_type": "automation script",
+          "rationale": "Machine learning algorithms can automate the detection and correction of errors, reducing the need for manual review."
+        },
+        {
+          "task_number": 1,
+          "step_number": 4,
+          "problem": "Manual coordination and communication",
+          "solution_type": "api integration",
+          "rationale": "Real-time collaboration tools can integrate with existing workflows to improve coordination and reduce delays."
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "problem": "Manual identification of errors",
+          "solution_type": "ocr extraction",
+          "rationale": "Optical character recognition technology can automatically extract text from documents, improving accuracy and efficiency."
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "problem": "Manual reading and proofreading",
+          "solution_type": "automation script",
+          "rationale": "AI-powered proofreading tools can quickly identify and correct common errors, freeing up time for more critical tasks."
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "problem": "Manual checking for logical flow",
+          "solution_type": "automation script",
+          "rationale": "Advanced NLP techniques can analyze text structure and suggest improvements for better coherence."
+        },
+        {
+          "task_number": 2,
+          "step_number": 4,
+          "problem": "Manual definition and consistency checking",
+          "solution_type": "automation script",
+          "rationale": "AI tools can manage and update terminology databases, ensuring consistency across the document."
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "problem": "Manual selection of fonts, colors, and layout styles",
+          "solution_type": "automation script",
+          "rationale": "AI algorithms can recommend optimal design elements based on project requirements and user preferences."
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "problem": "Manual application of formatting rules",
+          "solution_type": "automation script",
+          "rationale": "AI-generated templates can apply consistent formatting rules automatically, reducing manual effort."
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "problem": "Manual addition of tables, images, and charts",
+          "solution_type": "automation script",
+          "rationale": "AI-generated content creation tools can generate these elements efficiently, minimizing manual labor."
+        },
+        {
+          "task_number": 3,
+          "step_number": 4,
+          "problem": "Manual adjustment of margins, line spacing, and page breaks",
+          "solution_type": "automation script",
+          "rationale": "AI algorithms can optimize layout settings based on document content and reader preferences."
+        },
+        {
+          "task_number": 3,
+          "step_number": 5,
+          "problem": "Manual saving of files",
+          "solution_type": "automation script",
+          "rationale": "Cloud-based storage services can automate file saving processes, enhancing productivity and reducing manual errors."
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "problem": "Manual preparation for submission",
+          "solution_type": "automation script",
+          "rationale": "Automated workflows can streamline the entire submission process, including file conversion and monitoring."
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "problem": "Manual uploading or emailing submissions",
+          "solution_type": "api integration",
+          "rationale": "Integration with cloud platforms can automate file uploads and emails, reducing reliance on manual actions."
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "problem": "Manual response to requests for revisions",
+          "solution_type": "automation script",
+          "rationale": "Automated reminders and notifications can keep track of pending revisions and prompt responses."
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "problem": "Manual review of submitted documents",
+          "solution_type": "automation script",
+          "rationale": "AI tools can validate documents against predefined criteria, reducing the risk of errors."
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "problem": "Manual notification of readiness for review",
+          "solution_type": "automation script",
+          "rationale": "Automated alerts can notify relevant parties about document status changes."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "evaluator",
+      "valid": true,
+      "latency_ms": 29428.9,
+      "tokens": 940,
+      "attempts": 1,
+      "parsed": [
+        {
+          "task_number": 1,
+          "step_number": 1,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 1,
+          "step_number": 2,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 1,
+          "step_number": 3,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 1,
+          "step_number": 4,
+          "solution_type": "api integration",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 2,
+          "step_number": 1,
+          "solution_type": "ocr extraction",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 2,
+          "step_number": 2,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 2,
+          "step_number": 3,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 2,
+          "step_number": 4,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 1,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 2,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 3,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 4,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 3,
+          "step_number": 5,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 1,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 2,
+          "solution_type": "api integration",
+          "feasibility": 3,
+          "impact": 3,
+          "complexity": 4
+        },
+        {
+          "task_number": 4,
+          "step_number": 3,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 4,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "task_number": 4,
+          "step_number": 5,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        }
+      ],
+      "raw": null
+    }
+  ],
+  "elapsed_s": 127.5
+}
