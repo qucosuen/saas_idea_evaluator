@@ -11,13 +11,30 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
 from src.pipeline.prompts import (
-    STAGE1_SYSTEM, STAGE1_USER,
-    STAGE2_SYSTEM, STAGE2_USER,
-    STAGE3_SYSTEM, STAGE3_USER,
-    STAGE4_SYSTEM, STAGE4_USER,
+    STAGE1_SYSTEM,
+    STAGE1_USER,
+    STAGE2A_SYSTEM,
+    STAGE2A_USER,
+    STAGE2B_SYSTEM,
+    STAGE2B_USER,
+    STAGE3_SYSTEM,
+    STAGE3_USER,
+    STAGE4_SYSTEM,
+    STAGE4_USER,
 )
 from src.pipeline.validators import (
-    validate_stage1, validate_stage2, validate_stage3, validate_stage4,
+    validate_stage1,
+    validate_stage2a,
+    validate_stage2b,
+    validate_stage3,
+    validate_stage4,
+)
+from src.pipeline.schemas import (
+    TaskStep,
+    WorkflowTask,
+    StepAnalysis,
+    Solution,
+    Evaluation,
 )
 
 
@@ -51,7 +68,9 @@ class PipelineOutput:
                     "latency_ms": round(s.latency_ms, 1),
                     "tokens": s.tokens,
                     "attempts": s.attempts,
-                    "parsed": [asdict(p) for p in s.parsed] if s.valid and s.parsed else None,
+                    "parsed": [asdict(p) for p in s.parsed]
+                    if s.valid and s.parsed
+                    else None,
                     "raw": s.raw[:500] if not s.valid else None,
                 }
                 for s in self.stages
@@ -60,10 +79,15 @@ class PipelineOutput:
 
 
 class PipelineRunner:
-    """Runs the 4-stage pipeline with validation, retry, and optional caching."""
+    """Runs the 5-stage pipeline with validation, retry, and optional caching."""
 
-    def __init__(self, model, max_tokens: int = 200, max_retries: int = 2,
-                 cache_dir: str | None = None):
+    def __init__(
+        self,
+        model,
+        max_tokens: int = 200,
+        max_retries: int = 2,
+        cache_dir: str | None = None,
+    ):
         self.model = model
         self.max_tokens = max_tokens
         self.max_retries = max_retries
@@ -91,7 +115,9 @@ class PipelineRunner:
         with open(path, "w") as f:
             json.dump({"output": output}, f)
 
-    def _generate(self, system: str, user: str, stage: str | None = None) -> tuple[str, float, int]:
+    def _generate(
+        self, system: str, user: str, stage: str | None = None
+    ) -> tuple[str, float, int]:
         """Generate with optional cache lookup. Uses per-stage config from config.yaml."""
         key = self._cache_key(system, user)
         cached = self._get_cached(key)
@@ -99,24 +125,41 @@ class PipelineRunner:
             return cached, 0.0, 0
 
         from src.config import get_generation_params
+
         params = get_generation_params(stage)
 
-        start = time.perf_counter()
-        resp = self.model.create_chat_completion(
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            **params,
-        )
-        elapsed_ms = (time.perf_counter() - start) * 1000
-        output = resp["choices"][0]["message"]["content"]
-        tokens = resp["usage"]["completion_tokens"]
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                start = time.perf_counter()
+                resp = self.model.create_chat_completion(
+                    messages=[
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": user},
+                    ],
+                    **params,
+                )
+                elapsed_ms = (time.perf_counter() - start) * 1000
+                output = resp["choices"][0]["message"]["content"]
+                tokens = resp["usage"]["completion_tokens"]
 
-        self._set_cached(key, output)
-        return output, elapsed_ms, tokens
+                self._set_cached(key, output)
+                return output, elapsed_ms, tokens
 
-    def _run_stage(self, name, system, user, validator, stage: str | None = None) -> StageOutput:
+            except Exception as e:
+                if attempt < self.max_retries:
+                    wait_time = 2**attempt
+                    print(
+                        f"  [retry {attempt}/{self.max_retries}] {e}, waiting {wait_time}s..."
+                    )
+                    time.sleep(wait_time)
+                else:
+                    raise
+
+        return "", 0.0, 0
+
+    def _run_stage(
+        self, name, system, user, validator, stage: str | None = None
+    ) -> StageOutput:
         """Run a single stage with retry on validation failure."""
         last_raw = ""
         total_ms = 0.0
@@ -128,7 +171,9 @@ class PipelineRunner:
             last_raw = raw
             try:
                 parsed = validator(raw)
-                return StageOutput(name, raw, parsed, total_ms, total_tok, attempt, True)
+                return StageOutput(
+                    name, raw, parsed, total_ms, total_tok, attempt, True
+                )
             except (ValueError, KeyError, TypeError):
                 if self.cache_dir:
                     # Invalidate cache on failure so retry generates fresh
@@ -138,16 +183,19 @@ class PipelineRunner:
                         path.unlink()
                 continue
 
-        return StageOutput(name, last_raw, None, total_ms, total_tok, self.max_retries, False)
+        return StageOutput(
+            name, last_raw, None, total_ms, total_tok, self.max_retries, False
+        )
 
-    def run(self, job: str, max_stages: int = 4) -> PipelineOutput:
-        """Execute the pipeline. Use max_stages to stop early (1-4)."""
+    def run(self, job: str, max_stages: int = 5) -> PipelineOutput:
+        """Execute the pipeline. Use max_stages to stop early (1-5)."""
         result = PipelineOutput(job=job)
 
         # Stage 1: Workflow Generator (Job → Tasks with Steps)
         s1 = self._run_stage(
             "workflow_generator",
-            STAGE1_SYSTEM, STAGE1_USER.format(job=job),
+            STAGE1_SYSTEM,
+            STAGE1_USER.format(job=job),
             validate_stage1,
             stage="stage1_workflow",
         )
@@ -159,27 +207,61 @@ class PipelineRunner:
 
         workflow_text = json.dumps([asdict(s) for s in s1.parsed], indent=2)
 
-        # Stage 2: Step Analyzer (Steps → Current Solutions & Problems)
-        s2 = self._run_stage(
-            "step_analyzer",
-            STAGE2_SYSTEM, STAGE2_USER.format(workflow=workflow_text),
-            validate_stage2,
-            stage="stage2_problems",
+        # Stage 2A: Problem Analyzer (Steps → Problems)
+        s2a = self._run_stage(
+            "problem_analyzer",
+            STAGE2A_SYSTEM,
+            STAGE2A_USER.format(workflow=workflow_text),
+            validate_stage2a,
+            stage="stage2a_problems",
         )
-        result.stages.append(s2)
-        if not s2.valid or max_stages <= 2:
+        result.stages.append(s2a)
+        if not s2a.valid or max_stages <= 2:
             result.total_latency_ms = sum(s.latency_ms for s in result.stages)
-            result.success = all(s.valid for s in result.stages)
+            result.success = s2a.valid
             return result
 
+        # Stage 2B: Solution Analyzer (Steps → Current Solutions)
+        s2b = self._run_stage(
+            "solution_analyzer",
+            STAGE2B_SYSTEM,
+            STAGE2B_USER.format(workflow=workflow_text),
+            validate_stage2b,
+            stage="stage2b_solutions",
+        )
+        result.stages.append(s2b)
+        if not s2b.valid or max_stages <= 2:
+            result.total_latency_ms = sum(s.latency_ms for s in result.stages)
+            result.success = s2b.valid
+            return result
+
+        # Merge results from 2A and 2B into combined step analyses
+        problem_map = {(p.task_number, p.step_number): p for p in s2a.parsed}
+        combined_analyses = []
+        for sol in s2b.parsed:
+            key = (sol.task_number, sol.step_number)
+            prob = problem_map.get(key)
+            combined_analyses.append(
+                StepAnalysis(
+                    task_number=sol.task_number,
+                    step_number=sol.step_number,
+                    step_description=sol.step_description,
+                    current_solution=sol.current_solution,
+                    problem=prob.problem if prob else "",
+                )
+            )
+
         # Filter to only steps with problems for Stage 3
-        analyses_with_problems = [asdict(a) for a in s2.parsed if a.problem.strip()]
+        analyses_with_problems = [
+            asdict(a) for a in combined_analyses if a.problem.strip()
+        ]
         problems_text = json.dumps(analyses_with_problems, indent=2)
 
         # Stage 3: Solution Mapper (Problems → Automation Solutions)
         s3 = self._run_stage(
             "solution_mapper",
-            STAGE3_SYSTEM, STAGE3_USER.format(problems=problems_text),
+            STAGE3_SYSTEM,
+            STAGE3_USER.format(problems=problems_text),
             validate_stage3,
             stage="stage3_solutions",
         )
@@ -194,7 +276,8 @@ class PipelineRunner:
         # Stage 4: Evaluator (Solutions → Scores)
         s4 = self._run_stage(
             "evaluator",
-            STAGE4_SYSTEM, STAGE4_USER.format(solutions=solutions_text),
+            STAGE4_SYSTEM,
+            STAGE4_USER.format(solutions=solutions_text),
             validate_stage4,
             stage="stage4_evaluation",
         )

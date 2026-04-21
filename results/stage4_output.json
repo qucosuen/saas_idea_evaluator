@@ -1,0 +1,326 @@
+{
+  "job": "DevOps Engineer",
+  "stage": "stage4",
+  "evaluations": [
+    {
+      "task_number": 1,
+      "step_number": 1,
+      "solution_type": "api integration",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 2
+    },
+    {
+      "task_number": 1,
+      "step_number": 2,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 1,
+      "step_number": 3,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 1,
+      "step_number": 4,
+      "solution_type": "api integration",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 2
+    },
+    {
+      "task_number": 1,
+      "step_number": 5,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 1,
+      "step_number": 6,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 1,
+      "step_number": 7,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 1,
+      "step_number": 8,
+      "solution_type": "notification system",
+      "feasibility": 3,
+      "impact": 3,
+      "complexity": 4
+    },
+    {
+      "task_number": 2,
+      "step_number": 1,
+      "solution_type": "api integration",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 2
+    },
+    {
+      "task_number": 2,
+      "step_number": 2,
+      "solution_type": "dashboard",
+      "feasibility": 3,
+      "impact": 3,
+      "complexity": 4
+    },
+    {
+      "task_number": 2,
+      "step_number": 3,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 2,
+      "step_number": 4,
+      "solution_type": "notification system",
+      "feasibility": 3,
+      "impact": 3,
+      "complexity": 4
+    },
+    {
+      "task_number": 2,
+      "step_number": 5,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 2,
+      "step_number": 6,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 2,
+      "step_number": 7,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 2,
+      "step_number": 8,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 1,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 2,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 3,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 4,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 5,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 6,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 7,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 3,
+      "step_number": 8,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 1,
+      "solution_type": "api integration",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 2
+    },
+    {
+      "task_number": 4,
+      "step_number": 2,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 3,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 4,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 5,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 6,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 7,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 4,
+      "step_number": 8,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 1,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 2,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 3,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 4,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 5,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 6,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 7,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    },
+    {
+      "task_number": 5,
+      "step_number": 8,
+      "solution_type": "automation script",
+      "feasibility": 4,
+      "impact": 4,
+      "complexity": 3
+    }
+  ]
+}

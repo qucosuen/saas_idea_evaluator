@@ -1,0 +1,162 @@
+{
+  "job": "Data Entry Clerk",
+  "success": true,
+  "total_latency_ms": 483453.5,
+  "stages": [
+    {
+      "name": "workflow_generator",
+      "valid": true,
+      "latency_ms": 61374.0,
+      "tokens": 115,
+      "attempts": 1,
+      "parsed": [
+        {
+          "step_number": 1,
+          "title": "Data Entry",
+          "description": "Input data from various sources into the database."
+        },
+        {
+          "step_number": 2,
+          "title": "Data Validation",
+          "description": "Ensure data accuracy and completeness by checking for errors."
+        },
+        {
+          "step_number": 3,
+          "title": "Data Cleaning",
+          "description": "Remove duplicates and correct inconsistencies in the data."
+        },
+        {
+          "step_number": 4,
+          "title": "Data Reporting",
+          "description": "Generate reports and summaries based on the data entries."
+        },
+        {
+          "step_number": 5,
+          "title": "Data Backup",
+          "description": "Store data in a secure location for future reference."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "problem_extractor",
+      "valid": true,
+      "latency_ms": 108610.9,
+      "tokens": 223,
+      "attempts": 1,
+      "parsed": [
+        {
+          "step_number": 1,
+          "problem": "Data Entry: Inputting data from various sources into the database is time-consuming and prone to errors.",
+          "category": "time-consuming"
+        },
+        {
+          "step_number": 2,
+          "problem": "Data Validation: Ensuring data accuracy and completeness by checking for errors is repetitive and error-prone.",
+          "category": "repetitive"
+        },
+        {
+          "step_number": 3,
+          "problem": "Data Cleaning: Removing duplicates and correcting inconsistencies in the data is tedious and error-prone.",
+          "category": "tedious"
+        },
+        {
+          "step_number": 4,
+          "problem": "Data Reporting: Generating reports and summaries based on the data entries is manual and requires significant effort.",
+          "category": "manual"
+        },
+        {
+          "step_number": 5,
+          "problem": "Data Backup: Storing data in a secure location for future reference is manual and requires significant effort.",
+          "category": "manual"
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "solution_mapper",
+      "valid": true,
+      "latency_ms": 145593.1,
+      "tokens": 369,
+      "attempts": 1,
+      "parsed": [
+        {
+          "step_number": 1,
+          "problem": "Data Entry: Inputting data from various sources into the database is time-consuming and prone to errors.",
+          "solution_type": "automation script",
+          "rationale": "Automating data entry reduces the time spent on manual tasks and minimizes errors by using pre-defined templates and validation rules."
+        },
+        {
+          "step_number": 2,
+          "problem": "Data Validation: Ensuring data accuracy and completeness by checking for errors is repetitive and error-prone.",
+          "solution_type": "automation script",
+          "rationale": "Using automated data validation tools can quickly identify and correct errors, reducing the time spent on manual checks."
+        },
+        {
+          "step_number": 3,
+          "problem": "Data Cleaning: Removing duplicates and correcting inconsistencies in the data is tedious and error-prone.",
+          "solution_type": "automation script",
+          "rationale": "Automated data cleaning tools can efficiently remove duplicates and correct inconsistencies, saving time and reducing errors."
+        },
+        {
+          "step_number": 4,
+          "problem": "Data Reporting: Generating reports and summaries based on the data entries is manual and requires significant effort.",
+          "solution_type": "automation script",
+          "rationale": "Automated data reporting tools can quickly generate reports and summaries, reducing the time spent on manual data entry and analysis."
+        },
+        {
+          "step_number": 5,
+          "problem": "Data Backup: Storing data in a secure location for future reference is manual and requires significant effort.",
+          "solution_type": "automation script",
+          "rationale": "Automated data backup tools can securely store data in a secure location, reducing the time and effort required for manual backups."
+        }
+      ],
+      "raw": null
+    },
+    {
+      "name": "evaluator",
+      "valid": true,
+      "latency_ms": 167875.6,
+      "tokens": 222,
+      "attempts": 1,
+      "parsed": [
+        {
+          "step_number": 1,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "step_number": 2,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "step_number": 3,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "step_number": 4,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        },
+        {
+          "step_number": 5,
+          "solution_type": "automation script",
+          "feasibility": 4,
+          "impact": 4,
+          "complexity": 2
+        }
+      ],
+      "raw": null
+    }
+  ]
+}
