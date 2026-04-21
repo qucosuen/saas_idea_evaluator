@@ -6,7 +6,13 @@ Parse JSON, enforce schema, return structured data or raise ValueError.
 import json
 import re
 from src.pipeline.schemas import (
-    TaskStep, WorkflowTask, StepAnalysis, Solution, Evaluation,
+    TaskStep,
+    WorkflowTask,
+    StepProblem,
+    StepSolution,
+    StepAnalysis,
+    Solution,
+    Evaluation,
     VALID_SOLUTION_TYPES,
 )
 
@@ -40,17 +46,61 @@ def validate_stage1(output: str) -> list[WorkflowTask]:
     for i, item in enumerate(items):
         raw_steps = item.get("steps", [])
         if not isinstance(raw_steps, list) or len(raw_steps) < 2:
-            raise ValueError(f"Task {i+1} must have at least 2 steps, got {len(raw_steps) if isinstance(raw_steps, list) else 0}")
+            raise ValueError(
+                f"Task {i + 1} must have at least 2 steps, got {len(raw_steps) if isinstance(raw_steps, list) else 0}"
+            )
         steps = [
-            TaskStep(step_number=s.get("step_number", j + 1), description=str(s.get("description", "")))
+            TaskStep(
+                step_number=s.get("step_number", j + 1),
+                description=str(s.get("description", "")),
+                tool_stack=s.get("tool_stack", []),
+            )
             for j, s in enumerate(raw_steps)
         ]
-        tasks.append(WorkflowTask(
-            task_number=item.get("task_number", i + 1),
-            title=str(item.get("title", "")),
-            steps=steps,
-        ))
+        tasks.append(
+            WorkflowTask(
+                task_number=item.get("task_number", i + 1),
+                title=str(item.get("title", "")),
+                steps=steps,
+            )
+        )
     return tasks
+
+
+def validate_stage2a(output: str) -> list[StepProblem]:
+    """Validate and parse Stage 2A (Problem Analyzer) output."""
+    items = _extract_json_array(output)
+    if len(items) < 1:
+        raise ValueError("Expected at least 1 step problem")
+    analyses = []
+    for item in items:
+        analyses.append(
+            StepProblem(
+                task_number=item.get("task_number", 0),
+                step_number=item.get("step_number", 0),
+                step_description=str(item.get("step_description", "")),
+                problem=str(item.get("problem", "")),
+            )
+        )
+    return analyses
+
+
+def validate_stage2b(output: str) -> list[StepSolution]:
+    """Validate and parse Stage 2B (Solution Analyzer) output."""
+    items = _extract_json_array(output)
+    if len(items) < 1:
+        raise ValueError("Expected at least 1 step solution")
+    analyses = []
+    for item in items:
+        analyses.append(
+            StepSolution(
+                task_number=item.get("task_number", 0),
+                step_number=item.get("step_number", 0),
+                step_description=str(item.get("step_description", "")),
+                current_solution=str(item.get("current_solution", "")),
+            )
+        )
+    return analyses
 
 
 def validate_stage2(output: str) -> list[StepAnalysis]:
@@ -60,13 +110,15 @@ def validate_stage2(output: str) -> list[StepAnalysis]:
         raise ValueError("Expected at least 1 step analysis")
     analyses = []
     for item in items:
-        analyses.append(StepAnalysis(
-            task_number=item.get("task_number", 0),
-            step_number=item.get("step_number", 0),
-            step_description=str(item.get("step_description", "")),
-            current_solution=str(item.get("current_solution", "")),
-            problem=str(item.get("problem", "")),
-        ))
+        analyses.append(
+            StepAnalysis(
+                task_number=item.get("task_number", 0),
+                step_number=item.get("step_number", 0),
+                step_description=str(item.get("step_description", "")),
+                current_solution=str(item.get("current_solution", "")),
+                problem=str(item.get("problem", "")),
+            )
+        )
     return analyses
 
 
@@ -80,13 +132,15 @@ def validate_stage3(output: str) -> list[Solution]:
         stype = str(item.get("solution_type", "")).lower().strip()
         if stype not in VALID_SOLUTION_TYPES:
             stype = "automation script"
-        solutions.append(Solution(
-            task_number=item.get("task_number", 0),
-            step_number=item.get("step_number", 0),
-            problem=str(item.get("problem", "")),
-            solution_type=stype,
-            rationale=str(item.get("rationale", "")),
-        ))
+        solutions.append(
+            Solution(
+                task_number=item.get("task_number", 0),
+                step_number=item.get("step_number", 0),
+                problem=str(item.get("problem", "")),
+                solution_type=stype,
+                rationale=str(item.get("rationale", "")),
+            )
+        )
     return solutions
 
 
@@ -97,12 +151,14 @@ def validate_stage4(output: str) -> list[Evaluation]:
         raise ValueError("Expected at least 1 evaluation")
     evals = []
     for item in items:
-        evals.append(Evaluation(
-            task_number=item.get("task_number", 0),
-            step_number=item.get("step_number", 0),
-            solution_type=str(item.get("solution_type", "")),
-            feasibility=max(1, min(5, int(item.get("feasibility", 3)))),
-            impact=max(1, min(5, int(item.get("impact", 3)))),
-            complexity=max(1, min(5, int(item.get("complexity", 3)))),
-        ))
+        evals.append(
+            Evaluation(
+                task_number=item.get("task_number", 0),
+                step_number=item.get("step_number", 0),
+                solution_type=str(item.get("solution_type", "")),
+                feasibility=max(1, min(5, int(item.get("feasibility", 3)))),
+                impact=max(1, min(5, int(item.get("impact", 3)))),
+                complexity=max(1, min(5, int(item.get("complexity", 3)))),
+            )
+        )
     return evals

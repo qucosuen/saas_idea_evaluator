@@ -1,0 +1,390 @@
+{
+  "job": "Prompt Engineer",
+  "stage": "stage1",
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Design and Test Prompts for AI Models",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Research and gather requirements for the prompt design, including target audience and desired outcomes.",
+          "tool_stack": [
+            "Note-taking software",
+            "Research databases",
+            "Collaboration tools"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Create a set of initial prompts based on the gathered requirements and existing knowledge bases.",
+          "tool_stack": [
+            "Text editors",
+            "Language generation tools",
+            "Knowledge graph databases"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Refine the prompts through iterative testing and feedback, ensuring clarity and effectiveness.",
+          "tool_stack": [
+            "Testing frameworks",
+            "Human evaluation tools",
+            "Automated feedback systems"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Analyze the performance of the prompts using metrics such as accuracy, fluency, and relevance.",
+          "tool_stack": [
+            "Evaluation metrics tools",
+            "Data analysis software",
+            "Visualization libraries"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Update and refine the prompts based on the analysis results, incorporating lessons learned and best practices.",
+          "tool_stack": [
+            "Version control systems",
+            "Collaboration platforms",
+            "Knowledge management tools"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Document the prompt design process, including decisions made and trade-offs considered.",
+          "tool_stack": [
+            "Documentation tools",
+            "Wiki software",
+            "Note-taking apps"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Share the refined prompts with the development team for integration into the AI model.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Version control systems",
+            "API documentation tools"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Monitor the performance of the AI model with the new prompts and gather feedback from users.",
+          "tool_stack": [
+            "Monitoring tools",
+            "Feedback collection systems",
+            "User testing platforms"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Continuously update and improve the prompts based on user feedback and emerging trends.",
+          "tool_stack": [
+            "Agile project management tools",
+            "Continuous integration systems",
+            "Machine learning libraries"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Develop and maintain a knowledge base of effective prompts and design principles.",
+          "tool_stack": [
+            "Knowledge management tools",
+            "Wiki software",
+            "Documentation platforms"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 2,
+      "title": "Develop and Maintain Prompt Engineering Guidelines",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Research and gather best practices for prompt engineering from industry experts and research papers.",
+          "tool_stack": [
+            "Research databases",
+            "Academic journals",
+            "Industry blogs"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Create a comprehensive set of guidelines for prompt engineering, including design principles and testing methodologies.",
+          "tool_stack": [
+            "Documentation tools",
+            "Style guides",
+            "Template engines"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Establish a review process for prompt engineering guidelines to ensure they remain up-to-date and effective.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Version control systems",
+            "Review management tools"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Develop training materials and workshops to educate prompt engineers on the guidelines and best practices.",
+          "tool_stack": [
+            "Learning management systems",
+            "Course authoring tools",
+            "Virtual event platforms"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Create a community of practice for prompt engineers to share knowledge, experiences, and feedback.",
+          "tool_stack": [
+            "Community forums",
+            "Social media groups",
+            "Collaboration platforms"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Monitor the adoption and effectiveness of the guidelines and make adjustments as needed.",
+          "tool_stack": [
+            "Analytics tools",
+            "Survey software",
+            "Feedback collection systems"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Collaborate with other teams, such as development and product, to ensure alignment and integration of the guidelines.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Project management tools",
+            "Communication software"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Develop and maintain a set of metrics to measure the effectiveness of the guidelines and prompt engineering practices.",
+          "tool_stack": [
+            "Metrics tools",
+            "Data analysis software",
+            "Visualization libraries"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Continuously update and refine the guidelines based on emerging trends, new research, and user feedback.",
+          "tool_stack": [
+            "Agile project management tools",
+            "Continuous integration systems",
+            "Machine learning libraries"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Establish a process for recognizing and rewarding outstanding contributions to the prompt engineering community.",
+          "tool_stack": [
+            "Recognition platforms",
+            "Reward systems",
+            "Community forums"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 3,
+      "title": "Conduct Prompt Analysis and Optimization",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Collect and preprocess prompt data, including text, metadata, and performance metrics.",
+          "tool_stack": [
+            "Data ingestion tools",
+            "Data preprocessing libraries",
+            "Data storage systems"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Apply natural language processing techniques to analyze the prompts and identify areas for improvement.",
+          "tool_stack": [
+            "NLP libraries",
+            "Text analysis tools",
+            "Machine learning frameworks"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Develop and apply optimization techniques, such as prompt tuning and paraphrasing, to improve prompt performance.",
+          "tool_stack": [
+            "Optimization libraries",
+            "Machine learning frameworks",
+            "NLP tools"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Evaluate the effectiveness of the optimized prompts using metrics such as accuracy, fluency, and relevance.",
+          "tool_stack": [
+            "Evaluation metrics tools",
+            "Data analysis software",
+            "Visualization libraries"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Refine the optimization techniques based on the evaluation results and incorporate user feedback.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Version control systems",
+            "Feedback collection systems"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Develop and maintain a set of metrics to measure the effectiveness of the prompt analysis and optimization process.",
+          "tool_stack": [
+            "Metrics tools",
+            "Data analysis software",
+            "Visualization libraries"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Create a knowledge base of optimized prompts and design principles to share with the prompt engineering community.",
+          "tool_stack": [
+            "Knowledge management tools",
+            "Wiki software",
+            "Documentation platforms"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Collaborate with other teams, such as development and product, to ensure alignment and integration of the optimized prompts.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Project management tools",
+            "Communication software"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Continuously update and refine the prompt analysis and optimization process based on emerging trends and user feedback.",
+          "tool_stack": [
+            "Agile project management tools",
+            "Continuous integration systems",
+            "Machine learning libraries"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Develop and maintain a set of tools and scripts to automate the prompt analysis and optimization process.",
+          "tool_stack": [
+            "Automation tools",
+            "Scripting languages",
+            "DevOps platforms"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 4,
+      "title": "Develop and Maintain Prompt Engineering Tools",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Research and gather requirements for prompt engineering tools, including functionality and user experience.",
+          "tool_stack": [
+            "Research databases",
+            "User feedback systems",
+            "Collaboration platforms"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Design and develop prompt engineering tools, such as prompt generators and analyzers, using programming languages and frameworks.",
+          "tool_stack": [
+            "Programming languages",
+            "Development frameworks",
+            "Integrated development environments"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Test and refine the prompt engineering tools to ensure they meet the requirements and are user-friendly.",
+          "tool_stack": [
+            "Testing frameworks",
+            "Quality assurance tools",
+            "User testing platforms"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Deploy and maintain the prompt engineering tools, including updates, bug fixes, and security patches.",
+          "tool_stack": [
+            "Deployment tools",
+            "Version control systems",
+            "DevOps platforms"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Develop and maintain documentation for the prompt engineering tools, including user guides and API documentation.",
+          "tool_stack": [
+            "Documentation tools",
+            "API documentation generators",
+            "Help authoring software"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Provide support and training for users of the prompt engineering tools, including tutorials and workshops.",
+          "tool_stack": [
+            "Learning management systems",
+            "Course authoring tools",
+            "Virtual event platforms"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Collaborate with other teams, such as development and product, to ensure alignment and integration of the prompt engineering tools.",
+          "tool_stack": [
+            "Collaboration platforms",
+            "Project management tools",
+            "Communication software"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Continuously update and refine the prompt engineering tools based on emerging trends, user feedback, and new research.",
+          "tool_stack": [
+            "Agile project management tools",
+            "Continuous integration systems",
+            "Machine learning libraries"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Develop and maintain a set of metrics to measure the effectiveness and adoption of the prompt engineering tools.",
+          "tool_stack": [
+            "Metrics tools",
+            "Data analysis software",
+            "Visualization libraries"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Establish a process for recognizing and rewarding outstanding contributions to the development and maintenance of the prompt engineering tools.",
+          "tool_stack": [
+            "Recognition platforms",
+            "Reward systems",
+            "Community forums"
+          ]
+        }
+      ]
+    }
+  ]
+}

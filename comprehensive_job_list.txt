@@ -1,0 +1,1903 @@
+================================================================================
+COMPREHENSIVE LIST OF JOBS IN THE MARKET (2026)
+================================================================================
+
+This list includes job titles compiled from multiple sources including Indeed,
+Monster, LinkedIn, and BLS data as of April 2026.
+
+================================================================================
+TECHNOLOGY & ENGINEERING
+================================================================================
+
+AI & Machine Learning
+- AI/Machine Learning Engineer
+- AI Engineer
+- Prompt Engineer
+- Machine Learning Ops (MLOps)
+- AI Product Manager
+- AI Content Manager
+- AI Research Scientist
+- AI Ethics Specialist
+- AI Trainer
+- AI Auditor
+- AI Compliance Specialist
+- AI Security Specialist
+- Natural Language Processing Engineer (NLP)
+- Computer Vision Engineer
+- Deep Learning Engineer
+- Reinforcement Learning Engineer
+- AI Solutions Architect
+- AI Developer
+- AI Integration Specialist
+
+Software & Development
+- Software Developer
+- Software Engineer
+- Software Architect
+- Senior Software Engineer
+- Principal Software Engineer
+- Staff Software Engineer
+- Lead Software Engineer
+- Full-Stack Developer
+- Frontend Developer
+- Frontend Engineer
+- Backend Developer
+- Backend Engineer
+- Mobile Developer
+- Mobile Engineer
+- iOS Developer
+- Android Developer
+- React Developer
+- React Native Developer
+- Vue.js Developer
+- Angular Developer
+- Node.js Developer
+- Python Developer
+- Java Developer
+- C# Developer
+- C++ Developer
+- Go Developer
+- Rust Developer
+- Ruby Developer
+- PHP Developer
+- Swift Developer
+- Kotlin Developer
+- Scala Developer
+- Web Developer
+- UI Developer
+- UI Engineer
+- DevOps Engineer
+- Site Reliability Engineer (SRE)
+- Platform Engineer
+- Release Engineer
+- Build Engineer
+- Integration Engineer
+- API Developer
+- API Engineer
+- Microservices Developer
+- Database Developer
+- Database Administrator
+- Database Engineer
+- Embedded Systems Developer
+- Firmware Developer
+- Game Developer
+- Unity Developer
+- Unreal Developer
+- Graphics Developer
+- SDK Developer
+- Tool Developer
+
+Data & Analytics
+- Data Scientist
+- Data Analyst
+- Data Engineer
+- Data Architect
+- Data Manager
+- Data Director
+- Machine Learning Engineer
+- Machine Learning Scientist
+- ML Engineer
+- Business Analyst
+- Business Intelligence Analyst
+- BI Analyst
+- BI Developer
+- BI Manager
+- BI Director
+- Quantitative Analyst
+- Quantitative Researcher
+- Quantitative Developer
+- Analytics Manager
+- Analytics Director
+- Data Analytics Manager
+- Data Analytics Specialist
+- Data Visualization Developer
+- Data Visualization Engineer
+- Visualization Analyst
+- Reporting Analyst
+- Reporting Developer
+- ETL Developer
+- Data Integration Developer
+- Data Quality Analyst
+- Data Governance Analyst
+- Data Stewardship Manager
+- Data Catalog Manager
+- Chief Data Officer
+- VP of Data
+- Director of Data
+
+Cloud & Infrastructure
+- Cloud Architect
+- Cloud Engineer
+- Cloud Developer
+- Cloud Manager
+- Cloud Director
+- Solutions Architect
+- Enterprise Architect
+- Solutions Engineer
+- SAP Consultant
+- SAP Developer
+- SAP Analyst
+- SAP Manager
+- Salesforce Administrator
+- Salesforce Developer
+- Salesforce Analyst
+- Salesforce Consultant
+- ServiceNow Developer
+- ServiceNow Administrator
+- ServiceNow Consultant
+- AWS Engineer
+- Azure Engineer
+- Google Cloud Engineer
+- Cloud Security Engineer
+- Cloud Operations Engineer
+- Cloud Migration Engineer
+
+Cybersecurity
+- Cybersecurity Specialist
+- Cybersecurity Analyst
+- Security Engineer
+- Security Architect
+- Security Manager
+- Security Director
+- Chief Information Security Officer (CISO)
+- Chief Security Officer
+- Information Security Manager
+- Information Security Analyst
+- Information Security Engineer
+- Penetration Tester
+- Ethical Hacker
+- Security Consultant
+- Security Advisor
+- Security Compliance Officer
+- Security Compliance Analyst
+- GRC Analyst
+- GRC Manager
+- Governance Risk and Compliance
+- Incident Response Analyst
+- SOC Analyst
+- Security Operations Center Analyst
+- Threat Intelligence Analyst
+- Threat Hunter
+- Malware Analyst
+- Forensics Analyst
+- Digital Forensics Analyst
+- Security Auditor
+- Security Assessment Analyst
+- Vulnerability Analyst
+- Vulnerability Manager
+- Patch Management Specialist
+
+IT & Technical Support
+- IT Technician
+- IT Support Specialist
+- IT Support Engineer
+- IT Project Manager
+- IT Manager
+- IT Director
+- IT Administrator
+- Systems Administrator
+- Windows Administrator
+- Linux Administrator
+- Unix Administrator
+- Network Administrator
+- Network Engineer
+- Network Manager
+- Network Director
+- Help Desk Technician
+- Help Desk Analyst
+- Help Desk Manager
+- Service Desk Analyst
+- Service Desk Manager
+- Desktop Support Specialist
+- Desktop Support Engineer
+- Desktop Administrator
+- Field Technician
+- Field Engineer
+- ServiceNow Developer
+- ServiceNow Administrator
+- ServiceNow Analyst
+- ServiceNow Manager
+
+Other Tech Roles
+- UX/UI Designer
+- UI/UX Designer
+- UX Researcher
+- UX Writer
+- Product Manager
+- Associate Product Manager
+- Senior Product Manager
+- Group Product Manager
+- VP of Product
+- Chief Product Officer
+- Technical Writer
+- Senior Technical Writer
+- Lead Technical Writer
+- Documentation Specialist
+- QA Engineer
+- QA Analyst
+- QA Manager
+- QA Lead
+- Quality Assurance Engineer
+- Quality Assurance Analyst
+- Quality Assurance Manager
+- Software Quality Engineer
+- Release Manager
+- Release Coordinator
+- Program Manager
+- Scrum Master
+- Agile Coach
+- Technical Program Manager
+- Technical Project Manager
+- Engineering Manager
+- Engineering Director
+- VP of Engineering
+- CTO
+- Chief Technology Officer
+- Chief Information Officer
+- CIO
+- Technical Consultant
+- Solutions Consultant
+
+================================================================================
+HEALTHCARE & MEDICAL
+================================================================================
+
+Clinical/Medical
+- Registered Nurse (RN)
+- Nurse Practitioner (NP)
+- Clinical Nurse Specialist
+- Cardiac Medical Technician
+- Cardiac Nurse
+- Cardiovascular Nurse
+- Physician Assistant
+- Physician Coordinator
+- Physical Therapist (PT)
+- Physical Therapy Assistant
+- Occupational Therapist (OT)
+- Occupational Therapy Assistant
+- Respiratory Therapist
+- Respiratory Therapy Technician
+- Speech-Language Pathologist (SLP)
+- Speech Therapist
+- Radiation Therapist
+- Radiation Oncology Nurse
+- Radiologic Technician
+- Radiologic Technologist
+- Medical Sonographer
+- Diagnostic Medical Sonographer
+- Ultrasound Technician
+-Ultrasound Technologist
+- Medical/Clinical Laboratory Technician
+- Medical/Clinical Laboratory Technologist
+- Phlebotomist
+- Phlebotomy Technician
+- Pathology Assistant
+- Histotechnician
+- Histotechnologist
+- Cytotechnologist
+- Dietitian
+- Registered Dietitian
+- Nutritionist
+- Clinical Nutritionist
+- Dental Hygienist
+- Dental Assistant
+- Dental Technician
+- Dental Coordinator
+- Optometrist
+- Optician
+- Ophthalmic Technician
+- Ophthalmic Assistant
+- Podiatrist
+- Podiatry Assistant
+- Chiropractor
+- Chiropractic Assistant
+- Naturopathic Doctor
+- Acupuncturist
+- Massage Therapist
+- Reflexologist
+- Holistic Health Practitioner
+- Integrative Health Practitioner
+- Wellness Practitioner
+
+Mental Health
+- Licensed Professional Counselor (LPC)
+- Licensed Mental Health Counselor (LMHC)
+- Licensed Clinical Professional Counselor
+- Licensed Professional Counselor
+- Licensed Clinical Social Worker (LCSW)
+- Licensed Clinical Social Worker
+- Clinical Social Worker
+- Psychiatric Social Worker
+- Medical Social Worker
+- Music Therapist
+- Art Therapist
+- Dance Therapist
+- Drama Therapist
+- Recreational Therapist
+- Psychotherapist
+- Marriage and Family Therapist
+- Mental Health Counselor
+- Mental Health Therapist
+- Behavioral Health Counselor
+- Behavioral Health Therapist
+- Addiction Counselor
+- Substance Abuse Counselor
+- Trauma Counselor
+- Trauma Therapist
+- Grief Counselor
+- Grief Therapist
+- Child Psychologist
+- Child Therapist
+- Adolescent Psychologist
+- Family Psychologist
+- Clinical Psychologist
+- Counseling Psychologist
+- Industrial-Organizational Psychologist
+
+Allied Health
+- Home Health Aide
+- Personal Care Aide
+- Personal Care Assistant
+- Caregiver
+- Medical Assistant
+- Medical Office Assistant
+- Patient Care Technician
+- Patient Care Assistant
+- Patient Advocate
+- Patient Navigator
+- Patient Coordinator
+- Patient Services Coordinator
+- Renal Dialysis Nurse
+- Dialysis Technician
+- Nephrology Nurse
+- Oncology Nurse
+- Infusion Nurse
+- IV Nurse
+- Wound Care Nurse
+- Wound Care Specialist
+- Ostomy Nurse
+- Enterostomal Therapist
+- Diabetes Educator
+- Certified Diabetes Educator
+- Diabetes Specialist
+- Thyroid Specialist
+-Endocrinology Nurse
+- Gastroenterology Nurse
+- Gastrointestinal Nurse
+- Neurology Nurse
+- Neurosurgery Nurse
+- Orthopedic Nurse
+- Orthopaedic Nurse
+- Rehabilitation Nurse
+- Cardiac Rehabilitation Nurse
+- Pulmonary Rehabilitation Nurse
+- Pediatric Nurse
+- Pediatric Intensive Care Nurse
+- Neonatal Nurse
+- Neonatal Intensive Care Nurse
+- NICU Nurse
+- Labor and Delivery Nurse
+- Postpartum Nurse
+- Obstetrics Nurse
+- Gynecology Nurse
+- Women's Health Nurse
+- Maternal-Child Nurse
+- Perinatal Nurse
+- obstetric Nurse
+- Operating Room Nurse
+- OR Nurse
+- Surgical Nurse
+- Post-Anesthesia Care Unit Nurse
+- PACU Nurse
+- Anesthesia Nurse
+- Nurse Anesthetist
+- Certified Registered Nurse Anesthetist (CRNA)
+- Emergency Room Nurse
+- ER Nurse
+- Emergency Department Nurse
+- Trauma Nurse
+- Intensive Care Unit Nurse
+- ICU Nurse
+- Critical Care Nurse
+- Progressive Care Nurse
+- Telemetry Nurse
+- Transport Nurse
+- Flight Nurse
+- Nurse Coordinator
+- Care Coordinator
+- Care Manager
+- Case Manager
+- Care Navigator
+- Patient Experience Coordinator
+- Patient Experience Manager
+
+================================================================================
+SKILLED TRADES & TECHNICAL
+================================================================================
+
+Construction & Installation
+- HVAC Technician
+- Electrician
+- Plumber
+- Carpenter
+- Construction Manager
+- Elevator Installer
+- Solar Panel Installer
+- Wind Turbine Technician
+
+Automotive & Repair
+- Automotive Technician/Mechanic
+- Electronics Technician
+- Repair Technician
+
+Manufacturing & Industrial
+- CNC Machinist
+- Manufacturing Engineer
+- Warehouse Worker
+- Logistics Specialist
+
+================================================================================
+TRANSPORTATION & LOGISTICS
+================================================================================
+
+- Owner-Operator Truck Driver
+- Over-the-Road Truck Driver
+- Delivery Person
+- Commercial Driver
+- Dispatcher
+
+================================================================================
+BUSINESS, FINANCE, & PROFESSIONAL SERVICES
+================================================================================
+
+Management & Executive
+- General and Operations Manager
+- Project Manager
+- Business Manager
+- Regional Manager
+- CEO (Chief Executive Officer)
+- COO (Chief Operating Officer)
+- CFO (Chief Financial Officer)
+- CMO (Chief Marketing Officer)
+- CTO (Chief Technology Officer)
+- Chief Strategy Officer
+- Chief Human Resources Officer
+- VP of Operations
+- VP of Finance
+- VP of Marketing
+- Director of Business Development
+- Director of Strategy
+- Business Development Manager
+- Strategy Manager
+- Operations Manager
+
+Finance & Accounting
+- Accountant
+- Financial Analyst
+- Financial Manager
+- Certified Public Accountant (CPA)
+- Management Accountant
+- Cost Accountant
+- Auditor
+- Tax Specialist
+- Tax Manager
+- Bookkeeper
+- Payroll Specialist
+- Controller
+- Treasurer
+- Investment Analyst
+- Portfolio Manager
+- Risk Analyst
+- Risk Manager
+- Actuary
+- Underwriter
+- Claims Adjuster
+- Credit Analyst
+- Loan Officer
+- Mortgage Broker
+- Compliance Officer
+- Compliance Analyst
+- Treasury Analyst
+- Treasury Manager
+- Cash Manager
+- Revenue Cycle Manager
+- Revenue Cycle Specialist
+- Revenue Manager
+- Billing Specialist
+- Accounts Payable Specialist
+- Accounts Receivable Specialist
+- Forensic Accountant
+- Government Accountant
+- Internal Auditor
+- IT Auditor
+- Sarbanes-Oxley (SOX) Analyst
+
+ Economics & Research
+- Economist
+- Economic Analyst
+- Economic Research Analyst
+- Policy Analyst
+- Market Research Analyst
+- Research Economist
+- Forecasting Analyst
+- Budget Analyst
+
+Banking & Financial Services
+- Bank Teller
+- Personal Banker
+- Commercial Banker
+- Relationship Manager
+- Wealth Manager
+- Financial Advisor
+- Investment Advisor
+- Financial Consultant
+- Estate Planner
+- Insurance Agent
+- Insurance Broker
+
+Marketing & Advertising
+- Chief Marketing Officer (CMO)
+- VP of Marketing
+- VP of Digital Marketing
+- VP of Brand Marketing
+- VP of Growth
+- Marketing Manager
+- Digital Marketing Manager
+- Internet Marketing Manager
+- Online Marketing Manager
+- Marketing Analyst
+- Marketing Research Analyst
+- Marketing Data Analyst
+- Marketing Analytics Manager
+- Marketing Operations Manager
+- Marketing Operations Analyst
+- Marketing Technology Manager
+- MarTech Manager
+- Marketing Automation Manager
+- Marketing Automation Specialist
+- Email Marketing Manager
+- Email Marketing Specialist
+- Content Marketing Manager
+- Content Marketing Specialist
+- Content Strategist
+- Content Manager
+- Content Director
+- Content Marketing Director
+- Social Media Manager
+- Social Media Specialist
+- Social Media Analyst
+- Social Media Coordinator
+- Community Manager
+- Community Specialist
+- Community Director
+- SEO Specialist
+- SEO Manager
+- SEO Analyst
+- SEO Consultant
+- SEM Specialist
+- SEM Manager
+- SEM Analyst
+- PPC Specialist
+- PPC Manager
+- PPC Analyst
+- Paid Search Specialist
+- Paid Social Specialist
+- Paid Media Specialist
+- Programmatic Specialist
+- Programmatic Manager
+- Display Advertising Specialist
+- Brand Manager
+- Senior Brand Manager
+- Group Brand Manager
+- VP of Brand
+- Brand Director
+- Brand Marketing Manager
+- Product Marketing Manager
+- Senior Product Marketing Manager
+- Product Marketing Director
+- Growth Marketing Manager
+- Growth Marketing Specialist
+- Growth Manager
+- Growth Hacker
+- Performance Marketing Manager
+- Performance Marketing Specialist
+- Marketing Coordinator
+- Marketing Specialist
+- Marketing Assistant
+- Marketing Intern
+- Advertising Manager
+- Advertising Specialist
+- Advertising Coordinator
+- Advertising Director
+- Ad Operations Manager
+- Ad Operations Specialist
+- Media Planner
+- Media Buyer
+- Media Supervisor
+- Media Director
+- Media Relations Manager
+- Media Relations Specialist
+- Public Relations Manager
+- Public Relations Specialist
+- PR Manager
+- PR Specialist
+- Communications Manager
+- Communications Specialist
+- Corporate Communications Manager
+- Internal Communications Manager
+- External Communications Manager
+- Creative Director
+- Associate Creative Director
+- Senior Creative Director
+- Executive Creative Director
+- Copywriter
+- Senior Copywriter
+- Lead Copywriter
+- Creative Copywriter
+- Content Creator
+- Content Writer
+- Senior Content Writer
+- Lead Content Writer
+- Content Producer
+- Graphic Designer
+- Senior Graphic Designer
+- Lead Graphic Designer
+- Art Director
+- Associate Art Director
+- Senior Art Director
+- Visual Designer
+- Web Designer
+- Senior Web Designer
+- Lead Web Designer
+- UI Designer
+- Senior UI Designer
+- UX Designer
+- Senior UX Designer
+- UX Researcher
+- UX Writer
+- Product Designer
+- Senior Product Designer
+- Design Director
+- Design Manager
+- Design Lead
+
+Sales & Business Development
+- Chief Revenue Officer (CRO)
+- VP of Sales
+- VP of Business Development
+- VP of Sales Operations
+- Sales Director
+- Sales Manager
+- Regional Sales Manager
+- Area Sales Manager
+- District Sales Manager
+- Territory Sales Manager
+- Territory Manager
+- National Sales Manager
+- Enterprise Sales Manager
+- Commercial Sales Manager
+- SMB Sales Manager
+- Inside Sales Manager
+- Outside Sales Manager
+- Sales Engineer
+- Solutions Engineer
+- Solutions Consultant
+- Pre-Sales Engineer
+- Pre-Sales Consultant
+- Sales Representative
+- Salesperson
+- Account Executive
+- Senior Account Executive
+- Key Account Manager
+- Key Account Executive
+- Major Account Manager
+- Major Account Executive
+- Strategic Account Manager
+- Strategic Account Executive
+- Business Development Representative
+- Business Development Manager
+- Sales Development Representative
+- Sales Development Manager
+- Lead Generation Specialist
+- Lead Generation Manager
+- Prospecting Specialist
+- Territory Development Representative
+- Account Development Representative
+- Customer Success Manager
+- Customer Success Director
+- Customer Success VP
+- Customer Experience Manager
+- Customer Experience Director
+- Account Manager
+- Senior Account Manager
+- Relationship Manager
+- Senior Relationship Manager
+- Client Manager
+- Client Director
+- Client Success Manager
+- Channel Sales Manager
+- Channel Account Manager
+- Partner Manager
+- Strategic Partnership Manager
+- Alliances Manager
+- OEM Sales Manager
+- OEM Account Manager
+- Sales Operations Manager
+- Sales Operations Analyst
+- Sales Operations Specialist
+- Sales Enablement Manager
+- Sales Enablement Specialist
+- Sales Trainer
+- Sales Coach
+- Sales Analyst
+- Sales Planning Manager
+- Forecasting Analyst
+- Quota Manager
+- Compensation Analyst
+- CRM Administrator
+- Salesforce Administrator
+- Sales Administrator
+- Sales Coordinator
+- Sales Assistant
+
+Consulting
+- Management Consultant
+- Strategy Consultant
+- IT Consultant
+- SAP Consultant
+- Oracle Consultant
+- HR Consultant
+- Financial Consultant
+- Operations Consultant
+- Marketing Consultant
+- Business Consultant
+- Implementation Consultant
+- Change Management Consultant
+- Digital Transformation Consultant
+- Supply Chain Consultant
+- Risk Management Consultant
+- Regulatory Consultant
+- Healthcare Consultant
+- Pharmaceutical Consultant
+- biotech Consultant
+- Environmental Consultant
+- Construction Consultant
+- M&A Consultant
+- Private Equity Consultant
+- Investment Banking Consultant
+- ESG Consultant
+- Sustainability Consultant
+
+Human Resources
+- HR Manager
+- HR Director
+- HR Specialist
+- HR Coordinator
+- HR Business Partner
+- People Operations Manager
+- People Operations Specialist
+- Employee Relations Manager
+- Employee Relations Specialist
+- Diversity and Inclusion Manager
+- Diversity and Inclusion Specialist
+- HR Analytics Manager
+- HR Analytics Specialist
+- Workforce Planning Manager
+- Workforce Planning Specialist
+- Organizational Development Manager
+- Organizational Development Specialist
+- Learning and Development Manager
+- Learning and Development Specialist
+- Talent Acquisition Manager
+- Talent Development Manager
+- Training Manager
+- Training Specialist
+- Instructional Designer
+- Compensation Analyst
+- Compensation Manager
+- Benefits Administrator
+- Benefits Manager
+- Payroll Manager
+- Payroll Analyst
+- Employee Experience Manager
+- Culture Manager
+- HRIS Manager
+- HRIS Analyst
+- HRIS Specialist
+- VP of Human Resources
+- Chief People Officer
+
+Administrative & Office
+- Administrative Assistant
+- Executive Assistant
+- Executive Secretary
+- Legal Secretary
+- Medical Secretary
+- Receptionist
+- Front Desk Coordinator
+- Front Desk Manager
+- Call Center Representative
+- Call Center Manager
+- Customer Service Representative
+- Customer Service Manager
+- Office Manager
+- Office Administrator
+- Office Coordinator
+- Virtual Assistant
+- Personal Assistant
+- Executive Assistant to CEO
+- Executive Assistant to CFO
+- Administrative Coordinator
+- Administrative Manager
+- Data Entry Clerk
+- Data Entry Specialist
+- Records Manager
+- Records Specialist
+- Document Controller
+- Document Specialist
+- Concierge
+- Facility Coordinator
+- Facility Manager
+- Office Services Manager
+- Mailroom Manager
+- Mailroom Clerk
+- Procurement Specialist
+- Procurement Manager
+- Purchasing Manager
+- Purchasing Agent
+- Supply Chain Manager
+- Supply Chain Analyst
+- Logistics Coordinator
+- Logistics Manager
+- Travel Coordinator
+- Event Coordinator
+- Event Manager
+- Meeting Planner
+- Executive Coordinator
+- Operations Coordinator
+- Operations Specialist
+- Operations Analyst
+- Business Analyst
+- Process Analyst
+- Business Process Improvement Manager
+- Business Operations Manager
+- Chief of Staff
+- Office of the CEO Analyst
+
+================================================================
+EDUCATION & SOCIAL SERVICES
+================================================================================
+
+Education
+- Teacher
+- Substitute Teacher
+- Tutor
+- Teaching Assistant
+- Paraprofessional
+- Instructional Designer
+- Curriculum Developer
+- Curriculum Manager
+- Curriculum Specialist
+- Education Coordinator
+- Education Specialist
+- Education Manager
+- School Administrator
+- School Principal
+- Assistant Principal
+- Dean of Students
+- Dean of Faculty
+- College Professor
+- University Professor
+- Adjunct Professor
+- Visiting Professor
+- Professor Emeritus
+- Lecturer
+- Teaching Fellow
+- Research Fellow
+- Postdoctoral Researcher
+- Academic Advisor
+- College Counselor
+- High School Counselor
+- Career Counselor
+- Vocational Counselor
+- Academic Dean
+- Provost
+- Chancellor
+- President
+- Vice President of Academic Affairs
+- Vice President of Enrollment Management
+- Director of Admissions
+- Admissions Counselor
+- Admissions Officer
+- Enrollment Specialist
+- Registrar
+- Financial Aid Counselor
+- Financial Aid Director
+- Scholarship Coordinator
+- Student Affairs Director
+- Student Services Coordinator
+- Student Activities Director
+- Campus Life Coordinator
+- Housing Coordinator
+- Residence Life Director
+- Online Instructor
+- E-Learning Instructor
+- Virtual Teacher
+- Digital Learning Specialist
+- Educational Technologist
+- Learning Management System Administrator
+- LMS Administrator
+- Corporate Trainer
+- Professional Development Trainer
+- Talent Development Specialist
+
+Social Services
+- Social Worker
+- Medical Social Worker
+- Clinical Social Worker
+- Psychiatric Social Worker
+- Hospice Social Worker
+- School Social Worker
+- Case Manager
+- Care Coordinator
+- Care Manager
+- Caregiver
+- Family Services Coordinator
+- Family Services Specialist
+- Community Manager
+- Community Coordinator
+- Community Advocate
+- Community Outreach Manager
+- Community Outreach Specialist
+- Outreach Coordinator
+- Program Manager
+- Program Director
+- Program Coordinator
+- Program Specialist
+- Program Analyst
+- Nonprofit Director
+- Executive Director
+- Nonprofit Manager
+- Nonprofit Specialist
+- Nonprofit Coordinator
+- Development Director
+- Fundraising Director
+- Grants Manager
+- Grants Specialist
+- Grant Writer
+- Donor Relations Manager
+- Donor Relations Specialist
+- Major Gifts Officer
+- Corporate Giving Manager
+- Planned Giving Manager
+- Annual Fund Manager
+- Capital Campaign Manager
+- Chief Development Officer
+- Chief Advancement Officer
+- Advancement Officer
+- Alumni Relations Manager
+- Alumni Relations Specialist
+- Community Relations Manager
+- Community Relations Specialist
+- Public Relations Manager
+- Public Relations Specialist
+- Volunteer Coordinator
+- Volunteer Manager
+- Volunteer Services Director
+
+================================================================================
+LEGAL & COMPLIANCE
+================================================================================
+
+Legal
+- Attorney
+- Lawyer
+- Paralegal
+- Legal Assistant
+- Legal Secretary
+- Corporate Counsel
+- In-House Counsel
+- General Counsel
+- Contract Manager
+- Contract Specialist
+- Compliance Officer
+- Compliance Manager
+- Legal Consultant
+- Senior Counsel
+- Associate Counsel
+- Deputy General Counsel
+- Chief Legal Officer
+- Legal Operations Manager
+- Legal Operations Specialist
+- E-Discovery Specialist
+- E-Discovery Analyst
+- Litigation Paralegal
+- Corporate Paralegal
+- Real Estate Paralegal
+- Immigration Paralegal
+- Patent Paralegal
+- Trademark Attorney
+- Patent Attorney
+- IP Attorney
+- Litigation Attorney
+- Transactions Attorney
+- Environmental Attorney
+- Tax Attorney
+- Employment Attorney
+- Benefits Attorney
+- Healthcare Attorney
+- Technology Transactions Attorney
+- Data Privacy Attorney
+- Privacy Officer
+- Privacy Counsel
+- Privacy Analyst
+- Data Protection Officer
+- Regulatory Affairs Specialist
+- Regulatory Affairs Manager
+- Regulatory Affairs Director
+- Regulatory Writer
+- Quality Assurance Specialist
+- Quality Assurance Manager
+- Quality Control Specialist
+- Quality Control Manager
+- Governance Specialist
+- Governance Manager
+- Risk Specialist
+- Risk Manager
+- Risk Director
+- Fraud Investigator
+- Compliance Analyst
+- Ethics Officer
+- Ethics Specialist
+
+================================================================
+REAL ESTATE & PROPERTY
+================================================================================
+
+- Real Estate Agent
+- Real Estate Broker
+- Licensed Real Estate Agent
+- Property Manager
+- Property Analyst
+- Leasing Agent
+- Leasing Manager
+- Leasing Coordinator
+- Apartment Manager
+- Commercial Real Estate Agent
+- Commercial Real Estate Broker
+- Commercial Property Manager
+- Residential Real Estate Agent
+- Land Broker
+- Real Estate Developer
+- Real Estate Analyst
+- Real Estate Consultant
+- Real Estate Investment Analyst
+- Real Estate Investment Manager
+- Real Estate Acquisitions Manager
+- Real Estate Asset Manager
+- Real Estate Asset Analyst
+- Real Estate Finance Manager
+- Real Estate Finance Analyst
+- Real Estate Marketing Manager
+- Real Estate Marketing Specialist
+- Title Examiner
+- Title Officer
+- Escrow Officer
+- Escrow Manager
+- Closing Specialist
+- Closing Manager
+- Mortgage Underwriter
+- Mortgage Processor
+- Loan Originator
+- Loan Officer
+- Construction Project Manager
+- Construction Coordinator
+- Construction Estimator
+- Construction Cost Analyst
+- Site Manager
+- Site Supervisor
+- Facilities Director
+- Facilities Manager
+- Facilities Coordinator
+- Building Engineer
+- Building Inspector
+- City Planner
+- Urban Planner
+- Zoning Analyst
+- Land Use Planner
+- Development Coordinator
+- Development Manager
+
+================================================================
+SCIENCE & RESEARCH
+================================================================================
+
+- Research Scientist
+- Research Associate
+- Lab Technician
+- Laboratory Manager
+- Clinical Research Coordinator
+- Data Scientist
+- Biostatistician
+- Pharmacologist
+- Chemist
+- Biochemist
+- Physicist
+- Biologist
+- Microbiologist
+- Environmental Scientist
+- Geologist
+- Oceanographer
+- Research Analyst
+- Scientific Writer
+
+================================================================================
+ARTS, MEDIA & ENTERTAINMENT
+================================================================================
+
+Media & Communications
+- Journalist
+- Reporter
+- News Anchor
+- TV Anchor
+- Radio Host
+- Producer
+- Executive Producer
+- Associate Producer
+- Director
+- Film Director
+- Documentary Director
+- Showrunner
+- Editor
+- Content Editor
+- Video Editor
+- Motion Graphics Designer
+- Motion Graphics Animator
+- Videographer
+- Photographer
+- Photo Editor
+- Photojournalist
+- Camera Operator
+- Broadcast Technician
+- Audio Technician
+- Television Producer
+- Podcast Producer
+- Podcast Host
+- Podcast Manager
+- Social Media Producer
+- Digital Content Producer
+- Media Relations Specialist
+- Public Information Officer
+- Communications Specialist
+- Corporate Communications Manager
+- Internal Communications Manager
+- External Communications Manager
+- Press Secretary
+- Media Strategist
+
+Creative
+- Graphic Designer
+- Senior Graphic Designer
+- UI Designer
+- UX Designer
+- UX Researcher
+- UX Writer
+- Creative Director
+- Art Director
+- Creative Manager
+- Illustrator
+- Animator
+- 3D Artist
+- 3D Animator
+- Game Designer
+- Game Developer
+- Game Artist
+- Level Designer
+- Narrative Designer
+- Environment Artist
+- Character Artist
+- Concept Artist
+- Visual Designer
+- Brand Designer
+- Packaging Designer
+- Print Designer
+- Web Designer
+- Presentation Designer
+- Exhibition Designer
+- Interior Designer
+- Industrial Designer
+- Product Designer
+- UX Designer
+- Interaction Designer
+- Design Director
+- Design Manager
+- Design Lead
+
+Music & Entertainment
+- Music Producer
+- Music Director
+- Music Supervisor
+- Sound Engineer
+- Audio Engineer
+- Recording Engineer
+- Mixing Engineer
+- Mastering Engineer
+- DJ
+- Recording Artist
+- Recording Musician
+- Songwriter
+- Composer
+- Arranger
+- Orchestrator
+- Music Editor
+- Music Coordinator
+- Music Librarian
+- Talent Agent
+- Talent Manager
+- Booking Agent
+- Tour Manager
+- Tour Coordinator
+- Concert Promoter
+- Venue Manager
+- Venue Coordinator
+- Event Producer
+- Live Event Producer
+- Stage Manager
+- Stage Hand
+- Lighting Technician
+- Lighting Designer
+- Stage Designer
+- Production Designer
+- Set Designer
+- Costume Designer
+- Wardrobe Stylist
+- Makeup Artist
+- Hair Stylist
+- Casting Director
+- Casting Associate
+- Talent Scout
+
+Writing & Publishing
+- Technical Writer
+- Senior Technical Writer
+- Lead Technical Writer
+- Copywriter
+- Senior Copywriter
+- Creative Copywriter
+- Content Writer
+- Senior Content Writer
+- Content Strategist
+- Content Manager
+- Content Director
+- Author
+- Writer
+- Editor
+- Managing Editor
+- Senior Editor
+- Associate Editor
+- Proofreader
+- Copy Editor
+- Fact Checker
+- Editor-in-Chief
+- Publisher
+- Editorial Director
+- Publishing Manager
+- Acquisitions Editor
+- Commissioning Editor
+- Commissioning Editor
+- Literary Agent
+- Literary Manager
+- Books Editor
+- Magazine Editor
+- Newspaper Editor
+- Digital Editor
+- Web Content Editor
+- SEO Content Writer
+- Grant Writer
+- Speechwriter
+- Scriptwriter
+- Screenwriter
+- Playwright
+- TV Writer
+- Film Writer
+- Documentary Writer
+- Narrative Designer
+- Story Designer
+- Creative Writer
+
+================================================================================
+
+================================================================================
+RETAIL & HOSPITALITY
+================================================================================
+
+Retail
+- Retail Salesperson
+- Retail Sales Specialist
+- Retail Sales Associate
+- Cashier
+- Store Manager
+- Assistant Store Manager
+- Shift Manager
+- Shift Supervisor
+- Department Manager
+- Regional Manager
+- District Manager
+- Store Director
+- Merchandising Manager
+- Visual Merchandiser
+- Inventory Manager
+- Inventory Specialist
+- Loss Prevention Manager
+- Loss Prevention Specialist
+- Store Operations Manager
+- Store Operations Specialist
+- Customer Service Manager
+- Customer Service Supervisor
+- Customer Experience Manager
+- E-Commerce Manager
+- E-Commerce Specialist
+- Online Sales Manager
+- Digital Merchandising Manager
+- Category Manager
+- Category Specialist
+- Buyer
+- Assistant Buyer
+- Procurement Manager
+- Supply Chain Manager
+
+Restaurant & Food Service
+- Restaurant Manager
+- Assistant Restaurant Manager
+- Restaurant General Manager
+- Restaurant Owner
+- Kitchen Manager
+- Kitchen Director
+- Executive Chef
+- Sous Chef
+- Chef de Cuisine
+- Chef de Partie
+- Line Cook
+- Prep Cook
+- Cook
+- Server
+- Waiter
+- Waitress
+- Host
+- Hostess
+- Maitre d'
+- Sommelier
+- Bartender
+- Bar Manager
+- Barista
+- Fast Food Worker
+- Fast Food Manager
+- Delicatessen Attendant
+- Deli Manager
+- Catering Manager
+- Catering Coordinator
+- Food Service Manager
+- Food Service Director
+- Culinary Manager
+- Culinary Director
+- Pastry Chef
+- Baker
+- Bakery Manager
+
+Hospitality & Tourism
+- Hotel Manager
+- Assistant Hotel Manager
+- Hotel General Manager
+- Hotel Director
+- Front Desk Manager
+- Front Desk Supervisor
+- Front Desk Agent
+- Guest Services Manager
+- Guest Services Representative
+- Concierge
+- Night Auditor
+- Revenue Manager
+- Revenue Analyst
+- Reservation Manager
+- Reservations Agent
+- Housekeeping Manager
+- Housekeeping Supervisor
+- Housekeeper
+- Maintenance Manager
+- Maintenance Technician
+- Facilities Manager
+- Event Coordinator
+- Event Manager
+- Banquet Manager
+- Banquet Coordinator
+- Catering Sales Manager
+- Convention Services Manager
+- Travel Manager
+- Travel Coordinator
+- Tour Manager
+- Tour Guide
+- Destination Manager
+- Tourism Manager
+- Visitor Services Coordinator
+
+================================================================================
+GOVERNMENT & PUBLIC SERVICE
+================================================================================
+
+Federal Government
+- Government Analyst
+- Policy Analyst
+- Policy Writer
+- Policy Specialist
+- Program Analyst
+- Program Manager
+- Program Specialist
+- Public Administrator
+- Public Affairs Specialist
+- Public Affairs Officer
+- Government Relations Manager
+- Government Relations Specialist
+- Legislative Assistant
+- Legislative Analyst
+- Congressional Staffer
+- Capitol Hill Staffer
+- White House Staffer
+- Federal Employee
+- Civil Servant
+- Foreign Service Officer
+- Diplomat
+- Ambassador
+- State Department Official
+
+State & Local Government
+- City Manager
+- City Council Member
+- Mayor
+- County Executive
+- County Commissioner
+- Town Manager
+- Township Administrator
+- Municipal Manager
+- Local Government Manager
+- City Clerk
+- Town Clerk
+- County Clerk
+- Municipal Clerk
+- Recorder
+- Assessor
+- Tax Collector
+- Treasurer
+- Finance Director
+- Budget Director
+- Purchasing Director
+- Public Works Director
+- Public Works Manager
+- Public Works Superintendent
+- Transportation Director
+- Transportation Manager
+- Traffic Engineer
+- Traffic Manager
+- City Planner
+- Urban Planner
+- Land Use Planner
+- Zoning Administrator
+- Building Official
+- Building Inspector
+- Code Enforcement Officer
+- Health Officer
+- Sanitarian
+- Environmental Health Specialist
+
+Public Safety
+- Police Officer
+- Police Detective
+- Police Sergeant
+- Police Lieutenant
+- Police Captain
+- Police Chief
+- Deputy Sheriff
+- Sheriff
+- Correctional Officer
+- Probation Officer
+- Paroles Officer
+- Firefighter
+- Fire Captain
+- Fire Chief
+- Fire Marshal
+- Emergency Medical Technician (EMT)
+- Paramedic
+- Emergency Management Director
+- Emergency Management Manager
+- Emergency Management Coordinator
+- Disaster Recovery Manager
+- Crisis Management Manager
+- Public Safety Director
+- Security Director
+
+Military
+- Military Officer
+- Enlisted Member
+- Military Analyst
+- Defense Analyst
+- Intelligence Analyst
+- Operations Research Analyst
+- Logistics Manager
+- Supply Chain Manager
+- Procurement Officer
+- Contracting Officer
+- Contract Specialist
+- Program Manager
+- Project Manager
+
+================================================================================
+INSURANCE & FINANCIAL SERVICES
+================================================================================
+
+Insurance
+- Insurance Agent
+- Insurance Broker
+- Insurance Sales Representative
+- Insurance Underwriter
+- Senior Underwriter
+- Commercial Underwriter
+- Personal Lines Underwriter
+- Life Underwriter
+- Health Underwriter
+- Property Underwriter
+- Casualty Underwriter
+- Reinsurance Underwriter
+- Claims Adjuster
+- Claims Examiner
+- Claims Manager
+- Claims Specialist
+- Senior Claims Adjuster
+- Claims Investigator
+- Claims Analyst
+- Insurance Analyst
+- Insurance Consultant
+- Insurance Manager
+- Insurance Director
+- Insurance Operations Manager
+- Insurance Operations Specialist
+- Policy Specialist
+- Policy Manager
+- Policy Analyst
+- Rating Analyst
+- Actuary
+- Senior Actuary
+- Chief Actuary
+- Actuarial Analyst
+- Actuarial Manager
+- Risk Analyst
+- Risk Manager
+- Risk Director
+- Enterprise Risk Manager
+- Compliance Officer
+- Compliance Analyst
+- Compliance Manager
+- Insurance Marketing Manager
+- Insurance Marketing Specialist
+- Producer
+- Insurance Producer
+- Account Manager
+- Account Executive
+- Insurance Account Manager
+- Insurance Account Executive
+- Loss Control Specialist
+- Loss Control Manager
+- Premium Audit Specialist
+- Premium Audit Manager
+- Insurance Attorney
+- Insurance Counsel
+
+Financial Services
+- Financial Advisor
+- Financial Planner
+- Certified Financial Planner (CFP)
+- Investment Advisor
+- Investment Consultant
+- Wealth Manager
+- Wealth Advisor
+- Private Wealth Advisor
+- Private Banker
+- Investment Banker
+- Corporate Finance Analyst
+- Corporate Finance Associate
+- Mergers & Acquisitions Analyst
+- M&A Associate
+- Private Equity Analyst
+- Private Equity Associate
+- Venture Capital Analyst
+- Venture Capital Associate
+- Capital Markets Analyst
+- Capital Markets Associate
+- Trading Analyst
+- Trader
+- Quantitative Trader
+- Algorithmic Trader
+- Portfolio Manager
+- Assistant Portfolio Manager
+- Fixed Income Manager
+- Equity Manager
+- Investment Operations Analyst
+- Operations Analyst
+- Custodian
+- Fund Accountant
+- Fund Administrator
+- Hedge Fund Analyst
+- Mutual Fund Analyst
+- ETF Analyst
+- Research Analyst
+- Sell-Side Analyst
+- Buy-Side Analyst
+- Equity Research Analyst
+- Fixed Income Analyst
+- Credit Analyst
+- Commercial Credit Analyst
+- Corporate Credit Analyst
+- Relationship Manager
+- Commercial Relationship Manager
+- Business Relationship Manager
+- Treasury Analyst
+- Treasury Manager
+- Cash Management Analyst
+- Cash Management Manager
+- Payments Analyst
+- Payments Manager
+- Fraud Analyst
+- Fraud Manager
+- AML Analyst
+- AML Manager
+- KYC Analyst
+- KYC Manager
+
+================================================================================
+SPORTS, FITNESS & RECREATION
+================================================================================
+
+Sports & Athletics
+- Sports Agent
+- Sports Manager
+- Athletic Director
+- Coach
+- Head Coach
+- Assistant Coach
+- Athletic Trainer
+- Sports Therapist
+- Performance Analyst
+- Performance Manager
+- Scout
+- Talent Scout
+- Sports Writer
+- Sports Journalist
+- Sports Commentator
+- Sports Broadcaster
+- Sports Photographer
+- Sports Videographer
+- Esports Player
+- Esports Coach
+- Esports Manager
+- Esports Analyst
+
+Fitness & Wellness
+- Fitness Trainer
+- Personal Trainer
+- Group Fitness Instructor
+- Yoga Instructor
+- Pilates Instructor
+- Spin Instructor
+- Strength Coach
+- Nutritionist
+- Dietitian
+- Wellness Coach
+- Health Coach
+- Wellness Manager
+- Fitness Manager
+- Gym Manager
+- Club Manager
+
+Recreation
+- Recreation Director
+- Recreation Manager
+- Recreation Coordinator
+- Camp Director
+- Camp Counselor
+- Activity Director
+- Program Director
+- Program Coordinator
+
+================================================================================
+AVIATION & AEROSPACE
+================================================================================
+
+Aviation
+- Pilot
+- Captain
+- First Officer
+- Co-Pilot
+- Commercial Pilot
+- Private Pilot
+- Airline Pilot
+- Flight Instructor
+- Chief Pilot
+- Director of Flight Operations
+- Flight Operations Manager
+- Flight Dispatcher
+- Air Traffic Controller
+- Aviation Mechanic
+- A&P Mechanic
+- Avionics Technician
+- Aircraft Maintenance Technician
+- Ramp Agent
+- Flight Attendant
+- Cabin Crew
+- Ground Operations Agent
+- Baggage Handler
+- Customer Service Agent
+- Aviation Security Officer
+
+Aerospace
+- Aerospace Engineer
+- Aeronautical Engineer
+- Aerospace Designer
+- Aerospace Technician
+- Space Systems Engineer
+- Satellite Engineer
+- Rocket Scientist
+- Flight Test Engineer
+- Systems Engineer
+- Propulsion Engineer
+- Structural Engineer
+
+================================================================================
+TELECOMMUNICATIONS & UTILITIES
+================================================================================
+
+Telecommunications
+- Telecommunications Engineer
+- Network Engineer
+- Systems Engineer
+- Technical Support Specialist
+- Field Service Technician
+- Installation Technician
+- Fiber Optic Technician
+- Cable Technician
+- Data Center Technician
+- Data Center Manager
+- Network Administrator
+- Network Manager
+- Telecom Manager
+- Telecom Analyst
+- Telecom Specialist
+- VoIP Engineer
+- Wireless Engineer
+- RF Engineer
+- 5G Engineer
+- Telecom Consultant
+
+Utilities
+- Utility Manager
+- Utility Analyst
+- Utility Specialist
+- Electrician
+- Lineman
+- Power Lineman
+- Utility Technician
+- Water Treatment Specialist
+- Wastewater Treatment Specialist
+- Environmental Technician
+- Environmental Compliance Specialist
+- Energy Analyst
+- Energy Manager
+- Energy Engineer
+- Renewable Energy Specialist
+- Solar Energy Specialist
+- Wind Energy Specialist
+- Grid Analyst
+- Grid Manager
+- Power Systems Analyst
+- Power Systems Engineer
+
+================================================================================
+EMERGING & GROWING JOB TITLES (Fastest Growing)
+================================================================================
+
+Based on LinkedIn and industry reports, these roles show 50-100% YoY growth:
+
+- AI Engineer
+- Prompt Engineer
+- Machine Learning Ops
+- Data Annotator
+- Renewable Energy Technician
+- Sustainability Specialist
+- Healthcare Data Analyst
+- ESG Analyst
+- Sustainability Analyst
+- Climate Analyst
+- Carbon Analyst
+- Net Zero Analyst
+- Diversity, Equity & Inclusion (DEI) Specialist
+- Remote Work Coordinator
+- Chief Remote Officer
+- Work from Home Coordinator
+- Hybrid Work Manager
+- Chief Happiness Officer
+- Chief People Officer
+- Chief Culture Officer
+- Chief Experience Officer
+- Chief Data Officer
+- Chief Digital Officer
+- Chief Innovation Officer
+- Chief Strategy Officer
+- Chief Operating Officer
+- Chief Revenue Officer
+- Chief Commercial Officer
+- Chief Business Officer
+- Chief Development Officer
+- Chief Marketing Officer
+- Chief Communications Officer
+- Chief Information Officer
+- Chief Technology Officer
+- Chief Financial Officer
+- Chief Legal Officer
+- Chief Risk Officer
+- Chief Compliance Officer
+- Chief Audit Officer
+- Chief Security Officer
+- Chief Privacy Officer
+- Chief Data Protection Officer
+
+================================================================================
+REMOTE-FRIENDLY HIGH-PAYING JOBS
+================================================================================
+
+- Data Scientist (35% remote postings)
+- Solutions Architect (40% remote postings)
+- Software Developer (remote-friendly)
+- Cybersecurity Specialist
+- Product Manager
+- Project Manager (20% remote)
+- AI/ML Engineer
+- UX Designer
+- Technical Writer
+- Marketing Manager
+- HR Manager
+- Account Manager
+- Sales Manager
+- Consultant
+- Business Analyst
+- Financial Analyst
+- Recruiter
+- Copywriter
+- Content Writer
+
+================================================================================
+
+Note: This list is compiled from multiple sources including Indeed, Monster,
+LinkedIn, and Bureau of Labor Statistics (BLS) data as of April 2026.
+
+Job demand varies by location, industry, and economic conditions.
+Healthcare, technology, skilled trades, and logistics continue to show
+the strongest hiring demand in 2026.
+
+================================================================================

@@ -10,6 +10,7 @@ from dataclasses import dataclass, field
 class TaskStep:
     step_number: int
     description: str
+    tool_stack: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -20,12 +21,28 @@ class WorkflowTask:
 
 
 @dataclass
+class StepProblem:
+    task_number: int
+    step_number: int
+    step_description: str
+    problem: str
+
+
+@dataclass
+class StepSolution:
+    task_number: int
+    step_number: int
+    step_description: str
+    current_solution: str
+
+
+@dataclass
 class StepAnalysis:
     task_number: int
     step_number: int
     step_description: str
-    current_solution: str   # what tool/method is currently used for this step
-    problem: str            # problem with the current solution (empty string if none)
+    current_solution: str  # what tool/method is currently used for this step
+    problem: str  # problem with the current solution (empty string if none)
 
 
 @dataclass
@@ -43,15 +60,22 @@ class Evaluation:
     step_number: int
     solution_type: str
     feasibility: int  # 1-5
-    impact: int       # 1-5
-    complexity: int   # 1-5
+    impact: int  # 1-5
+    complexity: int  # 1-5
 
 
 VALID_PROBLEM_CATEGORIES = {
-    "time-consuming", "repetitive", "error-prone", "manual", "tedious",
+    "time-consuming",
+    "repetitive",
+    "error-prone",
+    "manual",
+    "tedious",
 }
 
 VALID_SOLUTION_TYPES = {
-    "automation script", "ocr extraction", "api integration",
-    "dashboard", "notification system",
+    "automation script",
+    "ocr extraction",
+    "api integration",
+    "dashboard",
+    "notification system",
 }

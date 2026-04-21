@@ -32,7 +32,9 @@ def slug(job: str) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run pipeline inference and cache results")
+    parser = argparse.ArgumentParser(
+        description="Run pipeline inference and cache results"
+    )
     parser.add_argument("--remote", action="store_true", help="Use HF Inference API")
     parser.add_argument("--jobs", type=int, help="Max number of jobs")
     parser.add_argument("--job", help="Single specific job")
@@ -45,9 +47,10 @@ def main():
     if args.job:
         dataset = [s for s in dataset if s["job"].lower() == args.job.lower()]
         if not dataset:
-            print(f"Job '{args.job}' not found."); return
+            print(f"Job '{args.job}' not found.")
+            return
     if args.jobs:
-        dataset = dataset[:args.jobs]
+        dataset = dataset[: args.jobs]
 
     os.makedirs(CACHE_DIR, exist_ok=True)
 
@@ -67,20 +70,23 @@ def main():
     # Load model
     if args.remote:
         from src.pipeline.model import load_remote_model
-        print("Using HuggingFace Inference API")
+
+        print("Using Groq API")
         model = load_remote_model()
+        print(f"Model: {model.model}")
     else:
         from src.pipeline.model import find_model, load_model
+
         path = find_model()
         print(f"Loading {path.name}...")
         model = load_model(path)
 
-    runner = PipelineRunner(model, max_retries=2)
+    runner = PipelineRunner(model, max_retries=3)
     print(f"\nRunning {len(to_run)} jobs ({len(dataset) - len(to_run)} cached)\n")
 
     for i, sample in enumerate(to_run):
         job = sample["job"]
-        print(f"[{i+1}/{len(to_run)}] {job}", end=" ... ", flush=True)
+        print(f"[{i + 1}/{len(to_run)}] {job}", end=" ... ", flush=True)
 
         start = time.time()
         try:
@@ -99,7 +105,7 @@ def main():
 
             status = "✓" if result.success else "✗"
             stages_ok = sum(1 for s in run_dict["stages"] if s["valid"])
-            print(f"{status} {stages_ok}/4 stages  {elapsed:.0f}s")
+            print(f"{status} {stages_ok}/5 stages  {elapsed:.0f}s")
 
         except Exception as e:
             elapsed = time.time() - start
@@ -107,8 +113,18 @@ def main():
             # Save error result to cache so score_benchmark knows it failed
             cache_path = Path(CACHE_DIR) / f"{slug(job)}.json"
             with open(cache_path, "w") as f:
-                json.dump({"job": job, "success": False, "error": str(e),
-                           "stages": [], "total_latency_ms": 0, "elapsed_s": round(elapsed, 1)}, f, indent=2)
+                json.dump(
+                    {
+                        "job": job,
+                        "success": False,
+                        "error": str(e),
+                        "stages": [],
+                        "total_latency_ms": 0,
+                        "elapsed_s": round(elapsed, 1),
+                    },
+                    f,
+                    indent=2,
+                )
 
     print(f"\nDone. Results cached in {CACHE_DIR}/")
     print(f"Run scoring: python scripts/score_benchmark.py")

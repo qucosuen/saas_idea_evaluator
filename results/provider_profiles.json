@@ -1,0 +1,35 @@
+{
+  "providers": {
+    "groq": {
+      "backend": "groq",
+      "available": true,
+      "latency_avg_ms": 327.2,
+      "latency_std_ms": 53.5,
+      "latency_min_ms": 261.3,
+      "latency_max_ms": 381.5,
+      "error_rate": 0.0,
+      "throttle_count": 0,
+      "total_runs": 5,
+      "errors": []
+    },
+    "huggingface": {
+      "backend": "huggingface",
+      "available": true,
+      "latency_avg_ms": 362.8,
+      "latency_std_ms": 56.1,
+      "latency_min_ms": 288.6,
+      "latency_max_ms": 430.2,
+      "error_rate": 1.0,
+      "throttle_count": 0,
+      "total_runs": 5,
+      "errors": [
+        "402 Client Error: Payment Required for url: https://router.huggingface.co/groq/openai/v1/chat/completions (Request ID: Root=1-69e1ecf4-434f50c067ab5e365dbc3404;867e025b-b524-4aaf-8d6f-08aa7f952491)\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.",
+        "402 Client Error: Payment Required for url: https://router.huggingface.co/groq/openai/v1/chat/completions (Request ID: Root=1-69e1ecf4-015583cf0e6c75e712495e13;dfc6bf65-c54a-40e2-b3ad-8f05cca78f25)\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.",
+        "402 Client Error: Payment Required for url: https://router.huggingface.co/groq/openai/v1/chat/completions (Request ID: Root=1-69e1ecf5-041fac3b044004bf74b2f355;4534ea19-6a95-40a3-ab2f-30fe4a394938)\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.",
+        "402 Client Error: Payment Required for url: https://router.huggingface.co/groq/openai/v1/chat/completions (Request ID: Root=1-69e1ecf5-4b3998bb7e351e0270890c20;9dff0c7d-b41d-44aa-ae69-3fe004c3ad1f)\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.",
+        "402 Client Error: Payment Required for url: https://router.huggingface.co/groq/openai/v1/chat/completions (Request ID: Root=1-69e1ecf5-67190c622fb1b66847abd6d6;54ff3e88-c158-43b4-8f64-96c4ac8ec1b2)\n\nYou have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage."
+      ]
+    }
+  },
+  "profile_timestamp": 1776413924.4793174
+}

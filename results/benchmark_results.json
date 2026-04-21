@@ -1,79 +1,424 @@
 {
   "summary": {
-    "jobs_evaluated": 1,
-    "timestamp": "2026-04-16T09:49:39.334238+00:00",
+    "jobs_evaluated": 12,
+    "timestamp": "2026-04-16T17:09:19.055154+00:00",
     "final_score": {
-      "mean": 0.363,
-      "std": 0
+      "mean": 0.666,
+      "std": 0.126
     },
     "task_score": {
-      "mean": 0.658,
-      "coverage": 0.2,
+      "mean": 0.631,
+      "coverage": 0.133,
       "relevance": 1.0,
-      "specificity": 0.591,
+      "specificity": 0.565,
       "non_redundancy": 1.0
     },
     "step_score": {
-      "mean": 0.874,
+      "mean": 0.803,
       "atomicity": 1.0,
-      "logical_ordering": 0.923,
+      "logical_ordering": 0.664,
       "actionability": 1.0,
-      "specificity": 0.573
+      "specificity": 0.547
     },
     "problem_score": {
-      "mean": 0,
-      "specificity": 0,
-      "realism": 0,
-      "causality": 0
+      "mean": 0.38,
+      "specificity": 0.509,
+      "realism": 0.41,
+      "causality": 0.131
     },
     "solution_score": {
-      "mean": 0,
-      "correctness": 0,
-      "specificity": 0,
-      "diversity": 0,
-      "feasibility": 0,
-      "novelty": 0
+      "mean": 0.503,
+      "correctness": 0.327,
+      "specificity": 0.482,
+      "diversity": 0.271,
+      "feasibility": 0.833,
+      "novelty": 0.812
     },
     "eval_score": {
-      "mean": 0,
-      "variance": 0,
-      "justification": 0,
-      "specificity": 0,
-      "usefulness": 0
+      "mean": 0.642,
+      "variance": 0.604,
+      "justification": 0.833,
+      "specificity": 0.166,
+      "usefulness": 0.833
     },
     "system": {
-      "consistency": 1.0,
+      "consistency": 0.683,
       "redundancy": 0,
-      "constraint_adherence": 1.0,
-      "practicality": 0.25
+      "constraint_adherence": 0.983,
+      "practicality": 0.733
     },
-    "success_rate": 0.0,
-    "hard_score": 0.363
+    "success_rate": 0.833,
+    "easy_score": 0.637,
+    "medium_score": 0.641,
+    "hard_score": 0.692
   },
   "results": [
     {
       "job": "DevOps Engineer",
       "difficulty": "hard",
-      "success": false,
+      "success": true,
       "task_scores": {
-        "coverage": 0.2,
+        "coverage": 0.4,
         "relevance": 1.0,
-        "specificity": 0.591,
+        "specificity": 0.567,
         "non_redundancy": 1.0,
-        "score": 0.658
+        "score": 0.712
       },
       "step_scores": {
         "atomicity": 1.0,
-        "logical_ordering": 0.923,
+        "logical_ordering": 0.717,
         "actionability": 1.0,
-        "specificity": 0.573,
-        "score": 0.874
+        "specificity": 0.551,
+        "score": 0.817
       },
       "problem_scores": {
-        "specificity": 0,
-        "realism": 0,
-        "causality": 0,
-        "score": 0
+        "specificity": 0.508,
+        "realism": 0.476,
+        "causality": 0.0,
+        "score": 0.37
+      },
+      "solution_scores": {
+        "correctness": 1.0,
+        "specificity": 0.611,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.753
+      },
+      "eval_scores": {
+        "variance": 0.961,
+        "justification": 1.0,
+        "specificity": 0.111,
+        "usefulness": 1.0,
+        "score": 0.812
+      },
+      "system_scores": {
+        "consistency": 0.3,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.767,
+      "latency_ms": 226459.6,
+      "elapsed_s": 226.5
+    },
+    {
+      "job": "Data Engineer",
+      "difficulty": "hard",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.618,
+        "non_redundancy": 1.0,
+        "score": 0.605
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.952,
+        "actionability": 1.0,
+        "specificity": 0.608,
+        "score": 0.89
+      },
+      "problem_scores": {
+        "specificity": 0.518,
+        "realism": 0.417,
+        "causality": 0.133,
+        "score": 0.386
+      },
+      "solution_scores": {
+        "correctness": 0.909,
+        "specificity": 0.675,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.746
+      },
+      "eval_scores": {
+        "variance": 0.556,
+        "justification": 1.0,
+        "specificity": 0.4,
+        "usefulness": 1.0,
+        "score": 0.769
+      },
+      "system_scores": {
+        "consistency": 0.5,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.761,
+      "latency_ms": 116346.1,
+      "elapsed_s": 116.4
+    },
+    {
+      "job": "Security Engineer",
+      "difficulty": "hard",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.2,
+        "relevance": 1.0,
+        "specificity": 0.56,
+        "non_redundancy": 1.0,
+        "score": 0.65
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.634,
+        "actionability": 1.0,
+        "specificity": 0.532,
+        "score": 0.791
+      },
+      "problem_scores": {
+        "specificity": 0.51,
+        "realism": 1.0,
+        "causality": 0.167,
+        "score": 0.596
+      },
+      "solution_scores": {
+        "correctness": 0.455,
+        "specificity": 0.56,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.604
+      },
+      "eval_scores": {
+        "variance": 0.556,
+        "justification": 1.0,
+        "specificity": 0.4,
+        "usefulness": 1.0,
+        "score": 0.769
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.769,
+      "latency_ms": 104758.9,
+      "elapsed_s": 104.8
+    },
+    {
+      "job": "Product Manager",
+      "difficulty": "medium",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.537,
+        "non_redundancy": 1.0,
+        "score": 0.584
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.542,
+        "actionability": 1.0,
+        "specificity": 0.517,
+        "score": 0.765
+      },
+      "problem_scores": {
+        "specificity": 0.501,
+        "realism": 0.556,
+        "causality": 0.0,
+        "score": 0.395
+      },
+      "solution_scores": {
+        "correctness": 0.0,
+        "specificity": 0.603,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.501
+      },
+      "eval_scores": {
+        "variance": 0.632,
+        "justification": 1.0,
+        "specificity": 0.03,
+        "usefulness": 1.0,
+        "score": 0.714
+      },
+      "system_scores": {
+        "consistency": 0.3,
+        "redundancy": 0.971,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.658,
+      "latency_ms": 309740.1,
+      "elapsed_s": 309.7
+    },
+    {
+      "job": "Customer Support Lead",
+      "difficulty": "medium",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.525,
+        "non_redundancy": 1.0,
+        "score": 0.581
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.241,
+        "actionability": 1.0,
+        "specificity": 0.489,
+        "score": 0.682
+      },
+      "problem_scores": {
+        "specificity": 0.495,
+        "realism": 0.0,
+        "causality": 0.0,
+        "score": 0.198
+      },
+      "solution_scores": {
+        "correctness": 0.0,
+        "specificity": 0.5,
+        "diversity": 1.0,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.625
+      },
+      "eval_scores": {
+        "variance": 0.651,
+        "justification": 1.0,
+        "specificity": 0.2,
+        "usefulness": 1.0,
+        "score": 0.753
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.656,
+      "latency_ms": 131768.9,
+      "elapsed_s": 131.8
+    },
+    {
+      "job": "Frontend Developer",
+      "difficulty": "medium",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.4,
+        "relevance": 1.0,
+        "specificity": 0.576,
+        "non_redundancy": 1.0,
+        "score": 0.714
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.952,
+        "actionability": 1.0,
+        "specificity": 0.56,
+        "score": 0.878
+      },
+      "problem_scores": {
+        "specificity": 0.514,
+        "realism": 0.0,
+        "causality": 0.0,
+        "score": 0.206
+      },
+      "solution_scores": {
+        "correctness": 1.0,
+        "specificity": 0.565,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 0.75,
+        "score": 0.704
+      },
+      "eval_scores": {
+        "variance": 0.633,
+        "justification": 1.0,
+        "specificity": 0.045,
+        "usefulness": 1.0,
+        "score": 0.717
+      },
+      "system_scores": {
+        "consistency": 0.3,
+        "redundancy": 1.0,
+        "constraint_adherence": 0.8,
+        "practicality": 0.8
+      },
+      "final_score": 0.716,
+      "latency_ms": 253752.6,
+      "elapsed_s": 253.8
+    },
+    {
+      "job": "Database Administrator",
+      "difficulty": "hard",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.63,
+        "non_redundancy": 1.0,
+        "score": 0.607
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.594,
+        "actionability": 1.0,
+        "specificity": 0.62,
+        "score": 0.804
+      },
+      "problem_scores": {
+        "specificity": 0.518,
+        "realism": 0.0,
+        "causality": 0.133,
+        "score": 0.241
+      },
+      "solution_scores": {
+        "correctness": 0.0,
+        "specificity": 0.66,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.515
+      },
+      "eval_scores": {
+        "variance": 0.651,
+        "justification": 1.0,
+        "specificity": 0.2,
+        "usefulness": 1.0,
+        "score": 0.753
+      },
+      "system_scores": {
+        "consistency": 0.5,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.655,
+      "latency_ms": 114164.8,
+      "elapsed_s": 114.2
+    },
+    {
+      "job": "Machine Learning Engineer",
+      "difficulty": "hard",
+      "success": false,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.571,
+        "non_redundancy": 1.0,
+        "score": 0.593
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 1.0,
+        "actionability": 1.0,
+        "specificity": 0.554,
+        "score": 0.889
+      },
+      "problem_scores": {
+        "specificity": 0.533,
+        "realism": 0.476,
+        "causality": 0.435,
+        "score": 0.489
       },
       "solution_scores": {
         "correctness": 0,
@@ -94,11 +439,207 @@
         "consistency": 1.0,
         "redundancy": 0,
         "constraint_adherence": 1.0,
-        "practicality": 0.25
+        "practicality": 0.4
       },
-      "final_score": 0.363,
-      "latency_ms": 127683.0,
-      "elapsed_s": 127.7
+      "final_score": 0.454,
+      "latency_ms": 214028.7,
+      "elapsed_s": 214.0
+    },
+    {
+      "job": "QA Engineer",
+      "difficulty": "medium",
+      "success": false,
+      "task_scores": {
+        "coverage": 0.2,
+        "relevance": 1.0,
+        "specificity": 0.545,
+        "non_redundancy": 1.0,
+        "score": 0.646
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.504,
+        "actionability": 1.0,
+        "specificity": 0.532,
+        "score": 0.759
+      },
+      "problem_scores": {
+        "specificity": 0.5,
+        "realism": 0.0,
+        "causality": 0.167,
+        "score": 0.242
+      },
+      "solution_scores": {
+        "correctness": 0,
+        "specificity": 0,
+        "diversity": 0,
+        "feasibility": 0,
+        "novelty": 0,
+        "score": 0
+      },
+      "eval_scores": {
+        "variance": 0,
+        "justification": 0,
+        "specificity": 0,
+        "usefulness": 0,
+        "score": 0
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.4
+      },
+      "final_score": 0.389,
+      "latency_ms": 188023.1,
+      "elapsed_s": 188.0
+    },
+    {
+      "job": "Technical Writer",
+      "difficulty": "easy",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.2,
+        "relevance": 1.0,
+        "specificity": 0.51,
+        "non_redundancy": 1.0,
+        "score": 0.637
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.336,
+        "actionability": 1.0,
+        "specificity": 0.512,
+        "score": 0.712
+      },
+      "problem_scores": {
+        "specificity": 0.494,
+        "realism": 0.0,
+        "causality": 0.0,
+        "score": 0.198
+      },
+      "solution_scores": {
+        "correctness": 0.0,
+        "specificity": 0.51,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.478
+      },
+      "eval_scores": {
+        "variance": 0.651,
+        "justification": 1.0,
+        "specificity": 0.2,
+        "usefulness": 1.0,
+        "score": 0.753
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.637,
+      "latency_ms": 106737.4,
+      "elapsed_s": 106.8
+    },
+    {
+      "job": "Network Administrator",
+      "difficulty": "medium",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.0,
+        "relevance": 1.0,
+        "specificity": 0.545,
+        "non_redundancy": 1.0,
+        "score": 0.586
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.595,
+        "actionability": 1.0,
+        "specificity": 0.516,
+        "score": 0.778
+      },
+      "problem_scores": {
+        "specificity": 0.494,
+        "realism": 1.0,
+        "causality": 0.533,
+        "score": 0.681
+      },
+      "solution_scores": {
+        "correctness": 0.556,
+        "specificity": 0.52,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.619
+      },
+      "eval_scores": {
+        "variance": 0.976,
+        "justification": 1.0,
+        "specificity": 0.2,
+        "usefulness": 1.0,
+        "score": 0.834
+      },
+      "system_scores": {
+        "consistency": 1.0,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.784,
+      "latency_ms": 118886.2,
+      "elapsed_s": 118.9
+    },
+    {
+      "job": "Cloud Architect",
+      "difficulty": "hard",
+      "success": true,
+      "task_scores": {
+        "coverage": 0.2,
+        "relevance": 1.0,
+        "specificity": 0.593,
+        "non_redundancy": 1.0,
+        "score": 0.658
+      },
+      "step_scores": {
+        "atomicity": 1.0,
+        "logical_ordering": 0.896,
+        "actionability": 1.0,
+        "specificity": 0.572,
+        "score": 0.867
+      },
+      "problem_scores": {
+        "specificity": 0.52,
+        "realism": 1.0,
+        "causality": 0.0,
+        "score": 0.558
+      },
+      "solution_scores": {
+        "correctness": 0.0,
+        "specificity": 0.58,
+        "diversity": 0.25,
+        "feasibility": 1.0,
+        "novelty": 1.0,
+        "score": 0.495
+      },
+      "eval_scores": {
+        "variance": 0.976,
+        "justification": 1.0,
+        "specificity": 0.2,
+        "usefulness": 1.0,
+        "score": 0.834
+      },
+      "system_scores": {
+        "consistency": 0.3,
+        "redundancy": 1.0,
+        "constraint_adherence": 1.0,
+        "practicality": 0.8
+      },
+      "final_score": 0.743,
+      "latency_ms": 122359.9,
+      "elapsed_s": 122.4
     }
   ]
 }

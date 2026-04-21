@@ -29,16 +29,18 @@ from src.pipeline.runner import PipelineRunner
 
 def print_result(output):
     """Pretty-print a pipeline result."""
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"  JOB: {output.job}")
     print(f"  Status: {'✓ Success' if output.success else '✗ Failed'}")
     print(f"  Stages run: {len(output.stages)}")
     print(f"  Total latency: {output.total_latency_ms:.0f}ms")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
 
     for stage in output.stages:
         status = "✓" if stage.valid else "✗"
-        print(f"\n  {status} {stage.name} ({stage.latency_ms:.0f}ms, {stage.tokens} tok, {stage.attempts} attempt(s))")
+        print(
+            f"\n  {status} {stage.name} ({stage.latency_ms:.0f}ms, {stage.tokens} tok, {stage.attempts} attempt(s))"
+        )
 
         if stage.valid and stage.parsed:
             for item in stage.parsed:
@@ -73,25 +75,36 @@ def print_result(output):
                 print(f"    {line.rstrip()}")
             print(f"    ── End raw output ──")
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Local-first LLM pipeline: Job → Workflow → Problems → Solutions → Evaluation")
+    parser = argparse.ArgumentParser(
+        description="Local-first LLM pipeline: Job → Workflow → Problems → Solutions → Evaluation"
+    )
     parser.add_argument("job", nargs="?", help="Job title to analyze")
     parser.add_argument("--model", help="Path to GGUF model")
-    parser.add_argument("--remote", action="store_true",
-                        help="Use HuggingFace Inference API instead of local model (requires HF_TOKEN)")
+    parser.add_argument(
+        "--remote",
+        action="store_true",
+        help="Use HuggingFace Inference API instead of local model (requires HF_TOKEN)",
+    )
     parser.add_argument("--json", action="store_true", help="Output JSON")
     parser.add_argument("--cache", action="store_true", help="Enable response caching")
     parser.add_argument("--max-tokens", type=int, default=350)
     parser.add_argument("--retries", type=int, default=2)
-    parser.add_argument("--stages", type=int, default=4, choices=[1, 2, 3, 4],
-                        help="Number of stages to run (1-4, default: 4)")
+    parser.add_argument(
+        "--stages",
+        type=int,
+        default=5,
+        choices=[1, 2, 3, 4, 5],
+        help="Number of stages to run (1-5, default: 5)",
+    )
     args = parser.parse_args()
 
     if args.remote:
         from src.pipeline.model import load_remote_model
+
         print("Using HuggingFace Inference API...", file=sys.stderr)
         model = load_remote_model()
     else:
@@ -116,7 +129,9 @@ def main():
     if args.job:
         run_job(args.job)
     else:
-        print("Interactive mode. Enter a job title, or 'quit' to exit.\n", file=sys.stderr)
+        print(
+            "Interactive mode. Enter a job title, or 'quit' to exit.\n", file=sys.stderr
+        )
         while True:
             try:
                 job = input("Job > ").strip()

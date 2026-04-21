@@ -1,0 +1,396 @@
+{
+  "job": "AI Engineer",
+  "stage": "stage1",
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Develop and Train AI Models",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Gather and preprocess datasets for model training, including data cleaning and feature engineering.",
+          "tool_stack": [
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Scikit-learn"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Design and implement AI model architectures using deep learning frameworks.",
+          "tool_stack": [
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Configure hyperparameters for model training, including learning rates, batch sizes, and regularization techniques.",
+          "tool_stack": [
+            "Hyperopt",
+            "Optuna",
+            "Grid Search"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Train AI models using selected datasets and hyperparameters, monitoring performance metrics and adjusting as needed.",
+          "tool_stack": [
+            "Jupyter Notebooks",
+            "Google Colab",
+            "AWS SageMaker"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Evaluate trained models using validation datasets and metrics, such as accuracy, precision, and recall.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Refine and tune models based on evaluation results, iterating on architecture, hyperparameters, and training data.",
+          "tool_stack": [
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Scikit-learn"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Deploy trained models to production environments, integrating with existing infrastructure and applications.",
+          "tool_stack": [
+            "Docker",
+            "Kubernetes",
+            "AWS SageMaker",
+            "Azure Machine Learning"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Monitor model performance in production, collecting metrics and feedback to inform future model updates and improvements.",
+          "tool_stack": [
+            "Prometheus",
+            "Grafana",
+            "New Relic",
+            "Datadog"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Collaborate with data scientists and engineers to integrate AI models with broader data pipelines and workflows.",
+          "tool_stack": [
+            "Apache Beam",
+            "Apache Spark",
+            "Apache Airflow"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Document model development, training, and deployment processes, including data sources, hyperparameters, and performance metrics.",
+          "tool_stack": [
+            "Markdown",
+            "Jupyter Notebooks",
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 2,
+      "title": "Data Preparation and Feature Engineering",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Collect and integrate data from various sources, including databases, APIs, and file systems.",
+          "tool_stack": [
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Apache Beam"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Clean and preprocess data, handling missing values, outliers, and data normalization.",
+          "tool_stack": [
+            "Pandas",
+            "NumPy",
+            "Scikit-learn"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Transform and feature-engineer data, applying techniques such as encoding, scaling, and dimensionality reduction.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Split data into training, validation, and testing sets, ensuring representative and unbiased samples.",
+          "tool_stack": [
+            "Scikit-learn",
+            "Python"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Explore and visualize data distributions, relationships, and patterns, using statistical and graphical methods.",
+          "tool_stack": [
+            "Matplotlib",
+            "Seaborn",
+            "Plotly"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Develop and apply data quality checks, ensuring data consistency, accuracy, and completeness.",
+          "tool_stack": [
+            "Great Expectations",
+            "Deequ",
+            "Apache Beam"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Store and manage prepared data in suitable formats and repositories, such as data warehouses or data lakes.",
+          "tool_stack": [
+            "Apache Hadoop",
+            "Amazon S3",
+            "Google Cloud Storage"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Document data sources, processing steps, and resulting datasets, maintaining data lineage and provenance.",
+          "tool_stack": [
+            "Markdown",
+            "Jupyter Notebooks",
+            "GitHub"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Collaborate with data engineers to design and implement data pipelines, integrating data preparation with broader workflows.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Apache Beam",
+            "Kubernetes"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Continuously monitor and refine data preparation processes, adapting to changing data sources, quality, and requirements.",
+          "tool_stack": [
+            "Prometheus",
+            "Grafana",
+            "New Relic",
+            "Datadog"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 3,
+      "title": "Model Deployment and Maintenance",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Containerize trained models using containerization tools, ensuring consistent and reliable deployment.",
+          "tool_stack": [
+            "Docker",
+            "Kubernetes"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Develop and implement model serving architectures, using frameworks and libraries for scalable and efficient deployment.",
+          "tool_stack": [
+            "TensorFlow Serving",
+            "PyTorch Serving",
+            "AWS SageMaker"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Configure and manage model deployment environments, including infrastructure, networking, and security settings.",
+          "tool_stack": [
+            "Kubernetes",
+            "AWS",
+            "Azure",
+            "Google Cloud"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Monitor model performance and latency in production, using metrics and logging to identify areas for improvement.",
+          "tool_stack": [
+            "Prometheus",
+            "Grafana",
+            "New Relic",
+            "Datadog"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Implement model updating and rollback strategies, ensuring seamless transitions between model versions.",
+          "tool_stack": [
+            "Kubernetes",
+            "AWS SageMaker",
+            "Azure Machine Learning"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Develop and apply model explainability and interpretability techniques, providing insights into model decisions and behavior.",
+          "tool_stack": [
+            "SHAP",
+            "LIME",
+            "TensorFlow Explain"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Collaborate with engineering teams to integrate models with broader applications and services, ensuring seamless interactions and data exchange.",
+          "tool_stack": [
+            "API design",
+            "Microservices architecture",
+            "Message queues"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Establish and maintain model maintenance schedules, including regular updates, retraining, and performance evaluations.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Kubernetes",
+            "AWS SageMaker"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Document model deployment, maintenance, and performance, maintaining records of model versions, configurations, and metrics.",
+          "tool_stack": [
+            "Markdown",
+            "Jupyter Notebooks",
+            "GitHub"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Continuously evaluate and improve model deployment and maintenance processes, adapting to changing requirements, technologies, and best practices.",
+          "tool_stack": [
+            "Industry research",
+            "Conference attendance",
+            "Online forums"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 4,
+      "title": "Collaboration and Communication",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Participate in project planning and requirements gathering, ensuring clear understanding of project goals and objectives.",
+          "tool_stack": [
+            "Agile project management",
+            "Jira",
+            "Asana"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Collaborate with cross-functional teams, including data scientists, engineers, and product managers, to ensure aligned goals and effective communication.",
+          "tool_stack": [
+            "Slack",
+            "Microsoft Teams",
+            "Email"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Develop and maintain technical documentation, including model descriptions, data sources, and deployment details.",
+          "tool_stack": [
+            "Markdown",
+            "Jupyter Notebooks",
+            "GitHub"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Present technical results and insights to non-technical stakeholders, using clear and concise language and visualizations.",
+          "tool_stack": [
+            "PowerPoint",
+            "Google Slides",
+            "Matplotlib"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Provide technical guidance and support to junior team members, mentoring and knowledge-sharing to promote skill growth and development.",
+          "tool_stack": [
+            "Pair programming",
+            "Code reviews",
+            "Mentorship programs"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Participate in code reviews and ensure adherence to coding standards, best practices, and security guidelines.",
+          "tool_stack": [
+            "GitHub",
+            "GitLab",
+            "Bitbucket"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Stay up-to-date with industry trends, research, and technologies, applying knowledge to improve project outcomes and contribute to the development of best practices.",
+          "tool_stack": [
+            "Industry research",
+            "Conference attendance",
+            "Online forums"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Contribute to the development of internal tools, frameworks, and libraries, promoting efficiency, scalability, and maintainability.",
+          "tool_stack": [
+            "Python",
+            "Java",
+            "C++"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Collaborate with external partners and vendors, ensuring effective communication and integration of third-party technologies and services.",
+          "tool_stack": [
+            "API design",
+            "Microservices architecture",
+            "Message queues"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Participate in retrospectives and post-mortem analyses, identifying areas for improvement and implementing changes to enhance team performance and project outcomes.",
+          "tool_stack": [
+            "Agile project management",
+            "Jira",
+            "Asana"
+          ]
+        }
+      ]
+    }
+  ]
+}
