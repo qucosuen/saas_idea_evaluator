@@ -1,0 +1,487 @@
+{
+  "job": "AI Research Scientist",
+  "stage": "stage1",
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Develop and Train AI Models",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Gather and preprocess datasets for model training, including data cleaning and feature engineering.",
+          "tool_stack": [
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Scikit-learn"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Design and implement AI model architectures using deep learning frameworks.",
+          "tool_stack": [
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Configure hyperparameters for model training, including learning rates, batch sizes, and regularization techniques.",
+          "tool_stack": [
+            "Hyperopt",
+            "Optuna",
+            "Grid Search"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Train AI models using preprocessed datasets and evaluate their performance on validation sets.",
+          "tool_stack": [
+            "GPU Clusters",
+            "Cloud Computing Services",
+            "Distributed Training Frameworks"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Fine-tune model performance by adjusting hyperparameters, experimenting with different architectures, and incorporating domain knowledge.",
+          "tool_stack": [
+            "Model Interpretability Tools",
+            "Feature Importance",
+            "Partial Dependence Plots"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Deploy trained models to production environments, ensuring scalability, reliability, and security.",
+          "tool_stack": [
+            "Containerization",
+            "Orchestration Tools",
+            "Cloud Services"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Monitor model performance in production, tracking metrics such as accuracy, precision, and recall.",
+          "tool_stack": [
+            "Monitoring Tools",
+            "Logging Frameworks",
+            "Alerting Systems"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Update and retrain models as new data becomes available, incorporating active learning and transfer learning techniques.",
+          "tool_stack": [
+            "Data Versioning",
+            "Model Versioning",
+            "Continuous Integration"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Collaborate with cross-functional teams to integrate AI models with existing systems and applications.",
+          "tool_stack": [
+            "API Design",
+            "Software Development Kits",
+            "DevOps Tools"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Document model development, training, and deployment processes, ensuring reproducibility and transparency.",
+          "tool_stack": [
+            "Documentation Tools",
+            "Version Control Systems",
+            "Collaboration Platforms"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 2,
+      "title": "Conduct Research and Literature Review",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Identify relevant research papers, articles, and books in the field of AI and related domains.",
+          "tool_stack": [
+            "Academic Databases",
+            "Search Engines",
+            "Reference Management Tools"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Read and analyze research papers, taking notes on key findings, methodologies, and contributions.",
+          "tool_stack": [
+            "PDF Readers",
+            "Note-taking Apps",
+            "Summarization Tools"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Organize and categorize research papers by topic, theme, or methodology.",
+          "tool_stack": [
+            "Tagging Systems",
+            "Citation Management Tools",
+            "Mind Mapping Software"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Synthesize research findings, identifying patterns, trends, and gaps in current knowledge.",
+          "tool_stack": [
+            "Concept Mapping Tools",
+            "Idea Management Software",
+            "Collaboration Platforms"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Evaluate the quality and validity of research papers, considering factors such as methodology, data quality, and conclusions.",
+          "tool_stack": [
+            "Critical Thinking Frameworks",
+            "Evaluation Checklists",
+            "Peer Review Guidelines"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Identify areas for further research, formulating hypotheses and research questions.",
+          "tool_stack": [
+            "Idea Generation Tools",
+            "Brainstorming Software",
+            "Research Proposal Templates"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Develop research proposals, outlining objectives, methodologies, and expected outcomes.",
+          "tool_stack": [
+            "Proposal Writing Guides",
+            "Research Design Tools",
+            "Grant Writing Software"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Collaborate with colleagues and peers to discuss research ideas, share knowledge, and receive feedback.",
+          "tool_stack": [
+            "Collaboration Platforms",
+            "Video Conferencing Tools",
+            "Academic Social Networks"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Stay up-to-date with recent advancements and breakthroughs in the field, attending conferences, workshops, and seminars.",
+          "tool_stack": [
+            "Conference Alerts",
+            "Workshop Announcements",
+            "Webinar Platforms"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Reflect on own research experiences, identifying lessons learned, challenges overcome, and areas for improvement.",
+          "tool_stack": [
+            "Reflective Journaling Tools",
+            "Self-Assessment Frameworks",
+            "Personal Development Plans"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 3,
+      "title": "Design and Implement Experiments",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Formulate hypotheses and research questions, defining the scope and objectives of the experiment.",
+          "tool_stack": [
+            "Hypothesis Generation Tools",
+            "Research Question Templates",
+            "Experiment Design Guides"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Design the experiment, selecting suitable methodologies, sampling strategies, and data collection methods.",
+          "tool_stack": [
+            "Experiment Design Software",
+            "Survey Tools",
+            "Sampling Frame Construction"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Develop data collection instruments, such as surveys, questionnaires, or data logging scripts.",
+          "tool_stack": [
+            "Survey Creation Tools",
+            "Questionnaire Design Software",
+            "Data Logging Libraries"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Pilot-test the experiment, refining the design, and identifying potential issues or biases.",
+          "tool_stack": [
+            "Pilot-Testing Guides",
+            "Experiment Simulation Tools",
+            "Sensitivity Analysis Software"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Recruit participants, ensuring diverse and representative samples, and obtaining informed consent.",
+          "tool_stack": [
+            "Participant Recruitment Tools",
+            "Informed Consent Templates",
+            "Survey Distribution Platforms"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Conduct the experiment, collecting data, and monitoring progress, using data visualization and logging tools.",
+          "tool_stack": [
+            "Experiment Execution Software",
+            "Data Visualization Libraries",
+            "Logging Frameworks"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Analyze the collected data, applying statistical methods, and data mining techniques to extract insights.",
+          "tool_stack": [
+            "Statistical Analysis Software",
+            "Data Mining Tools",
+            "Machine Learning Libraries"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Interpret the results, drawing conclusions, and identifying implications for theory, practice, or policy.",
+          "tool_stack": [
+            "Result Interpretation Guides",
+            "Conclusion Drawing Templates",
+            "Implication Analysis Software"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Document the experiment, including design, methodology, results, and conclusions, ensuring transparency and reproducibility.",
+          "tool_stack": [
+            "Experiment Documentation Templates",
+            "Research Reporting Guides",
+            "Collaboration Platforms"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Reflect on the experiment, identifying lessons learned, challenges overcome, and areas for improvement, to inform future research.",
+          "tool_stack": [
+            "Reflective Journaling Tools",
+            "Experiment Evaluation Frameworks",
+            "Personal Development Plans"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 4,
+      "title": "Collaborate with Cross-Functional Teams",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Identify stakeholders, including team members, stakeholders, and external partners, to ensure effective collaboration.",
+          "tool_stack": [
+            "Stakeholder Analysis Tools",
+            "Communication Plans",
+            "Collaboration Platforms"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Develop a shared understanding of project goals, objectives, and timelines, using project management tools and techniques.",
+          "tool_stack": [
+            "Project Management Software",
+            "Goal-Setting Templates",
+            "Gantt Charts"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Establish clear communication channels, including regular meetings, progress updates, and feedback mechanisms.",
+          "tool_stack": [
+            "Communication Plans",
+            "Meeting Scheduling Tools",
+            "Feedback Mechanisms"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Define roles and responsibilities, ensuring each team member understands their tasks, deadlines, and dependencies.",
+          "tool_stack": [
+            "Role-Definition Templates",
+            "Responsibility Assignment Tools",
+            "Task Management Software"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Foster a culture of collaboration, encouraging open discussion, active listening, and constructive feedback.",
+          "tool_stack": [
+            "Collaboration Guides",
+            "Team-Building Activities",
+            "Conflict Resolution Tools"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Manage conflicts and disagreements, using conflict resolution techniques, and escalating issues when necessary.",
+          "tool_stack": [
+            "Conflict Resolution Guides",
+            "Mediation Tools",
+            "Escalation Procedures"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Monitor progress, tracking milestones, and adjusting plans as needed, to ensure project success.",
+          "tool_stack": [
+            "Project Monitoring Tools",
+            "Milestone Tracking Software",
+            "Agile Methodologies"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Facilitate knowledge sharing, providing training, and documentation, to ensure team members have necessary skills and expertise.",
+          "tool_stack": [
+            "Knowledge Management Tools",
+            "Training Programs",
+            "Documentation Templates"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Recognize and reward team achievements, celebrating successes, and acknowledging individual contributions.",
+          "tool_stack": [
+            "Recognition Programs",
+            "Reward Systems",
+            "Team-Building Activities"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Evaluate collaboration effectiveness, identifying areas for improvement, and implementing changes to optimize team performance.",
+          "tool_stack": [
+            "Collaboration Evaluation Tools",
+            "Team Assessment Software",
+            "Process Improvement Guides"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 5,
+      "title": "Communicate Research Findings",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Prepare research findings for dissemination, including writing, editing, and formatting.",
+          "tool_stack": [
+            "Writing Guides",
+            "Editing Tools",
+            "Formatting Software"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Develop presentations, including slides, posters, and oral presentations, to effectively communicate research results.",
+          "tool_stack": [
+            "Presentation Software",
+            "Slide Design Tools",
+            "Public Speaking Guides"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Create visualizations, such as graphs, charts, and infographics, to illustrate complex research findings.",
+          "tool_stack": [
+            "Data Visualization Tools",
+            "Graphing Software",
+            "Infographic Design Platforms"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Write and publish research papers, including journal articles, conference papers, and book chapters.",
+          "tool_stack": [
+            "Academic Writing Guides",
+            "Journal Submission Tools",
+            "Book Publishing Platforms"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Present research findings at conferences, workshops, and seminars, using presentation skills and audience engagement techniques.",
+          "tool_stack": [
+            "Presentation Skills Guides",
+            "Public Speaking Tools",
+            "Audience Engagement Software"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Engage with media, including press releases, interviews, and social media, to share research findings with broader audiences.",
+          "tool_stack": [
+            "Media Outreach Guides",
+            "Press Release Templates",
+            "Social Media Management Tools"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Develop and maintain a professional online presence, including academic profiles, personal websites, and social media accounts.",
+          "tool_stack": [
+            "Professional Online Presence Guides",
+            "Website Builders",
+            "Social Media Management Tools"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Collaborate with science communicators, including writers, editors, and designers, to effectively communicate research findings.",
+          "tool_stack": [
+            "Science Communication Guides",
+            "Collaboration Platforms",
+            "Content Creation Tools"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Evaluate the impact of research communication, using metrics such as citations, downloads, and media coverage.",
+          "tool_stack": [
+            "Research Impact Metrics",
+            "Citation Tracking Tools",
+            "Media Monitoring Software"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Refine research communication strategies, based on feedback, evaluation, and emerging trends in science communication.",
+          "tool_stack": [
+            "Communication Strategy Guides",
+            "Feedback Mechanisms",
+            "Trend Analysis Tools"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -23,7 +23,7 @@ def gen(model, system, user):
     return r["choices"][0]["message"]["content"], ms
 
 def run_pipeline(model):
-    out1, ms1 = gen(model, STAGE1_SYSTEM, STAGE1_USER.format(job=JOB))
+    out1, ms1 = gen(model, STAGE1_SYSTEM.format(job=JOB), STAGE1_USER.format(job=JOB))
     out2, ms2 = gen(model, STAGE2_SYSTEM, STAGE2_USER.format(workflow=out1))
     out3, ms3 = gen(model, STAGE3_SYSTEM, STAGE3_USER.format(problems=out2))
     out4, ms4 = gen(model, STAGE4_SYSTEM, STAGE4_USER.format(solutions=out3))

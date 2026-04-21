@@ -1,121 +1,206 @@
 [
-  {"job": "Data Entry Clerk", "difficulty": "easy", "expected_patterns": ["data entry", "typing", "spreadsheet", "records", "filing"],
-   "min_tasks": 3, "critical_tasks": ["data entry", "validation", "filing", "reporting"],
-   "expected_solutions": ["spreadsheet", "excel", "database", "software", "scanner", "ocr"]},
-
-  {"job": "Customer Support Agent", "difficulty": "easy", "expected_patterns": ["tickets", "customer", "response", "inquiry", "resolve"],
-   "min_tasks": 3, "critical_tasks": ["ticket", "response", "escalation", "follow-up", "resolution"],
-   "expected_solutions": ["crm", "zendesk", "freshdesk", "helpdesk", "ticketing", "email", "chat"]},
-
-  {"job": "Receptionist", "difficulty": "easy", "expected_patterns": ["greeting", "scheduling", "phone", "appointment", "visitor"],
-   "min_tasks": 3, "critical_tasks": ["greeting", "scheduling", "phone", "visitor", "mail"],
-   "expected_solutions": ["calendar", "phone system", "email", "scheduling software", "google"]},
-
-  {"job": "Warehouse Worker", "difficulty": "easy", "expected_patterns": ["inventory", "picking", "packing", "shipping", "stock"],
-   "min_tasks": 3, "critical_tasks": ["receiving", "picking", "packing", "shipping", "inventory"],
-   "expected_solutions": ["wms", "barcode", "scanner", "forklift", "inventory system"]},
-
-  {"job": "Retail Cashier", "difficulty": "easy", "expected_patterns": ["checkout", "payment", "scanning", "register", "receipt"],
-   "min_tasks": 3, "critical_tasks": ["checkout", "payment", "scanning", "register", "customer"],
-   "expected_solutions": ["pos", "register", "scanner", "card reader", "receipt printer"]},
-
-  {"job": "File Clerk", "difficulty": "easy", "expected_patterns": ["filing", "sorting", "organizing", "documents", "archive"],
-   "min_tasks": 3, "critical_tasks": ["filing", "sorting", "retrieval", "archiving", "labeling"],
-   "expected_solutions": ["filing system", "database", "scanner", "document management"]},
-
-  {"job": "Mail Sorter", "difficulty": "easy", "expected_patterns": ["sorting", "delivery", "packages", "routing", "labels"],
-   "min_tasks": 3, "critical_tasks": ["sorting", "routing", "delivery", "scanning", "loading"],
-   "expected_solutions": ["sorting machine", "barcode", "scanner", "conveyor", "tracking system"]},
-
-  {"job": "Parking Lot Attendant", "difficulty": "easy", "expected_patterns": ["parking", "tickets", "vehicles", "payment", "monitoring"],
-   "min_tasks": 3, "critical_tasks": ["ticketing", "payment", "monitoring", "directing", "security"],
-   "expected_solutions": ["ticket machine", "payment terminal", "camera", "barrier gate"]},
-
-  {"job": "Library Assistant", "difficulty": "easy", "expected_patterns": ["cataloging", "shelving", "checkout", "returns", "patron"],
-   "min_tasks": 3, "critical_tasks": ["checkout", "returns", "shelving", "cataloging", "patron"],
-   "expected_solutions": ["library system", "barcode", "database", "catalog software"]},
-
-  {"job": "Janitor", "difficulty": "easy", "expected_patterns": ["cleaning", "maintenance", "supplies", "inspection", "schedule"],
-   "min_tasks": 3, "critical_tasks": ["cleaning", "maintenance", "inspection", "restocking", "waste"],
-   "expected_solutions": ["cleaning equipment", "checklist", "schedule", "supply management"]},
-
-  {"job": "Accountant", "difficulty": "medium", "expected_patterns": ["data entry", "verification", "reporting", "reconciliation", "audit"],
-   "min_tasks": 4, "critical_tasks": ["bookkeeping", "reconciliation", "reporting", "tax", "audit", "invoicing"],
-   "expected_solutions": ["quickbooks", "excel", "erp", "sap", "accounting software", "xero"]},
-
-  {"job": "HR Manager", "difficulty": "medium", "expected_patterns": ["recruitment", "onboarding", "compliance", "performance", "payroll"],
-   "min_tasks": 4, "critical_tasks": ["recruitment", "onboarding", "payroll", "performance", "compliance", "training"],
-   "expected_solutions": ["hris", "workday", "bamboohr", "ats", "payroll system", "linkedin"]},
-
-  {"job": "Marketing Coordinator", "difficulty": "medium", "expected_patterns": ["campaign", "content", "analytics", "scheduling", "reporting"],
-   "min_tasks": 4, "critical_tasks": ["campaign", "content", "social media", "analytics", "email marketing"],
-   "expected_solutions": ["hubspot", "mailchimp", "google analytics", "hootsuite", "canva", "cms"]},
-
-  {"job": "Sales Representative", "difficulty": "medium", "expected_patterns": ["prospecting", "outreach", "follow-up", "CRM", "closing"],
-   "min_tasks": 4, "critical_tasks": ["prospecting", "outreach", "demo", "negotiation", "closing", "follow-up"],
-   "expected_solutions": ["crm", "salesforce", "hubspot", "email", "linkedin", "phone"]},
-
-  {"job": "Office Manager", "difficulty": "medium", "expected_patterns": ["scheduling", "procurement", "coordination", "budgeting", "communication"],
-   "min_tasks": 4, "critical_tasks": ["scheduling", "procurement", "budgeting", "coordination", "facilities"],
-   "expected_solutions": ["calendar", "email", "spreadsheet", "procurement system", "slack", "teams"]},
-
-  {"job": "Insurance Claims Adjuster", "difficulty": "medium", "expected_patterns": ["claims", "investigation", "documentation", "assessment", "settlement"],
-   "min_tasks": 4, "critical_tasks": ["claims review", "investigation", "assessment", "documentation", "settlement"],
-   "expected_solutions": ["claims system", "database", "phone", "email", "inspection tools"]},
-
-  {"job": "Real Estate Agent", "difficulty": "medium", "expected_patterns": ["listings", "showings", "contracts", "negotiation", "marketing"],
-   "min_tasks": 4, "critical_tasks": ["listings", "showings", "negotiation", "contracts", "marketing", "client"],
-   "expected_solutions": ["mls", "crm", "email", "virtual tour", "docusign", "zillow"]},
-
-  {"job": "Paralegal", "difficulty": "medium", "expected_patterns": ["research", "documents", "filing", "case management", "review"],
-   "min_tasks": 4, "critical_tasks": ["research", "drafting", "filing", "case management", "document review"],
-   "expected_solutions": ["westlaw", "lexisnexis", "case management system", "document management"]},
-
-  {"job": "IT Help Desk Technician", "difficulty": "medium", "expected_patterns": ["troubleshooting", "tickets", "installation", "configuration", "escalation"],
-   "min_tasks": 4, "critical_tasks": ["ticket triage", "troubleshooting", "installation", "escalation", "documentation"],
-   "expected_solutions": ["ticketing system", "jira", "servicenow", "remote desktop", "active directory"]},
-
-  {"job": "Event Planner", "difficulty": "medium", "expected_patterns": ["venue", "vendors", "logistics", "budget", "coordination"],
-   "min_tasks": 4, "critical_tasks": ["venue", "vendor", "logistics", "budget", "guest management"],
-   "expected_solutions": ["event software", "spreadsheet", "email", "project management", "calendar"]},
-
-  {"job": "Supply Chain Manager", "difficulty": "hard", "expected_patterns": ["procurement", "logistics", "forecasting", "vendor management", "inventory optimization"],
-   "min_tasks": 5, "critical_tasks": ["procurement", "logistics", "forecasting", "vendor management", "inventory", "compliance"],
-   "expected_solutions": ["erp", "sap", "oracle", "supply chain software", "analytics", "warehouse management"]},
-
-  {"job": "Construction Project Manager", "difficulty": "hard", "expected_patterns": ["scheduling", "subcontractors", "permits", "budgeting", "safety compliance"],
-   "min_tasks": 5, "critical_tasks": ["scheduling", "budgeting", "subcontractor", "permits", "safety", "inspection"],
-   "expected_solutions": ["project management", "primavera", "procore", "autocad", "bim", "scheduling software"]},
-
-  {"job": "Hospital Administrator", "difficulty": "hard", "expected_patterns": ["staffing", "compliance", "budgeting", "patient flow", "regulatory"],
-   "min_tasks": 5, "critical_tasks": ["staffing", "compliance", "budgeting", "patient flow", "quality", "regulatory"],
-   "expected_solutions": ["ehr", "epic", "scheduling system", "compliance software", "analytics"]},
-
-  {"job": "Investment Portfolio Manager", "difficulty": "hard", "expected_patterns": ["analysis", "risk assessment", "rebalancing", "reporting", "compliance"],
-   "min_tasks": 5, "critical_tasks": ["analysis", "risk assessment", "rebalancing", "reporting", "compliance", "client"],
-   "expected_solutions": ["bloomberg", "trading platform", "risk management", "excel", "analytics", "portfolio system"]},
-
-  {"job": "Logistics Director", "difficulty": "hard", "expected_patterns": ["routing", "fleet management", "warehousing", "customs", "optimization"],
-   "min_tasks": 5, "critical_tasks": ["routing", "fleet", "warehousing", "customs", "optimization", "tracking"],
-   "expected_solutions": ["tms", "fleet management", "gps", "warehouse system", "erp", "tracking software"]},
-
-  {"job": "Manufacturing Plant Supervisor", "difficulty": "hard", "expected_patterns": ["production scheduling", "quality control", "maintenance", "safety", "workforce"],
-   "min_tasks": 5, "critical_tasks": ["production", "quality control", "maintenance", "safety", "workforce", "scheduling"],
-   "expected_solutions": ["mes", "erp", "scada", "quality system", "maintenance software", "scheduling"]},
-
-  {"job": "Pharmaceutical Compliance Officer", "difficulty": "hard", "expected_patterns": ["regulatory", "documentation", "audit", "reporting", "training"],
-   "min_tasks": 5, "critical_tasks": ["regulatory", "documentation", "audit", "reporting", "training", "inspection"],
-   "expected_solutions": ["compliance software", "document management", "audit system", "training platform"]},
-
-  {"job": "University Registrar", "difficulty": "hard", "expected_patterns": ["enrollment", "transcripts", "scheduling", "compliance", "records"],
-   "min_tasks": 5, "critical_tasks": ["enrollment", "transcripts", "scheduling", "records", "compliance", "graduation"],
-   "expected_solutions": ["sis", "student information system", "database", "scheduling software", "portal"]},
-
-  {"job": "Chief Financial Officer", "difficulty": "hard", "expected_patterns": ["forecasting", "reporting", "compliance", "strategy", "risk management"],
-   "min_tasks": 5, "critical_tasks": ["forecasting", "reporting", "compliance", "strategy", "risk", "budgeting", "investor"],
-   "expected_solutions": ["erp", "sap", "oracle", "excel", "analytics", "financial software", "bloomberg"]},
-
-  {"job": "Air Traffic Controller", "difficulty": "hard", "expected_patterns": ["monitoring", "communication", "sequencing", "safety", "coordination"],
-   "min_tasks": 5, "critical_tasks": ["monitoring", "communication", "sequencing", "separation", "coordination", "emergency"],
-   "expected_solutions": ["radar", "communication system", "flight management", "atc system", "surveillance"]}
+  {
+    "job": "DevOps Engineer",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "mid",
+      "infra_scale": "50 microservices, 200 nodes, AWS",
+      "budget": "medium",
+      "reliability_target": "99.9%"
+    },
+    "ground_truth": {
+      "tasks": ["CI/CD pipeline management", "infrastructure monitoring", "incident response", "infrastructure as code", "security patching"],
+      "steps_keywords": ["deploy", "monitor", "alert", "rollback", "terraform", "docker", "kubernetes", "pipeline", "test", "log"],
+      "problems_keywords": ["downtime", "manual", "drift", "slow", "bottleneck", "alert fatigue", "inconsistent"],
+      "acceptable_solutions": ["Jenkins", "GitHub Actions", "ArgoCD", "Terraform", "Ansible", "Datadog", "Prometheus", "Grafana", "PagerDuty", "ELK", "CloudWatch", "Kubernetes", "Docker"]
+    },
+    "bad_patterns": ["manual-only solution", "no monitoring", "repeated automation script", "no alerting"]
+  },
+  {
+    "job": "Data Engineer",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "enterprise",
+      "infra_scale": "10TB daily ingestion, 500+ tables, multi-cloud",
+      "budget": "high",
+      "reliability_target": "99.95%"
+    },
+    "ground_truth": {
+      "tasks": ["data pipeline development", "data quality monitoring", "schema management", "ETL optimization", "data catalog maintenance"],
+      "steps_keywords": ["ingest", "transform", "validate", "schedule", "partition", "query", "schema", "pipeline", "warehouse", "lake"],
+      "problems_keywords": ["data quality", "latency", "schema drift", "stale", "duplicate", "missing", "inconsistent", "bottleneck"],
+      "acceptable_solutions": ["Airflow", "dbt", "Spark", "Snowflake", "BigQuery", "Kafka", "Flink", "Great Expectations", "Monte Carlo", "Databricks", "Redshift"]
+    },
+    "bad_patterns": ["manual ETL", "no data validation", "no scheduling", "single point of failure"]
+  },
+  {
+    "job": "Security Engineer",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "enterprise",
+      "infra_scale": "1000+ endpoints, hybrid cloud",
+      "budget": "high",
+      "reliability_target": "zero-breach tolerance"
+    },
+    "ground_truth": {
+      "tasks": ["vulnerability management", "incident response", "access control", "security monitoring", "compliance auditing"],
+      "steps_keywords": ["scan", "patch", "investigate", "triage", "remediate", "audit", "encrypt", "authenticate", "authorize", "log"],
+      "problems_keywords": ["vulnerability", "breach", "unauthorized", "compliance", "exposure", "misconfiguration", "phishing", "unpatched"],
+      "acceptable_solutions": ["SIEM", "Splunk", "CrowdStrike", "Qualys", "Nessus", "Okta", "Vault", "WAF", "IDS", "SOAR", "Sentinel"]
+    },
+    "bad_patterns": ["no encryption", "manual access review", "no incident plan", "no logging"]
+  },
+  {
+    "job": "Product Manager",
+    "difficulty": "medium",
+    "context": {
+      "company_size": "startup",
+      "infra_scale": "1 product, 5 engineers, B2B SaaS",
+      "budget": "low",
+      "reliability_target": "ship fast, iterate"
+    },
+    "ground_truth": {
+      "tasks": ["user research", "roadmap planning", "sprint management", "stakeholder communication", "metrics tracking"],
+      "steps_keywords": ["interview", "prioritize", "backlog", "sprint", "review", "launch", "feedback", "metric", "OKR", "roadmap"],
+      "problems_keywords": ["scope creep", "misalignment", "unclear requirements", "slow feedback", "competing priorities", "technical debt"],
+      "acceptable_solutions": ["Jira", "Linear", "Notion", "Figma", "Amplitude", "Mixpanel", "Productboard", "Confluence", "Slack", "Miro"]
+    },
+    "bad_patterns": ["no user research", "no metrics", "waterfall only", "no stakeholder input"]
+  },
+  {
+    "job": "Customer Support Lead",
+    "difficulty": "medium",
+    "context": {
+      "company_size": "mid",
+      "infra_scale": "500 tickets/day, 15 agents, multi-channel",
+      "budget": "medium",
+      "reliability_target": "< 4hr first response"
+    },
+    "ground_truth": {
+      "tasks": ["ticket triage", "agent coaching", "escalation management", "knowledge base maintenance", "SLA monitoring"],
+      "steps_keywords": ["triage", "assign", "respond", "escalate", "resolve", "document", "train", "review", "report", "feedback"],
+      "problems_keywords": ["slow response", "repetitive", "burnout", "knowledge gap", "inconsistent", "SLA breach", "backlog"],
+      "acceptable_solutions": ["Zendesk", "Intercom", "Freshdesk", "Salesforce Service Cloud", "Help Scout", "Confluence", "Guru", "Slack"]
+    },
+    "bad_patterns": ["no ticketing system", "manual routing", "no knowledge base", "no SLA tracking"]
+  },
+  {
+    "job": "Frontend Developer",
+    "difficulty": "medium",
+    "context": {
+      "company_size": "startup",
+      "infra_scale": "React SPA, 50k MAU",
+      "budget": "low",
+      "reliability_target": "< 3s page load"
+    },
+    "ground_truth": {
+      "tasks": ["feature development", "code review", "bug fixing", "performance optimization", "testing"],
+      "steps_keywords": ["implement", "review", "test", "deploy", "debug", "refactor", "component", "API", "style", "build"],
+      "problems_keywords": ["slow render", "bundle size", "accessibility", "browser compatibility", "tech debt", "flaky tests"],
+      "acceptable_solutions": ["React", "Next.js", "Webpack", "Vite", "Jest", "Cypress", "Storybook", "Lighthouse", "Sentry", "GitHub"]
+    },
+    "bad_patterns": ["no testing", "no code review", "manual deployment", "no performance monitoring"]
+  },
+  {
+    "job": "Database Administrator",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "enterprise",
+      "infra_scale": "50 databases, 10TB total, PostgreSQL + Oracle",
+      "budget": "high",
+      "reliability_target": "99.99% uptime"
+    },
+    "ground_truth": {
+      "tasks": ["backup management", "performance tuning", "capacity planning", "security hardening", "migration planning"],
+      "steps_keywords": ["backup", "restore", "index", "query", "optimize", "monitor", "replicate", "failover", "encrypt", "audit"],
+      "problems_keywords": ["slow query", "deadlock", "disk full", "replication lag", "corruption", "unauthorized access", "downtime"],
+      "acceptable_solutions": ["pgAdmin", "Oracle Enterprise Manager", "Percona", "pg_stat_statements", "pgBouncer", "Patroni", "Barman", "AWS RDS"]
+    },
+    "bad_patterns": ["no backups", "no monitoring", "manual failover", "no encryption at rest"]
+  },
+  {
+    "job": "Machine Learning Engineer",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "mid",
+      "infra_scale": "10 models in production, GPU cluster",
+      "budget": "medium",
+      "reliability_target": "< 100ms inference latency"
+    },
+    "ground_truth": {
+      "tasks": ["model training", "model deployment", "experiment tracking", "data pipeline management", "model monitoring"],
+      "steps_keywords": ["train", "evaluate", "deploy", "monitor", "retrain", "feature", "pipeline", "experiment", "inference", "optimize"],
+      "problems_keywords": ["model drift", "data quality", "latency", "resource cost", "reproducibility", "bias", "overfitting"],
+      "acceptable_solutions": ["MLflow", "Kubeflow", "SageMaker", "Weights & Biases", "DVC", "Seldon", "TensorRT", "ONNX", "Ray", "Airflow"]
+    },
+    "bad_patterns": ["no experiment tracking", "manual deployment", "no model monitoring", "no versioning"]
+  },
+  {
+    "job": "QA Engineer",
+    "difficulty": "medium",
+    "context": {
+      "company_size": "mid",
+      "infra_scale": "web + mobile app, 2-week sprints",
+      "budget": "medium",
+      "reliability_target": "< 1% defect escape rate"
+    },
+    "ground_truth": {
+      "tasks": ["test planning", "test automation", "regression testing", "bug reporting", "release validation"],
+      "steps_keywords": ["plan", "write", "execute", "automate", "report", "verify", "regression", "smoke", "integration", "acceptance"],
+      "problems_keywords": ["flaky tests", "slow suite", "coverage gap", "manual bottleneck", "environment issues", "late testing"],
+      "acceptable_solutions": ["Selenium", "Cypress", "Playwright", "Jest", "TestRail", "Jira", "Postman", "Appium", "BrowserStack", "Jenkins"]
+    },
+    "bad_patterns": ["no automation", "manual-only testing", "no test plan", "no bug tracking"]
+  },
+  {
+    "job": "Technical Writer",
+    "difficulty": "easy",
+    "context": {
+      "company_size": "startup",
+      "infra_scale": "1 product, API docs + user guides",
+      "budget": "low",
+      "reliability_target": "docs updated within 1 sprint of feature release"
+    },
+    "ground_truth": {
+      "tasks": ["documentation planning", "content writing", "review and editing", "publishing", "feedback collection"],
+      "steps_keywords": ["outline", "draft", "review", "edit", "publish", "update", "screenshot", "diagram", "version", "feedback"],
+      "problems_keywords": ["outdated docs", "inconsistent style", "missing examples", "no versioning", "slow review"],
+      "acceptable_solutions": ["Notion", "Confluence", "GitBook", "ReadTheDocs", "Docusaurus", "Markdown", "Swagger", "Postman"]
+    },
+    "bad_patterns": ["no documentation", "no review process", "no versioning", "no user feedback"]
+  },
+  {
+    "job": "Network Administrator",
+    "difficulty": "medium",
+    "context": {
+      "company_size": "mid",
+      "infra_scale": "3 offices, 500 devices, VPN",
+      "budget": "medium",
+      "reliability_target": "99.9% network uptime"
+    },
+    "ground_truth": {
+      "tasks": ["network monitoring", "firewall management", "VPN administration", "capacity planning", "incident response"],
+      "steps_keywords": ["monitor", "configure", "troubleshoot", "patch", "segment", "route", "firewall", "VPN", "bandwidth", "DNS"],
+      "problems_keywords": ["outage", "latency", "congestion", "misconfiguration", "unauthorized access", "single point of failure"],
+      "acceptable_solutions": ["Nagios", "PRTG", "SolarWinds", "Cisco", "pfSense", "Wireshark", "Zabbix", "Fortinet", "OpenVPN"]
+    },
+    "bad_patterns": ["no monitoring", "flat network", "no firewall rules", "no redundancy"]
+  },
+  {
+    "job": "Cloud Architect",
+    "difficulty": "hard",
+    "context": {
+      "company_size": "enterprise",
+      "infra_scale": "multi-region, 200+ services, AWS + GCP",
+      "budget": "high",
+      "reliability_target": "99.99%"
+    },
+    "ground_truth": {
+      "tasks": ["architecture design", "cost optimization", "disaster recovery", "security architecture", "migration planning"],
+      "steps_keywords": ["design", "review", "provision", "automate", "optimize", "failover", "replicate", "migrate", "govern", "audit"],
+      "problems_keywords": ["cost overrun", "vendor lock-in", "complexity", "security gap", "compliance", "single region", "manual provisioning"],
+      "acceptable_solutions": ["Terraform", "CloudFormation", "Pulumi", "AWS Well-Architected", "FinOps", "Kubernetes", "Service Mesh", "CDN"]
+    },
+    "bad_patterns": ["no IaC", "single region", "no DR plan", "no cost monitoring"]
+  }
 ]

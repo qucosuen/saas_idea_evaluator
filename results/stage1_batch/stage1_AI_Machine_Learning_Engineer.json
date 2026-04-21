@@ -1,0 +1,430 @@
+{
+  "job": "AI/Machine Learning Engineer",
+  "stage": "stage1",
+  "tasks": [
+    {
+      "task_number": 1,
+      "title": "Develop and Train Machine Learning Models",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Collect and preprocess datasets for model training, including data cleaning and feature engineering.",
+          "tool_stack": [
+            "Pandas",
+            "NumPy",
+            "Scikit-learn",
+            "Matplotlib"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Split preprocessed datasets into training, validation, and testing sets for model evaluation.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Implement and configure machine learning algorithms for model training, including hyperparameter tuning.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Train machine learning models using the training dataset and evaluate their performance on the validation set.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Fine-tune model hyperparameters based on validation set performance to optimize model accuracy.",
+          "tool_stack": [
+            "Hyperopt",
+            "Optuna",
+            "Grid Search",
+            "Random Search"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Evaluate the trained model on the testing set to estimate its performance on unseen data.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Compare the performance of different models and select the best-performing model for deployment.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Document model development, including data preprocessing, model architecture, and training procedures.",
+          "tool_stack": [
+            "Jupyter Notebooks",
+            "Markdown",
+            "LaTeX",
+            "Microsoft Word"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Store trained models in a model repository for version control and future deployment.",
+          "tool_stack": [
+            "TensorFlow Model Garden",
+            "PyTorch Hub",
+            "MLflow",
+            "DVC"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Schedule model retraining and updating based on data drift or performance degradation.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Kubernetes",
+            "Cron Jobs",
+            "Cloud Functions"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 2,
+      "title": "Deploy and Monitor Machine Learning Models",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Containerize trained models using containerization tools for deployment.",
+          "tool_stack": [
+            "Docker",
+            "Kubernetes",
+            "Containerd",
+            "Podman"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Create a model serving API for real-time prediction and inference.",
+          "tool_stack": [
+            "TensorFlow Serving",
+            "PyTorch Serve",
+            "AWS SageMaker",
+            "Azure Machine Learning"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Deploy the model serving API to a cloud or on-premises environment.",
+          "tool_stack": [
+            "AWS",
+            "Azure",
+            "Google Cloud",
+            "Kubernetes"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Configure monitoring and logging for the deployed model, including metrics and logs.",
+          "tool_stack": [
+            "Prometheus",
+            "Grafana",
+            "CloudWatch",
+            "Datadog"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Set up alerting and notification systems for model performance degradation or data drift.",
+          "tool_stack": [
+            "PagerDuty",
+            "Opsgenie",
+            "Slack",
+            "Email Systems"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Implement A/B testing and experimentation for model comparison and improvement.",
+          "tool_stack": [
+            "Optimizely",
+            "VWO",
+            "Google Optimize",
+            "Microsoft Experimentation"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Collect and analyze feedback from model users, including errors and suggestions.",
+          "tool_stack": [
+            "UserVoice",
+            "Medallia",
+            "SurveyMonkey",
+            "Google Forms"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Update and retrain models based on user feedback, data drift, or performance degradation.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Kubernetes",
+            "Cron Jobs",
+            "Cloud Functions"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Maintain model documentation, including model architecture, training data, and deployment details.",
+          "tool_stack": [
+            "Jupyter Notebooks",
+            "Markdown",
+            "LaTeX",
+            "Microsoft Word"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Ensure model compliance with regulatory requirements, including data privacy and security.",
+          "tool_stack": [
+            "GDPR",
+            "HIPAA",
+            "CCPA",
+            "SOC 2"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 3,
+      "title": "Data Preparation and Feature Engineering",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Collect and integrate data from various sources, including databases, APIs, and files.",
+          "tool_stack": [
+            "Pandas",
+            "NumPy",
+            "Scikit-learn",
+            "Matplotlib"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Clean and preprocess data, including handling missing values and outliers.",
+          "tool_stack": [
+            "Pandas",
+            "NumPy",
+            "Scikit-learn",
+            "Matplotlib"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Transform and normalize data, including feature scaling and encoding.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Extract relevant features from data, including text, images, and time series.",
+          "tool_stack": [
+            "NLTK",
+            "spaCy",
+            "OpenCV",
+            "Scikit-image"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Select and engineer features for model training, including dimensionality reduction.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Create data visualizations to understand data distributions and relationships.",
+          "tool_stack": [
+            "Matplotlib",
+            "Seaborn",
+            "Plotly",
+            "Bokeh"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Store preprocessed data in a data warehouse or database for future access.",
+          "tool_stack": [
+            "AWS S3",
+            "Google Cloud Storage",
+            "Azure Blob Storage",
+            "Relational Databases"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Document data preprocessing and feature engineering steps for reproducibility.",
+          "tool_stack": [
+            "Jupyter Notebooks",
+            "Markdown",
+            "LaTeX",
+            "Microsoft Word"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Schedule data updates and reprocessing based on data drift or changes in data sources.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Kubernetes",
+            "Cron Jobs",
+            "Cloud Functions"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Ensure data quality and integrity, including data validation and data governance.",
+          "tool_stack": [
+            "Data Validation",
+            "Data Governance",
+            "Data Quality",
+            "Data Lineage"
+          ]
+        }
+      ]
+    },
+    {
+      "task_number": 4,
+      "title": "Model Evaluation and Hyperparameter Tuning",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Split data into training, validation, and testing sets for model evaluation.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Implement and configure machine learning algorithms for model training.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Train models with different hyperparameters and evaluate their performance on the validation set.",
+          "tool_stack": [
+            "Hyperopt",
+            "Optuna",
+            "Grid Search",
+            "Random Search"
+          ]
+        },
+        {
+          "step_number": 4,
+          "description": "Compare the performance of different models and hyperparameters to select the best combination.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 5,
+          "description": "Evaluate the best-performing model on the testing set to estimate its performance on unseen data.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 6,
+          "description": "Analyze the results of hyperparameter tuning and model evaluation to identify areas for improvement.",
+          "tool_stack": [
+            "Matplotlib",
+            "Seaborn",
+            "Plotly",
+            "Bokeh"
+          ]
+        },
+        {
+          "step_number": 7,
+          "description": "Refine the model and hyperparameters based on the analysis and retrain the model.",
+          "tool_stack": [
+            "Scikit-learn",
+            "TensorFlow",
+            "PyTorch",
+            "Keras"
+          ]
+        },
+        {
+          "step_number": 8,
+          "description": "Document the model evaluation and hyperparameter tuning process for reproducibility.",
+          "tool_stack": [
+            "Jupyter Notebooks",
+            "Markdown",
+            "LaTeX",
+            "Microsoft Word"
+          ]
+        },
+        {
+          "step_number": 9,
+          "description": "Store the best-performing model and hyperparameters in a model repository for future deployment.",
+          "tool_stack": [
+            "TensorFlow Model Garden",
+            "PyTorch Hub",
+            "MLflow",
+            "DVC"
+          ]
+        },
+        {
+          "step_number": 10,
+          "description": "Schedule model retraining and updating based on data drift or performance degradation.",
+          "tool_stack": [
+            "Apache Airflow",
+            "Kubernetes",
+            "Cron Jobs",
+            "Cloud Functions"
+          ]
+        }
+      ]
+    }
+  ]
+}

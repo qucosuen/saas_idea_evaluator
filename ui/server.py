@@ -29,8 +29,6 @@ def get_data():
                 continue
     d["pipeline_runs"] = runs
 
-    # Benchmark results
-    d["stage1_benchmark"] = load_json("results/benchmark/stage1_benchmark.json") or {}
     d["champion"] = load_json("results/champion_selection.json") or {}
 
     return d

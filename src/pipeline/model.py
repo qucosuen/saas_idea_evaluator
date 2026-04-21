@@ -46,7 +46,42 @@ def load_model(model_path: Path, n_threads: int = 0):
     )
 
 
-def load_remote_model(model_name: str = "Qwen/Qwen2.5-1.5B-Instruct"):
-    """Load a remote model via HuggingFace Inference API. Requires HF_TOKEN env var."""
+def load_remote_model(model_name: str | None = None, backend: str = None):
+    """Load a remote model via Groq or HuggingFace API. Reads model from config.yaml if not provided."""
+    import yaml
     from src.pipeline.remote_model import RemoteModel
-    return RemoteModel(model=model_name)
+
+    config_path = Path("config.yaml")
+    config = {}
+    if config_path.exists():
+        with open(config_path) as f:
+            config = yaml.safe_load(f).get("model", {})
+
+    if model_name is None:
+        if backend == "huggingface" or config.get("remote_backend") == "huggingface":
+            model_name = config.get("hf_model", "meta-llama/Llama-3.3-70b-Instruct")
+        else:
+            model_name = config.get("remote_model", "llama-3.3-70b-versatile")
+
+    return RemoteModel(model=model_name, backend=backend)
+
+
+def load_remote_model_with_fallback(
+    model_name: str | None = None,
+    provider_order: list[str] | None = None,
+):
+    """
+    Load a remote model with automatic provider selection and fallback on throttling.
+
+    Args:
+        model_name: Optional model name override (only used for groq, hf uses hf_model from config)
+        provider_order: List of providers in fallback order (default: groq -> huggingface)
+
+    Returns:
+        MultiProviderModel instance with automatic fallback support
+    """
+    from src.pipeline.remote_model import MultiProviderModel
+
+    return MultiProviderModel(
+        provider_order=provider_order,
+    )

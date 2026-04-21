@@ -21,6 +21,7 @@ models/
 
 # Cache
 .cache/
+*.jukit/
 
 # IDE
 .idea/
@@ -35,3 +36,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Config
+config.yaml
